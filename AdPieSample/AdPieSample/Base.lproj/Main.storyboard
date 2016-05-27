@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Po-QW-6vQ" customClass="APAdView">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pPA-EP-8ej"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-fD-vKY">
+                                <rect key="frame" x="238" y="285" width="124" height="30"/>
+                                <state key="normal" title="Interstitial Ad load"/>
+                                <connections>
+                                    <action selector="requestInterstitialAd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNb-CC-lZ8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdPie Sample" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov2-iO-R7z">
+                                <rect key="frame" x="20" y="48" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdPie SDK Version : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l67-Dx-dGo">
+                                <rect key="frame" x="20" y="77" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50588235294117645" green="0.76078431372549016" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="l67-Dx-dGo" firstAttribute="leading" secondItem="Ov2-iO-R7z" secondAttribute="leading" id="4QC-OB-dSA"/>
+                            <constraint firstItem="Ov2-iO-R7z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="4Xo-3f-SvN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Po-QW-6vQ" secondAttribute="bottom" id="Iad-HT-N7I"/>
+                            <constraint firstItem="6Po-QW-6vQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="IvD-kE-paQ"/>
+                            <constraint firstItem="gFc-fD-vKY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KY3-j2-W0T"/>
+                            <constraint firstItem="6Po-QW-6vQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OGU-Bn-dDX"/>
+                            <constraint firstItem="gFc-fD-vKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZUu-YZ-jxw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ov2-iO-R7z" secondAttribute="leading" id="uLA-me-znv"/>
+                            <constraint firstItem="l67-Dx-dGo" firstAttribute="top" secondItem="Ov2-iO-R7z" secondAttribute="bottom" constant="8" id="xhV-Li-RFU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adView" destination="6Po-QW-6vQ" id="Dxi-OD-nQt"/>
+                        <outlet property="sdkVersionLabel" destination="l67-Dx-dGo" id="msR-aC-Nxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
