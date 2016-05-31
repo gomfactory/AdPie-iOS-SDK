@@ -75,25 +75,22 @@
     // 광고 요청 또는 표출 실패 후 이벤트 발생
     // error code : [error code]
     // error message : [error localizedDescription]
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
         
-        NSString *title = @"Error";
-        NSString *message = [NSString stringWithFormat:@"Failed to load interstitial ads. \n (code : %d, message : %@)", (int)[error code], [error localizedDescription]];
+    NSString *title = @"Error";
+    NSString *message = [NSString stringWithFormat:@"Failed to load interstitial ads. \n (code : %d, message : %@)", (int)[error code], [error localizedDescription]];
         
-        UIAlertController * alert=   [UIAlertController
+    UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:title
                                       message:message
                                       preferredStyle:UIAlertControllerStyleAlert];
         
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
             
             //do something when click button
-        }];
-        [alert addAction:okAction];
-        UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-        [vc presentViewController:alert animated:YES completion:nil];
-    });
+    }];
+    [alert addAction:okAction];
+    UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    [vc presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)interstitialWillPresentScreen:(APInterstitial *)interstitial {
