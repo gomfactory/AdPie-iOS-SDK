@@ -17,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        // 디버깅
-        AdPieSDK.sharedInstance().logging()
+        
+        // 디버깅 적용
+        // AdPieSDK.sharedInstance().logging()
+        
         // SDK 초기화
         AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
         

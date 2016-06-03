@@ -22,13 +22,15 @@
     
     // Slot ID 입력 (Banner)
     [self.adView setSlotId:@"57342fdd7174ea39844cac15"];
+    // 델리게이트 등록 (Banner)
     [self.adView setDelegate:self];
     
-    // 광고요청
+    // 광고요청 (Banner)
     [self.adView load];
     
     // Slot ID 입력 (Interstitial)
     self.interstitial = [[APInterstitial alloc] initWithSlotId:@"573430057174ea39844cac16"];
+    // 델리게이트 등록 (Interstitial)
     [self.interstitial setDelegate:self];
 }
 
@@ -39,7 +41,7 @@
 }
 
 - (IBAction)requestInterstitialAd:(id)sender {
-    // 광고 요청
+    // 광고 요청 (Interstitial)
     [self.interstitial load];
 }
 

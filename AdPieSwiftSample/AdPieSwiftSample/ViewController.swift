@@ -21,18 +21,20 @@ class ViewController: UIViewController, APAdViewDelegate, APInterstitialDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        sdkVersionLabel.text = sdkVersionLabel.text! + AdPieSDK.sdkVersion()
+        self.sdkVersionLabel.text = self.sdkVersionLabel.text! + AdPieSDK.sdkVersion()
         
         // Slot ID 입력 (Banner)
-        adView.slotId = "57342fdd7174ea39844cac15"
-        adView.delegate = self
+        self.adView.slotId = "57342fdd7174ea39844cac15"
+        // 델리게이트 등록 (Banner)
+        self.adView.delegate = self
         
-        // 광고 요청
-        adView.load()
+        // 광고 요청 (Banner)
+        self.adView.load()
         
         // Slot ID 입력 (Interstitial)
-        interstitial = APInterstitial(slotId: "573430057174ea39844cac16")
-        interstitial.delegate = self
+        self.interstitial = APInterstitial(slotId: "573430057174ea39844cac16")
+        // 델리게이트 등록 (Interstitial)
+        self.interstitial.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,8 +43,8 @@ class ViewController: UIViewController, APAdViewDelegate, APInterstitialDelegate
     }
 
     @IBAction func requestInterstitialAd(sender: UIButton) {
-        // 광고 요청
-        interstitial.load()
+        // 광고 요청 (Interstitial)
+        self.interstitial.load()
     }
     
     // MARK: - APAdView delegates
@@ -53,8 +55,8 @@ class ViewController: UIViewController, APAdViewDelegate, APInterstitialDelegate
     
     func adViewDidFailToLoadAd(view: APAdView!, withError error: NSError!) {
         // 광고 요청 또는 표출 실패 후 이벤트 발생
-        // error code : [error code]
-        // error message : [error localizedDescription]
+        // error code : error.code
+        // error message : error.localizedDescription
     }
     
     func adViewWillLeaveApplication(view: APAdView!) {
@@ -67,9 +69,9 @@ class ViewController: UIViewController, APAdViewDelegate, APInterstitialDelegate
         // 광고 로딩 완료 후 이벤트 발생
         
         // 광고 요청 후 즉시 노출하고자 할 경우 아래의 코드를 추가한다.
-        if (interstitial.isReady()) {
+        if (self.interstitial.isReady()) {
             // 광고 표출
-            interstitial.presentFromRootViewController(self)
+            self.interstitial.presentFromRootViewController(self)
         }
     }
     
