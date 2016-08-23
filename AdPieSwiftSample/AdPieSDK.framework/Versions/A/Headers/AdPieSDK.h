@@ -13,7 +13,7 @@
 #import <AdPieSDK/APInterstitial.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.0.2"
+#define ADPIE_SDK_VERSION @"1.0.3"
 
 @interface AdPieSDK : NSObject
 
