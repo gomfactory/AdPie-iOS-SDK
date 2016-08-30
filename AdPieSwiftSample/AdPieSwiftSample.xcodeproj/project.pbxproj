@@ -15,7 +15,7 @@
 		A354F1D91CFD38D70099D551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1D71CFD38D70099D551 /* Main.storyboard */; };
 		A354F1DB1CFD38D70099D551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A354F1DA1CFD38D70099D551 /* Assets.xcassets */; };
 		A354F1EB1CFD3A310099D551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1EA1CFD3A310099D551 /* LaunchScreen.storyboard */; };
-		A376EE061D755F85000C9288 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A376EE051D755F85000C9288 /* AdPieSDK.framework */; };
+		A376EE241D7591F6000C9288 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A376EE231D7591F6000C9288 /* AdPieSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		A354F1DA1CFD38D70099D551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A354F1DF1CFD38D70099D551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A354F1EA1CFD3A310099D551 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A376EE051D755F85000C9288 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
+		A376EE231D7591F6000C9288 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 				A33924CE1CFD935F00EBA9DA /* AdSupport.framework in Frameworks */,
 				A33924CC1CFD935500EBA9DA /* CoreTelephony.framework in Frameworks */,
 				A33924CA1CFD934400EBA9DA /* SystemConfiguration.framework in Frameworks */,
-				A376EE061D755F85000C9288 /* AdPieSDK.framework in Frameworks */,
+				A376EE241D7591F6000C9288 /* AdPieSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		A354F1E51CFD39250099D551 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				A376EE051D755F85000C9288 /* AdPieSDK.framework */,
+				A376EE231D7591F6000C9288 /* AdPieSDK.framework */,
 				A33924CD1CFD935F00EBA9DA /* AdSupport.framework */,
 				A33924CB1CFD935500EBA9DA /* CoreTelephony.framework */,
 				A33924C91CFD934400EBA9DA /* SystemConfiguration.framework */,
