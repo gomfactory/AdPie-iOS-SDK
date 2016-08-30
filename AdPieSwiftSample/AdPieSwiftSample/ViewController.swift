@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  AdPieSwiftSample
 //
-//  Created by KimYongSun on 2016. 5. 31..
+//  Created by sunny on 2016. 5. 31..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 
@@ -25,6 +25,8 @@ class ViewController: UIViewController, APAdViewDelegate, APInterstitialDelegate
         
         // Slot ID 입력 (Banner)
         self.adView.slotId = "57342fdd7174ea39844cac15"
+        // 광고뷰의 RootViewController 등록
+        self.adView.rootViewController = self
         // 델리게이트 등록 (Banner)
         self.adView.delegate = self
         

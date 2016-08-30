@@ -2,7 +2,7 @@
 //  ViewController.m
 //  AdPieSample
 //
-//  Created by KimYongSun on 2016. 5. 27..
+//  Created by sunny on 2016. 5. 27..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 
@@ -21,9 +21,11 @@
     self.sdkVersionLabel.text = [self.sdkVersionLabel.text stringByAppendingString:[AdPieSDK sdkVersion]];
     
     // Slot ID 입력 (Banner)
-    [self.adView setSlotId:@"57342fdd7174ea39844cac15"];
+    self.adView.slotId = @"57342fdd7174ea39844cac15";
+    // 광고뷰의 RootViewController 등록
+    self.adView.rootViewController = self;
     // 델리게이트 등록 (Banner)
-    [self.adView setDelegate:self];
+    self.adView.delegate = self;
     
     // 광고요청 (Banner)
     [self.adView load];
@@ -31,7 +33,7 @@
     // Slot ID 입력 (Interstitial)
     self.interstitial = [[APInterstitial alloc] initWithSlotId:@"573430057174ea39844cac16"];
     // 델리게이트 등록 (Interstitial)
-    [self.interstitial setDelegate:self];
+    self.interstitial.delegate = self;
 }
 
 

@@ -2,7 +2,7 @@
 //  AdPieSDK.h
 //  AdPieSDK
 //
-//  Created by KimYongSun on 2016. 2. 22..
+//  Created by sunny on 2016. 2. 22..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 #import <AdPieSDK/APInterstitial.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.0.4"
+#define ADPIE_SDK_VERSION @"1.0.5"
 
 @interface AdPieSDK : NSObject
 

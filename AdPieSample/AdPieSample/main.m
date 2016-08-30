@@ -2,7 +2,7 @@
 //  main.m
 //  AdPieSample
 //
-//  Created by KimYongSun on 2016. 5. 27..
+//  Created by sunny on 2016. 5. 27..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 

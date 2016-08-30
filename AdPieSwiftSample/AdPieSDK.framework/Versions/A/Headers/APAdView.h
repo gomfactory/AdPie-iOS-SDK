@@ -2,7 +2,7 @@
 //  APAdView.h
 //  AdPieSDK
 //
-//  Created by KimYongSun on 2016. 2. 22..
+//  Created by sunny on 2016. 2. 22..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 
@@ -35,10 +35,5 @@
 - (void)adViewDidFailToLoadAd:(APAdView *)view withError:(NSError *)error;
 // 클릭 이후 앱이 백그라운드 상태로 전환
 - (void)adViewWillLeaveApplication:(APAdView *)view;
-
-//// 광고에서 클릭하여 풀스크린 형태의 광고가 표출될 것을 알림
-//- (void)adViewWillPresentFullScreen:(APAdView *)view;
-//// 풀스크린 광고에서 앱으로 다시 돌아왔을 때 알림
-//- (void)adViewDidDismissFullScreen:(APAdView *)view;
 
 @end

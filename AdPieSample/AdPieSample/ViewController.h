@@ -2,7 +2,7 @@
 //  ViewController.h
 //  AdPieSample
 //
-//  Created by KimYongSun on 2016. 5. 27..
+//  Created by sunny on 2016. 5. 27..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet APAdView *adView;
 
 @property (nonatomic) APInterstitial *interstitial;
-
 
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 

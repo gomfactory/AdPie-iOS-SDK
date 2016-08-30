@@ -2,7 +2,7 @@
 //  APInterstitial.h
 //  AdPieSDK
 //
-//  Created by KimYongSun on 2016. 3. 2..
+//  Created by sunny on 2016. 3. 2..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 

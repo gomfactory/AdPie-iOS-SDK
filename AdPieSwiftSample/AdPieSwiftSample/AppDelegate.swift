@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  AdPieSwiftSample
 //
-//  Created by KimYongSun on 2016. 5. 31..
+//  Created by sunny on 2016. 5. 31..
 //  Copyright © 2016년 GomFactory. All rights reserved.
 //
 
