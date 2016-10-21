@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="APNativeAdView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-I5-6wZ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Euv-WY-FCa"/>
+                        <constraint firstAttribute="width" constant="40" id="r7u-Mk-p1p"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33.5" translatesAutoresizingMaskIntoConstraints="NO" id="NVd-WH-KCQ">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqX-BC-wnx" customClass="APMainAdView">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PqX-BC-wnx" secondAttribute="height" multiplier="300:250" id="7jY-aq-qKe"/>
+                        <constraint firstAttribute="width" constant="300" id="Odd-76-8ci"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-rF-B1I">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NVd-WH-KCQ" firstAttribute="leading" secondItem="fjB-I5-6wZ" secondAttribute="trailing" constant="8" id="1NR-bv-SgR"/>
+                <constraint firstItem="fjB-I5-6wZ" firstAttribute="bottom" secondItem="PqX-BC-wnx" secondAttribute="top" constant="-5" id="Abh-bJ-vTE"/>
+                <constraint firstItem="ycf-rF-B1I" firstAttribute="leading" secondItem="PqX-BC-wnx" secondAttribute="leading" id="Ast-Lr-OeT"/>
+                <constraint firstItem="NVd-WH-KCQ" firstAttribute="centerY" secondItem="fjB-I5-6wZ" secondAttribute="centerY" id="Eef-V2-ov7"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="GNf-m6-N18"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HLk-6U-mR7"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="trailing" id="JW8-8n-aVF"/>
+                <constraint firstItem="ycf-rF-B1I" firstAttribute="top" secondItem="PqX-BC-wnx" secondAttribute="bottom" constant="5" id="L9l-9z-rtr"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SKU-mL-oew"/>
+                <constraint firstItem="ycf-rF-B1I" firstAttribute="trailing" secondItem="PqX-BC-wnx" secondAttribute="trailing" id="jQO-NT-b3y"/>
+                <constraint firstItem="fjB-I5-6wZ" firstAttribute="leading" secondItem="PqX-BC-wnx" secondAttribute="leading" id="v3E-RE-gtF"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="fjB-I5-6wZ"/>
+                    <exclude reference="NVd-WH-KCQ"/>
+                    <exclude reference="ycf-rF-B1I"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="1NR-bv-SgR"/>
+                    <exclude reference="Eef-V2-ov7"/>
+                    <exclude reference="Abh-bJ-vTE"/>
+                    <exclude reference="v3E-RE-gtF"/>
+                    <exclude reference="Ast-Lr-OeT"/>
+                    <exclude reference="L9l-9z-rtr"/>
+                    <exclude reference="jQO-NT-b3y"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="fjB-I5-6wZ"/>
+                    <include reference="NVd-WH-KCQ"/>
+                    <include reference="ycf-rF-B1I"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="1NR-bv-SgR"/>
+                    <include reference="Eef-V2-ov7"/>
+                    <include reference="Abh-bJ-vTE"/>
+                    <include reference="v3E-RE-gtF"/>
+                    <include reference="Ast-Lr-OeT"/>
+                    <include reference="L9l-9z-rtr"/>
+                    <include reference="jQO-NT-b3y"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="descriptionLabel" destination="ycf-rF-B1I" id="VDy-RH-Qhb"/>
+                <outlet property="iconImageView" destination="fjB-I5-6wZ" id="diy-TI-iq7"/>
+                <outlet property="mainAdView" destination="PqX-BC-wnx" id="KVp-up-oVk"/>
+                <outlet property="mainAdViewAspectRatioConstraint" destination="7jY-aq-qKe" id="p3g-tx-CJ7"/>
+                <outlet property="titleLabel" destination="NVd-WH-KCQ" id="UUZ-mp-enf"/>
+            </connections>
+            <point key="canvasLocation" x="202" y="252"/>
+        </view>
+    </objects>
+</document>

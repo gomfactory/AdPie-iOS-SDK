@@ -11,13 +11,15 @@
 // Header files.
 #import <AdPieSDK/APAdView.h>
 #import <AdPieSDK/APInterstitial.h>
+#import <AdPieSDK/APNativeAd.h>
+#import <AdPieSDK/APNativeAdView.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.0.5"
+#define ADPIE_SDK_VERSION @"1.1.0"
 
 @interface AdPieSDK : NSObject
 
-@property(nonatomic, copy) NSString *mediaId;
+@property(copy, nonatomic) NSString *mediaId;
 @property(nonatomic, readonly) BOOL isInitialized;
 
 + (instancetype)sharedInstance;
