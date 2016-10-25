@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // 디버깅 적용
-        AdPieSDK.sharedInstance().logging()
+        // AdPieSDK.sharedInstance().logging()
         
         // SDK 초기화
         AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
