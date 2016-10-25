@@ -18,7 +18,6 @@
 @property(weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property(weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property(weak, nonatomic) IBOutlet APMainAdView *mainAdView;
-//@property(weak, nonatomic) IBOutlet UIButton *ctaButton;
 
 @property(nonatomic, readonly) bool isValidLayout;
 
@@ -26,7 +25,7 @@
 
 @property(weak, nonatomic) id<APNativeAdViewDelegate> delegate;
 
-- (void)fillAd:(APNativeAdData *)adData;
+- (BOOL)fillAd:(APNativeAdData *)adData;
 
 @end
 

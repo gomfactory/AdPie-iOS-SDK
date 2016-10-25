@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A35088131DB4BDC300B910E0 /* AdPie_300x250_NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35088021DB4BDC300B910E0 /* AdPie_300x250_NativeAdView.xib */; };
+		A35088131DB4BDC300B910E0 /* AdPieNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35088021DB4BDC300B910E0 /* AdPieNativeAdView.xib */; };
 		A35088141DB4BDC300B910E0 /* AdPieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A35088041DB4BDC300B910E0 /* AdPieTableViewCell.m */; };
 		A35088161DB4BDC300B910E0 /* BannerAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35088071DB4BDC300B910E0 /* BannerAdViewController.m */; };
 		A35088171DB4BDC300B910E0 /* InterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35088091DB4BDC300B910E0 /* InterstitialAdViewController.m */; };
@@ -25,12 +25,12 @@
 		A354F1B61CF7DB870099D551 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A354F1B51CF7DB870099D551 /* CoreTelephony.framework */; };
 		A354F1B81CF7DB930099D551 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A354F1B71CF7DB930099D551 /* SystemConfiguration.framework */; };
 		A354F1BC1CF7E8290099D551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1BB1CF7E8290099D551 /* LaunchScreen.storyboard */; };
+		A3B9B6301DBF28D400002ED0 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B9B62F1DBF28D400002ED0 /* AdPieSDK.framework */; };
 		A3E1A4031DB9E709009C2158 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A4021DB9E709009C2158 /* InfoViewController.m */; };
-		A3E1A4071DB9FD78009C2158 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E1A4061DB9FD78009C2158 /* AdPieSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A35088021DB4BDC300B910E0 /* AdPie_300x250_NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdPie_300x250_NativeAdView.xib; sourceTree = "<group>"; };
+		A35088021DB4BDC300B910E0 /* AdPieNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdPieNativeAdView.xib; sourceTree = "<group>"; };
 		A35088031DB4BDC300B910E0 /* AdPieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdPieTableViewCell.h; sourceTree = "<group>"; };
 		A35088041DB4BDC300B910E0 /* AdPieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdPieTableViewCell.m; sourceTree = "<group>"; };
 		A35088061DB4BDC300B910E0 /* BannerAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerAdViewController.h; sourceTree = "<group>"; };
@@ -58,9 +58,9 @@
 		A354F1B51CF7DB870099D551 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A354F1B71CF7DB930099D551 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A354F1BB1CF7E8290099D551 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3B9B62F1DBF28D400002ED0 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 		A3E1A4011DB9E709009C2158 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		A3E1A4021DB9E709009C2158 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
-		A3E1A4061DB9FD78009C2158 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				A354F1B81CF7DB930099D551 /* SystemConfiguration.framework in Frameworks */,
 				A354F1B61CF7DB870099D551 /* CoreTelephony.framework in Frameworks */,
 				A354F1B41CF7DB7D0099D551 /* AdSupport.framework in Frameworks */,
-				A3E1A4071DB9FD78009C2158 /* AdPieSDK.framework in Frameworks */,
+				A3B9B6301DBF28D400002ED0 /* AdPieSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 				A35088091DB4BDC300B910E0 /* InterstitialAdViewController.m */,
 				A350880C1DB4BDC300B910E0 /* NativeAdViewController.h */,
 				A350880D1DB4BDC300B910E0 /* NativeAdViewController.m */,
-				A35088021DB4BDC300B910E0 /* AdPie_300x250_NativeAdView.xib */,
+				A35088021DB4BDC300B910E0 /* AdPieNativeAdView.xib */,
 				A350880A1DB4BDC300B910E0 /* NativeAdTableViewController.h */,
 				A350880B1DB4BDC300B910E0 /* NativeAdTableViewController.m */,
 				A35088031DB4BDC300B910E0 /* AdPieTableViewCell.h */,
@@ -139,7 +139,7 @@
 		A354F1AE1CF7D9FA0099D551 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				A3E1A4061DB9FD78009C2158 /* AdPieSDK.framework */,
+				A3B9B62F1DBF28D400002ED0 /* AdPieSDK.framework */,
 				A354F1B71CF7DB930099D551 /* SystemConfiguration.framework */,
 				A354F1B51CF7DB870099D551 /* CoreTelephony.framework */,
 				A354F1B31CF7DB7D0099D551 /* AdSupport.framework */,
@@ -206,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A354F1BC1CF7E8290099D551 /* LaunchScreen.storyboard in Resources */,
-				A35088131DB4BDC300B910E0 /* AdPie_300x250_NativeAdView.xib in Resources */,
+				A35088131DB4BDC300B910E0 /* AdPieNativeAdView.xib in Resources */,
 				A354F1A41CF7D9AF0099D551 /* Assets.xcassets in Resources */,
 				A354F1A21CF7D9AF0099D551 /* Main.storyboard in Resources */,
 				A350881B1DB4BDC300B910E0 /* SimpleTableViewCell.xib in Resources */,
@@ -345,6 +345,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMNALPNZ69;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -365,6 +368,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMNALPNZ69;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

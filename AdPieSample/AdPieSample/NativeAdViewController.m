@@ -46,7 +46,7 @@ preparation before navigation
 
 - (void)nativeDidLoadAd:(APNativeAd *)nativeAd {
     // 광고 요청 완료 후 이벤트 발생
-    APNativeAdView *nativeAdView = [[[NSBundle mainBundle] loadNibNamed:@"AdPie_300x250_NativeAdView"
+    APNativeAdView *nativeAdView = [[[NSBundle mainBundle] loadNibNamed:@"AdPieNativeAdView"
                                                        owner:nil
                                                      options:nil] firstObject];
     
@@ -63,20 +63,36 @@ preparation before navigation
                                                                         views:viewDictionary]];
     
     // 광고뷰에 데이터 표출
-    [nativeAdView fillAd:nativeAd.getNativeAdData];
-    
-    // 광고 클릭 이벤트 수신을 위해 등록
-    [nativeAd registerViewForInteraction:nativeAdView];
+    if ([nativeAdView fillAd:nativeAd.getNativeAdData]) {
+        // 광고 클릭 이벤트 수신을 위해 등록
+        [nativeAd registerViewForInteraction:nativeAdView];
+    } else {
+        // 광고 데이터를 채우는데 실패한 경우로 광고뷰 제거
+        [nativeAdView removeFromSuperview];
+        
+        NSString *message = @"Failed to fill native ads data. Check your xib file.";
+        
+        [self alertMessage:message];
+    }
 }
 
 - (void)nativeDidFailToLoadAd:(APNativeAd *)nativeAd
                           withError:(NSError *)error {
     // 광고 요청 실패 후 이벤트 발생
-    NSString *title = @"Error";
     NSString *message = [NSString
                          stringWithFormat:
                          @"Failed to load native ads. \n (code : %d, message : %@)",
                          (int)[error code], [error localizedDescription]];
+    
+    [self alertMessage:message];
+}
+
+- (void)nativeWillLeaveApplication:(APNativeAd *)nativeAd {
+    // 광고 클릭 후 이벤트 발생
+}
+
+- (void) alertMessage:(NSString *)message{
+    NSString *title = @"Error";
     
     UIAlertController *alert = [UIAlertController
                                 alertControllerWithTitle:title
@@ -94,10 +110,6 @@ preparation before navigation
     UIViewController *vc = [[[[UIApplication sharedApplication] delegate]
                              window] rootViewController];
     [vc presentViewController:alert animated:YES completion:nil];
-}
-
-- (void)nativeWillLeaveApplication:(APNativeAd *)nativeAd {
-    // 광고 클릭 후 이벤트 발생
 }
 
 @end

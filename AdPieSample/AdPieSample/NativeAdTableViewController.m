@@ -114,10 +114,10 @@
         APNativeAdData *nativeAdData = [self.itemsArray objectAtIndex:indexPath.row];
         
         // 광고뷰에 데이터 표출
-        [cell.nativeAdView fillAd:nativeAdData];
-        
-        // 광고 클릭 이벤트 수신을 위해 등록
-        [self.nativeAd registerViewForInteraction:cell.nativeAdView];
+        if ([cell.nativeAdView fillAd:nativeAdData]) {
+            // 광고 클릭 이벤트 수신을 위해 등록
+            [self.nativeAd registerViewForInteraction:cell.nativeAdView];
+        }
         
         return cell;
     }else{

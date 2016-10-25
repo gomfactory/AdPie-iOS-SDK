@@ -115,10 +115,10 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
             let nativeAdData = itemsArray.object(at: indexPath.row) as? APNativeAdData
             
             // 광고뷰에 데이터 표출
-            cell.nativeAdView.fillAd(nativeAdData)
-            
-            // 광고 클릭 이벤트 수신을 위해 등록
-            nativeAd.registerView(forInteraction: cell.nativeAdView)
+            if cell.nativeAdView.fillAd(nativeAdData) {
+                // 광고 클릭 이벤트 수신을 위해 등록
+                nativeAd.registerView(forInteraction: cell.nativeAdView)
+            }
             
             return cell
             

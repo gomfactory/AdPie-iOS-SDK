@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,7 +29,6 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="PqX-BC-wnx" secondAttribute="height" multiplier="300:250" id="7jY-aq-qKe"/>
-                        <constraint firstAttribute="width" constant="300" id="Odd-76-8ci"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-rF-B1I">
@@ -38,55 +38,29 @@
                 </label>
             </subviews>
             <constraints>
-                <constraint firstItem="NVd-WH-KCQ" firstAttribute="leading" secondItem="fjB-I5-6wZ" secondAttribute="trailing" constant="8" id="1NR-bv-SgR"/>
+                <constraint firstItem="NVd-WH-KCQ" firstAttribute="leading" secondItem="fjB-I5-6wZ" secondAttribute="trailing" constant="5" id="1NR-bv-SgR"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="750" id="3Aa-7b-qwm"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6eB-5y-FKf"/>
                 <constraint firstItem="fjB-I5-6wZ" firstAttribute="bottom" secondItem="PqX-BC-wnx" secondAttribute="top" constant="-5" id="Abh-bJ-vTE"/>
                 <constraint firstItem="ycf-rF-B1I" firstAttribute="leading" secondItem="PqX-BC-wnx" secondAttribute="leading" id="Ast-Lr-OeT"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" priority="750" id="D2z-dc-Cxe"/>
                 <constraint firstItem="NVd-WH-KCQ" firstAttribute="centerY" secondItem="fjB-I5-6wZ" secondAttribute="centerY" id="Eef-V2-ov7"/>
-                <constraint firstItem="PqX-BC-wnx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="GNf-m6-N18"/>
-                <constraint firstItem="PqX-BC-wnx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HLk-6U-mR7"/>
-                <constraint firstItem="PqX-BC-wnx" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="trailing" id="JW8-8n-aVF"/>
                 <constraint firstItem="ycf-rF-B1I" firstAttribute="top" secondItem="PqX-BC-wnx" secondAttribute="bottom" constant="5" id="L9l-9z-rtr"/>
                 <constraint firstItem="PqX-BC-wnx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SKU-mL-oew"/>
+                <constraint firstItem="ycf-rF-B1I" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="aeZ-ST-OTB"/>
+                <constraint firstItem="fjB-I5-6wZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="gGk-42-sxD"/>
                 <constraint firstItem="ycf-rF-B1I" firstAttribute="trailing" secondItem="PqX-BC-wnx" secondAttribute="trailing" id="jQO-NT-b3y"/>
+                <constraint firstItem="NVd-WH-KCQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="oSd-Er-eVE"/>
+                <constraint firstItem="fjB-I5-6wZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="sqA-Te-d82"/>
                 <constraint firstItem="fjB-I5-6wZ" firstAttribute="leading" secondItem="PqX-BC-wnx" secondAttribute="leading" id="v3E-RE-gtF"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" id="vtR-B4-VHh"/>
+                <constraint firstItem="PqX-BC-wnx" firstAttribute="width" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" id="xlj-Wd-ffN"/>
             </constraints>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="fjB-I5-6wZ"/>
-                    <exclude reference="NVd-WH-KCQ"/>
-                    <exclude reference="ycf-rF-B1I"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="1NR-bv-SgR"/>
-                    <exclude reference="Eef-V2-ov7"/>
-                    <exclude reference="Abh-bJ-vTE"/>
-                    <exclude reference="v3E-RE-gtF"/>
-                    <exclude reference="Ast-Lr-OeT"/>
-                    <exclude reference="L9l-9z-rtr"/>
-                    <exclude reference="jQO-NT-b3y"/>
-                </mask>
-            </variation>
-            <variation key="heightClass=regular-widthClass=compact">
-                <mask key="subviews">
-                    <include reference="fjB-I5-6wZ"/>
-                    <include reference="NVd-WH-KCQ"/>
-                    <include reference="ycf-rF-B1I"/>
-                </mask>
-                <mask key="constraints">
-                    <include reference="1NR-bv-SgR"/>
-                    <include reference="Eef-V2-ov7"/>
-                    <include reference="Abh-bJ-vTE"/>
-                    <include reference="v3E-RE-gtF"/>
-                    <include reference="Ast-Lr-OeT"/>
-                    <include reference="L9l-9z-rtr"/>
-                    <include reference="jQO-NT-b3y"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="descriptionLabel" destination="ycf-rF-B1I" id="VDy-RH-Qhb"/>
                 <outlet property="iconImageView" destination="fjB-I5-6wZ" id="diy-TI-iq7"/>
-                <outlet property="mainAdView" destination="PqX-BC-wnx" id="KVp-up-oVk"/>
-                <outlet property="mainAdViewAspectRatioConstraint" destination="7jY-aq-qKe" id="p3g-tx-CJ7"/>
+                <outlet property="mainAdView" destination="PqX-BC-wnx" id="81L-1u-JPO"/>
+                <outlet property="mainAdViewAspectRatioConstraint" destination="7jY-aq-qKe" id="hl8-LB-gIq"/>
                 <outlet property="titleLabel" destination="NVd-WH-KCQ" id="UUZ-mp-enf"/>
             </connections>
             <point key="canvasLocation" x="202" y="252"/>

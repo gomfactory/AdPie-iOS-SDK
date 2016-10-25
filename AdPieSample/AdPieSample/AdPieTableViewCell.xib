@@ -33,10 +33,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHW-DS-JwR" customClass="APMainAdView">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" secondItem="OHW-DS-JwR" secondAttribute="width" multiplier="627:1200" id="Dgz-r3-q89"/>
+                                    <constraint firstAttribute="width" secondItem="OHW-DS-JwR" secondAttribute="height" multiplier="1200:627" id="Dgz-r3-q89"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="498" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-9I-ohV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="498" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-9I-ohV">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,21 +44,25 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AD6-aY-uEM" firstAttribute="leading" secondItem="omZ-ea-btI" secondAttribute="trailing" constant="5" id="Bjf-dV-bZv"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailing" constant="-5" id="Boi-kw-qew"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leading" constant="5" id="HTr-tQ-Fr1"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="top" secondItem="OHW-DS-JwR" secondAttribute="bottom" constant="5" id="Kkq-5q-Y4o"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="top" secondItem="omZ-ea-btI" secondAttribute="bottom" constant="5" id="SNB-CZ-6KL"/>
-                            <constraint firstAttribute="bottom" secondItem="B7r-9I-ohV" secondAttribute="bottom" constant="5" id="Sff-r0-Cn8"/>
-                            <constraint firstItem="AD6-aY-uEM" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailing" id="Z20-r1-2Cg"/>
-                            <constraint firstItem="AD6-aY-uEM" firstAttribute="centerY" secondItem="omZ-ea-btI" secondAttribute="centerY" id="aLa-jO-eg2"/>
-                            <constraint firstItem="omZ-ea-btI" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leading" constant="5" id="cb4-7x-FWa"/>
-                            <constraint firstItem="omZ-ea-btI" firstAttribute="top" secondItem="wMk-Ih-otk" secondAttribute="top" constant="5" id="mhF-Vt-Bz1"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leading" constant="5" id="pqc-H1-Zlu"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailing" constant="-5" id="wpy-b6-w6b"/>
+                            <constraint firstItem="AD6-aY-uEM" firstAttribute="centerY" secondItem="omZ-ea-btI" secondAttribute="centerY" id="0Lk-BZ-2fD"/>
+                            <constraint firstItem="omZ-ea-btI" firstAttribute="leading" secondItem="OHW-DS-JwR" secondAttribute="leading" id="5oc-5t-ghJ"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="width" relation="lessThanOrEqual" secondItem="wMk-Ih-otk" secondAttribute="width" id="7Ob-BJ-9EX"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="bottom" secondItem="wMk-Ih-otk" secondAttribute="bottomMargin" id="7S8-55-JTb"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="height" relation="lessThanOrEqual" secondItem="wMk-Ih-otk" secondAttribute="height" id="9Ka-z6-uG4"/>
+                            <constraint firstItem="AD6-aY-uEM" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailingMargin" id="AyV-lg-zQL"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="height" secondItem="wMk-Ih-otk" secondAttribute="height" priority="750" id="Dvj-6B-IIB"/>
+                            <constraint firstItem="omZ-ea-btI" firstAttribute="bottom" secondItem="OHW-DS-JwR" secondAttribute="top" constant="-5" id="RJf-H7-key"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="top" secondItem="OHW-DS-JwR" secondAttribute="bottom" constant="5" id="Zls-nF-mcq"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="centerX" secondItem="wMk-Ih-otk" secondAttribute="centerX" id="bxd-Uu-d0U"/>
+                            <constraint firstItem="AD6-aY-uEM" firstAttribute="leading" secondItem="omZ-ea-btI" secondAttribute="trailing" constant="5" id="cBI-9g-mHJ"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="leading" secondItem="OHW-DS-JwR" secondAttribute="leading" id="h35-ok-yiE"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="trailing" secondItem="OHW-DS-JwR" secondAttribute="trailing" id="kwS-ub-TRc"/>
+                            <constraint firstItem="omZ-ea-btI" firstAttribute="top" secondItem="wMk-Ih-otk" secondAttribute="topMargin" id="rwC-9T-5J6"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="width" secondItem="wMk-Ih-otk" secondAttribute="width" priority="750" id="sHy-x8-At9"/>
+                            <constraint firstItem="omZ-ea-btI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wMk-Ih-otk" secondAttribute="leadingMargin" id="zC5-9N-5Sa"/>
                         </constraints>
                         <connections>
-                            <outlet property="descriptionLabel" destination="B7r-9I-ohV" id="dkc-bz-KUK"/>
+                            <outlet property="descriptionLabel" destination="B7r-9I-ohV" id="wFB-uu-Zft"/>
                             <outlet property="iconImageView" destination="omZ-ea-btI" id="yKu-TP-9CX"/>
                             <outlet property="mainAdView" destination="OHW-DS-JwR" id="ara-sL-w6v"/>
                             <outlet property="mainAdViewAspectRatioConstraint" destination="Dgz-r3-q89" id="1lo-6G-0Cu"/>
@@ -67,10 +71,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Z3k-QW-eQn"/>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="uW1-X3-wqF"/>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="v6V-o4-fFd"/>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="wgb-wM-awk"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Z3k-QW-eQn"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="uW1-X3-wqF"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="v6V-o4-fFd"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="wgb-wM-awk"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

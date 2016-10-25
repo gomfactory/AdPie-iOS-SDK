@@ -48,7 +48,7 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
     func nativeDidLoad(_ nativeAd: APNativeAd!) {
         // 광고 요청 완료 후 이벤트 발생
         
-        let nativeAdView = Bundle.main.loadNibNamed("AdPie_300x250_NativeAdView", owner: nil, options: nil)?[0] as! APNativeAdView
+        let nativeAdView = Bundle.main.loadNibNamed("AdPieNativeAdView", owner: nil, options: nil)?[0] as! APNativeAdView
         view.addSubview(nativeAdView)
         
         var viewDictionary = [String: AnyObject]()
@@ -59,11 +59,16 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nativeAdView]|", options: [], metrics: nil, views: viewDictionary))
         
         // 광고뷰에 데이터 표출
-        nativeAdView.fillAd(nativeAd.getData())
-        
-        // 광고 클릭 이벤트 수신을 위해 등록
-        nativeAd.registerView(forInteraction: nativeAdView)
-        
+        if nativeAdView.fillAd(nativeAd.getData()) {
+            // 광고 클릭 이벤트 수신을 위해 등록
+            nativeAd.registerView(forInteraction: nativeAdView)
+        } else {
+            nativeAdView.removeFromSuperview()
+            
+            let errorMessage = "Failed to fill native ads data. Check your xib file."
+            
+            alertMessage(errorMessage)
+        }
     }
     
     func nativeDidFail(toLoad nativeAd: APNativeAd!, withError error: Error!) {
@@ -73,6 +78,15 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         
         let errorMessage = "Failed to load native ads." + "(code : " + String(error._code) + ", message : " + error.localizedDescription + ")"
         
+        alertMessage(errorMessage)
+
+    }
+    
+    func nativeWillLeaveApplication(_ nativeAd: APNativeAd!) {
+        // 광고 클릭 후 이벤트 발생
+    }
+    
+    func alertMessage(_ errorMessage : String) {
         if #available(iOS 8.0, *) {
             let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -84,10 +98,5 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
             alertView.alertViewStyle = .default
             alertView.show()
         }
-
-    }
-    
-    func nativeWillLeaveApplication(_ nativeAd: APNativeAd!) {
-        // 광고 클릭 후 이벤트 발생
     }
 }
