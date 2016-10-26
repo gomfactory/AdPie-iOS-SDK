@@ -18,7 +18,7 @@ class BannerAdViewContoller: UIViewController, APAdViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        // Slot ID 입력
+        // 광고뷰에 Slot ID 입력
         adView.slotId = "57342fdd7174ea39844cac15"
         // 광고뷰의 RootViewController 등록 (Refresh를 위해 필요)
         adView.rootViewController = self

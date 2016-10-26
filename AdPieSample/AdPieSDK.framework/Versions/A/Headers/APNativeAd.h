@@ -18,11 +18,11 @@
 
 @property(copy, nonatomic) NSString *slotId;
 
+@property(nonatomic, readonly) APNativeAdData *nativeAdData;
+
 - (id)initWithSlotId:(NSString *)slotId;
 
 - (void)load;
-
-- (APNativeAdData *)getNativeAdData;
 
 - (void)registerViewForInteraction:(APNativeAdView *)nativeAdView;
 
@@ -32,11 +32,14 @@
 
 @required
 
-@optional
 // 네이티브 성공
 - (void)nativeDidLoadAd:(APNativeAd *)nativeAd;
+
 // 네이티브 실패
 - (void)nativeDidFailToLoadAd:(APNativeAd *)nativeAd withError:(NSError *)error;
+
+@optional
+
 // 네이티브 클릭 알림
 - (void)nativeWillLeaveApplication:(APNativeAd *)nativeAd;
 

@@ -18,7 +18,7 @@ class InterstitialAdViewContoller: UIViewController, APInterstitialDelegate {
         
         // Do any additional setup after loading the view.
         
-        // Slot ID 입력
+        // 광고 객체 생성 (Slot ID 입력)
         interstitial = APInterstitial(slotId: "573430057174ea39844cac16")
         // 델리게이트 등록
         interstitial.delegate = self

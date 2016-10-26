@@ -18,7 +18,7 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         
         // Do any additional setup after loading the view.
         
-        // Slot ID 입력
+        // 광고 객체 생성 (Slot ID 입력)
         nativeAd = APNativeAd(slotId: "580491a37174ea5279c5d09b")
         // 델리게이트 등록
         nativeAd.delegate = self
@@ -59,7 +59,7 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nativeAdView]|", options: [], metrics: nil, views: viewDictionary))
         
         // 광고뷰에 데이터 표출
-        if nativeAdView.fillAd(nativeAd.getData()) {
+        if nativeAdView.fillAd(nativeAd.nativeAdData) {
             // 광고 클릭 이벤트 수신을 위해 등록
             nativeAd.registerView(forInteraction: nativeAdView)
         } else {

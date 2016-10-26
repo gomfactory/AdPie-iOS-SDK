@@ -27,12 +27,12 @@
 @protocol APAdViewDelegate <NSObject>
 
 @required
-
-@optional
 // 성공 알림
 - (void)adViewDidLoadAd:(APAdView *)view;
 // 실패 알림
 - (void)adViewDidFailToLoadAd:(APAdView *)view withError:(NSError *)error;
+
+@optional
 // 클릭 이후 앱이 백그라운드 상태로 전환
 - (void)adViewWillLeaveApplication:(APAdView *)view;
 

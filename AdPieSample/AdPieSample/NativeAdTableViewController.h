@@ -7,13 +7,13 @@
 //
 
 #import <AdPieSDK/AdPieSDK.h>
+#import "AdPieTableViewCell.h"
 #import <UIKit/UIKit.h>
 
-@interface NativeAdTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, APNativeDelegate>
+@interface NativeAdTableViewController : UITableViewController <APNativeDelegate>
 
 @property(strong, nonatomic) APNativeAd *nativeAd;
 
-@property(strong, nonatomic) IBOutlet UITableView *myTableView;
 @property(strong, nonatomic) NSMutableArray *itemsArray;
 @property(strong, nonatomic) NSMutableDictionary *adViewDictionary;
 @property(nonatomic) int adRowIndex;

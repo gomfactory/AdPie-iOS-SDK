@@ -31,12 +31,13 @@
 
 @required
 
-@optional
 // 전면배너 성공
 - (void)interstitialDidLoadAd:(APInterstitial *)interstitial;
 // 전면배너 실패
 - (void)interstitialDidFailToLoadAd:(APInterstitial *)interstitial
                           withError:(NSError *)error;
+
+@optional
 // 전면배너 표출 알림
 - (void)interstitialWillPresentScreen:(APInterstitial *)interstitial;
 // 전면배너 종료 예정 알림

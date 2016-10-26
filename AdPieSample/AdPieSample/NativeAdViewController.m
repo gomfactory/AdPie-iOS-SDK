@@ -63,7 +63,7 @@ preparation before navigation
                                                                         views:viewDictionary]];
     
     // 광고뷰에 데이터 표출
-    if ([nativeAdView fillAd:nativeAd.getNativeAdData]) {
+    if ([nativeAdView fillAd:nativeAd.nativeAdData]) {
         // 광고 클릭 이벤트 수신을 위해 등록
         [nativeAd registerViewForInteraction:nativeAdView];
     } else {

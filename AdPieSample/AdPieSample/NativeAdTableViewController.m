@@ -20,26 +20,30 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.adViewDictionary = [[NSMutableDictionary alloc] init];
-    
-    // 광고의 테이블 인덱스
-    self.adRowIndex = 10;
-    
-    [self.tableView registerNib:[UINib nibWithNibName:@"SimpleTableViewCell" bundle:nil] forCellReuseIdentifier:@"SimpleTableViewCell"];
-    
-    // 광고를 위한 XIB 파일 등록
-    [self.tableView registerNib:[UINib nibWithNibName:@"AdPieTableViewCell" bundle:nil] forCellReuseIdentifier:@"AdPieTableViewCell"];
-    
+    // 동적으로 셀의 크기 지정
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         // ios 8+
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 300;
     }
     
+    // 샘플 컨텐츠를 위한 xib 지정
+    [self.tableView registerNib:[UINib nibWithNibName:@"SimpleTableViewCell" bundle:nil] forCellReuseIdentifier:@"SimpleTableViewCell"];
+    
+    // 데이터 저장을 위한 배열 생성
     self.itemsArray = [[NSMutableArray alloc] init];
     for(int i = 0;i<20;i++){
         [self.itemsArray addObject:[NSString stringWithFormat:@"Item %d", (i + 1)]];
     }
+    
+    // 광고가 존재하는 테이블뷰 셀을 저장하기 위해 생성
+    self.adViewDictionary = [[NSMutableDictionary alloc] init];
+    
+    // 광고의 테이블 인덱스
+    self.adRowIndex = 10;
+    
+    // 광고를 위한 xib 파일 등록
+    [self.tableView registerNib:[UINib nibWithNibName:@"AdPieTableViewCell" bundle:nil] forCellReuseIdentifier:@"AdPieTableViewCell"];
     
     // Slot ID 입력
     self.nativeAd = [[APNativeAd alloc] initWithSlotId:@"580491a37174ea5279c5d09b"];
@@ -88,6 +92,7 @@
                 // ios 8+
                 return UITableViewAutomaticDimension;
             }else{
+                // 광고 형태와 사이즈에 따라 수정
                 return 300;
             }
         }else{
@@ -177,11 +182,11 @@
 
 - (void)nativeDidLoadAd:(APNativeAd *)nativeAd {
     // 광고 로딩 완료 후 이벤트 발생
-    if(nativeAd.getNativeAdData){
+    if(nativeAd.nativeAdData){
         if([[self.itemsArray objectAtIndex:self.adRowIndex] isKindOfClass:[APNativeAdData class]] == YES){
-            [self.itemsArray replaceObjectAtIndex:self.adRowIndex withObject:nativeAd.getNativeAdData];
+            [self.itemsArray replaceObjectAtIndex:self.adRowIndex withObject:nativeAd.nativeAdData];
         }else{
-            [self.itemsArray insertObject:nativeAd.getNativeAdData atIndex:self.adRowIndex];
+            [self.itemsArray insertObject:nativeAd.nativeAdData atIndex:self.adRowIndex];
         }
     }
     

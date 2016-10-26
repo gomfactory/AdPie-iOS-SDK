@@ -26,29 +26,33 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // navigationItem.rightBarButtonItem = editButtonItem()
-
-        adViewDictionary = NSMutableDictionary()
         
-        // 광고의 테이블 인덱스
-        adRowIndex = 10
-        
-        tableView.register(UINib.init(nibName: "SimpleTableViewCell", bundle: nil), forCellReuseIdentifier: "SimpleTableViewCell")
-        
-        // 광고를 위한 XIB 파일 등록
-        tableView.register(UINib.init(nibName: "AdPieTableViewCell", bundle: nil), forCellReuseIdentifier: "AdPieTableViewCell")
-        
+        // 동적으로 셀의 크기 지정
         if #available(iOS 8.0, *) {
             tableView.rowHeight = UITableViewAutomaticDimension;
             tableView.estimatedRowHeight = 300;
         }
         
+        // 샘플 컨텐츠를 위한 xib 등록
+        tableView.register(UINib.init(nibName: "SimpleTableViewCell", bundle: nil), forCellReuseIdentifier: "SimpleTableViewCell")
+        
+        // 데이터 저장을 위한 배열 생성
         itemsArray = NSMutableArray()
         
         for index in 1...20{
             itemsArray.add(String("Item \(index)"))
         }
+
+        // 광고가 존재하는 테이블뷰 셀을 저장하기 위해 생성
+        adViewDictionary = NSMutableDictionary()
         
-        // Slot ID 입력
+        // 광고의 테이블 인덱스
+        adRowIndex = 10
+        
+        // 광고를 위한 xib 파일 등록
+        tableView.register(UINib.init(nibName: "AdPieTableViewCell", bundle: nil), forCellReuseIdentifier: "AdPieTableViewCell")
+        
+        // 광고 객체 생성 (Slot ID 입력)
         nativeAd = APNativeAd(slotId: "580491a37174ea5279c5d09b")
         // 델리게이트 등록
         nativeAd.delegate = self
@@ -60,36 +64,6 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if itemsArray.object(at: indexPath.row) is APNativeAdData {
-            
-            var isValidLayout: Bool = false
-            
-            let cellIdentifier = "AdPieTableViewCell"
-            
-            if let cell = adViewDictionary?.object(forKey: String(format: "%@_%d", cellIdentifier,indexPath.row)) {
-                isValidLayout = (cell as! AdPieTableViewCell).nativeAdView.isValidLayout
-            }
-            
-            if isValidLayout {
-                if #available(iOS 8.0, *) {
-                    return UITableViewAutomaticDimension
-                } else {
-                    return 300;
-                }
-            } else {
-                return 0
-            }
-        } else {
-            if #available(iOS 8.0, *) {
-                return UITableViewAutomaticDimension
-            } else {
-                return tableView.rowHeight
-            }
-        }
     }
     
     // MARK: - Table view data source
@@ -128,8 +102,37 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
             
             return cell
         }
-     }
+    }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if itemsArray.object(at: indexPath.row) is APNativeAdData {
+            
+            var isValidLayout: Bool = false
+            
+            let cellIdentifier = "AdPieTableViewCell"
+            
+            if let cell = adViewDictionary?.object(forKey: String(format: "%@_%d", cellIdentifier,indexPath.row)) {
+                isValidLayout = (cell as! AdPieTableViewCell).nativeAdView.isValidLayout
+            }
+            
+            if isValidLayout {
+                if #available(iOS 8.0, *) {
+                    return UITableViewAutomaticDimension
+                } else {
+                    return 300;
+                }
+            } else {
+                return 0
+            }
+        } else {
+            if #available(iOS 8.0, *) {
+                return UITableViewAutomaticDimension
+            } else {
+                return tableView.rowHeight
+            }
+        }
+    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -180,11 +183,11 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
     
     func nativeDidLoad(_ nativeAd: APNativeAd!) {
         // 광고 요청 완료 후 이벤트 발생
-        if nativeAd.getData() != nil {
+        if nativeAd.nativeAdData != nil {
             if itemsArray.object(at: adRowIndex) is APNativeAdData {
-                itemsArray.replaceObject(at: adRowIndex, with: nativeAd.getData())
+                itemsArray.replaceObject(at: adRowIndex, with: nativeAd.nativeAdData)
             } else {
-                itemsArray.insert(nativeAd.getData(), at: adRowIndex)
+                itemsArray.insert(nativeAd.nativeAdData, at: adRowIndex)
             }
         }
         
