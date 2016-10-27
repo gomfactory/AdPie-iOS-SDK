@@ -13,7 +13,6 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
     
     var nativeAd: APNativeAd!
     
-    @IBOutlet var myTableView: UITableView!
     var itemsArray: NSMutableArray!
     var adViewDictionary: NSMutableDictionary!
     var adRowIndex: Int!
