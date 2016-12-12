@@ -13,4 +13,6 @@
 
 @property(weak, nonatomic) IBOutlet APAdView *adView;
 
+@property (weak, nonatomic) IBOutlet UILabel *adViewResultLabel;
+
 @end

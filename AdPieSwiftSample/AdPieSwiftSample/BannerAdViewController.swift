@@ -11,12 +11,15 @@ import AdPieSDK
 
 class BannerAdViewContoller: UIViewController, APAdViewDelegate {
     
+    @IBOutlet weak var adViewResultLabel: UILabel!
     @IBOutlet weak var adView: APAdView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        adViewResultLabel.numberOfLines = 5
         
         // 광고뷰에 Slot ID 입력
         adView.slotId = "57342fdd7174ea39844cac15"
@@ -49,12 +52,27 @@ class BannerAdViewContoller: UIViewController, APAdViewDelegate {
     
     func adViewDidLoadAd(_ view: APAdView!) {
         // 광고 표출 성공 후 이벤트 발생
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = dateFormatter.string(from:date)
+        
+        adViewResultLabel?.text = "Ad View Result : Success (date : \(dateString))"
     }
     
     func adViewDidFail(toLoadAd view: APAdView!, withError error: Error!) {
         // 광고 요청 또는 표출 실패 후 이벤트 발생
         // error code : error._code
         // error message : error.localizedDescription
+
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = dateFormatter.string(from:date)
+        
+        adViewResultLabel?.text = "Ad View Result : Error" + "(code : " + String(error._code) + ", message : " + error.localizedDescription + ", date : \(dateString))"
+
     }
     
     func adViewWillLeaveApplication(_ view: APAdView!) {

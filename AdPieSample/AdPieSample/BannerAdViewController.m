@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.adViewResultLabel.numberOfLines = 5;
+    
     // Slot ID 입력
     self.adView.slotId = @"57342fdd7174ea39844cac15";
     // 광고뷰의 RootViewController 등록 (Refresh를 위해 필요)
@@ -49,12 +51,16 @@ preparation before navigation
 
 - (void)adViewDidLoadAd:(APAdView *)view {
     // 광고 표출 성공 후 이벤트 발생
+    
+    self.adViewResultLabel.text = [NSString stringWithFormat:@"Ad View Result : %@ (date : %@)", @"Success", [[NSDate date] descriptionWithLocale:[NSLocale systemLocale]]];
 }
 
 - (void)adViewDidFailToLoadAd:(APAdView *)view withError:(NSError *)error {
     // 광고 요청 또는 표출 실패 후 이벤트 발생
     // error code : [error code]
     // error message : [error localizedDescription]
+    
+    self.adViewResultLabel.text = [NSString stringWithFormat:@"Ad View Result : Error (code : %d, message : %@, date : %@)", (int)[error code], [error localizedDescription], [[NSDate date] descriptionWithLocale:[NSLocale systemLocale]]];
 }
 
 - (void)adViewWillLeaveApplication:(APAdView *)view {

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPU-el-Kr0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPU-el-Kr0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,23 +13,23 @@
         <!--AdPie Home-->
         <scene sceneID="u1f-XB-mh0">
             <objects>
-                <tableViewController title="AdPie Home" id="6we-Pj-PWs" customClass="ViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="AdPie Home" automaticallyAdjustsScrollViewInsets="NO" id="6we-Pj-PWs" customClass="ViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="pP8-1M-6MX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="AD TYPE" id="lOJ-Qj-bh1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ezf-m5-WWP" style="IBUITableViewCellStyleDefault" id="tt1-Xl-D5X">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tt1-Xl-D5X" id="z9z-Mf-CBb">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Banner Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ezf-m5-WWP">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,14 +42,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="No4-Wg-QzA" style="IBUITableViewCellStyleDefault" id="e3G-lQ-aFe">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3G-lQ-aFe" id="gxY-VZ-cWR">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Interstitial Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="No4-Wg-QzA">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,14 +62,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="2JK-Ps-NIU" style="IBUITableViewCellStyleDefault" id="qJy-zk-mNV">
-                                        <rect key="frame" x="0.0" y="208" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJy-zk-mNV" id="LCl-ks-syb">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Native Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2JK-Ps-NIU">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,14 +82,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="6ny-QR-rqy" style="IBUITableViewCellStyleDefault" id="FQq-Pn-pdg">
-                                        <rect key="frame" x="0.0" y="252" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="188" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FQq-Pn-pdg" id="xhD-RR-cJp">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Native Ad (TableView)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6ny-QR-rqy">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,14 +106,14 @@
                             <tableViewSection headerTitle="AD INFO" id="k0r-ly-Jxc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5VW-7e-MB3" style="IBUITableViewCellStyleDefault" id="zPD-ga-mCs">
-                                        <rect key="frame" x="0.0" y="353" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="289" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zPD-ga-mCs" id="cgw-Rq-RWu">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5VW-7e-MB3">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,6 +133,7 @@
                             <outlet property="delegate" destination="6we-Pj-PWs" id="rdU-a7-QaM"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="AdPie Home" id="Wdz-QH-FOz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMv-lC-WvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,16 +143,17 @@
         <!--Infomation-->
         <scene sceneID="jS6-1l-crQ">
             <objects>
-                <viewController title="Infomation" id="flw-sx-FVi" customClass="InfoViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Infomation" automaticallyAdjustsScrollViewInsets="NO" id="flw-sx-FVi" customClass="InfoViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tGo-RN-bek"/>
                         <viewControllerLayoutGuide type="bottom" id="9Oz-gC-ufw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TAs-7F-L7f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Version : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-nb-352">
+                                <rect key="frame" x="26" y="26" width="108.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Up5-jd-HkO"/>
                                     <constraint firstAttribute="width" constant="108.5" id="ZcF-1n-J2O"/>
@@ -158,6 +163,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eah-3y-Ily">
+                                <rect key="frame" x="144.5" y="47" width="114.5" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,6 +178,7 @@
                             <constraint firstItem="eah-3y-Ily" firstAttribute="baseline" secondItem="cTH-nb-352" secondAttribute="baseline" id="vIo-rT-Fmj"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="sdkInfoLabel" destination="eah-3y-Ily" id="qz9-cf-Xlf"/>
                     </connections>
@@ -183,31 +190,43 @@
         <!--Banner Ad-->
         <scene sceneID="MhN-1d-K6R">
             <objects>
-                <viewController title="Banner Ad" id="o3H-Zf-RKY" customClass="BannerAdViewContoller" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Banner Ad" automaticallyAdjustsScrollViewInsets="NO" id="o3H-Zf-RKY" customClass="BannerAdViewContoller" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eck-n8-fL0"/>
                         <viewControllerLayoutGuide type="bottom" id="EW7-5A-GIZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yxk-K2-m8G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdg-Mo-t9r" customClass="APAdView">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="juJ-Te-GOQ"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l85-Uq-omd">
+                                <rect key="frame" x="16" y="301.5" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="l85-Uq-omd" secondAttribute="trailing" id="Loy-35-s90"/>
+                            <constraint firstItem="l85-Uq-omd" firstAttribute="leading" secondItem="yxk-K2-m8G" secondAttribute="leadingMargin" id="ScD-TW-A7U"/>
                             <constraint firstItem="Vdg-Mo-t9r" firstAttribute="centerX" secondItem="yxk-K2-m8G" secondAttribute="centerX" id="etq-Sr-UAi"/>
                             <constraint firstItem="Vdg-Mo-t9r" firstAttribute="width" secondItem="yxk-K2-m8G" secondAttribute="width" id="oTL-B9-65X"/>
+                            <constraint firstItem="l85-Uq-omd" firstAttribute="centerY" secondItem="yxk-K2-m8G" secondAttribute="centerY" id="rdl-Ug-BFQ"/>
                             <constraint firstItem="EW7-5A-GIZ" firstAttribute="top" secondItem="Vdg-Mo-t9r" secondAttribute="bottom" id="zzP-nW-PFv"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="adView" destination="Vdg-Mo-t9r" id="ftP-xI-qhx"/>
+                        <outlet property="adViewResultLabel" destination="l85-Uq-omd" id="nMm-Vj-yz1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tby-Bf-Mc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,16 +236,17 @@
         <!--Interstitial Ad-->
         <scene sceneID="nFL-Kc-WSE">
             <objects>
-                <viewController title="Interstitial Ad" id="axh-VQ-Yem" customClass="InterstitialAdViewContoller" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Interstitial Ad" automaticallyAdjustsScrollViewInsets="NO" id="axh-VQ-Yem" customClass="InterstitialAdViewContoller" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hAE-pn-A3m"/>
                         <viewControllerLayoutGuide type="bottom" id="9zs-1r-w2y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Ta-So-ZQO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AR-MG-K8k">
+                                <rect key="frame" x="125.5" y="286.5" width="124" height="30"/>
                                 <state key="normal" title="Interstitial Ad load"/>
                                 <connections>
                                     <action selector="requestInterstitialAd:" destination="axh-VQ-Yem" eventType="touchUpInside" id="0m2-K9-bj7"/>
@@ -239,6 +259,7 @@
                             <constraint firstItem="1AR-MG-K8k" firstAttribute="centerX" secondItem="8Ta-So-ZQO" secondAttribute="centerX" id="m55-UC-tWF"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ck6-50-YD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +268,7 @@
         <!--Native Ad-->
         <scene sceneID="8iC-Bw-c4s">
             <objects>
-                <viewController title="Native Ad" id="tc4-VK-zqS" customClass="NativeAdViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Native Ad" automaticallyAdjustsScrollViewInsets="NO" id="tc4-VK-zqS" customClass="NativeAdViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bIe-Ol-DRS"/>
                         <viewControllerLayoutGuide type="bottom" id="2WK-6M-3jq"/>
@@ -257,7 +278,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwM-oj-oR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,9 +287,9 @@
         <!--Native Ad (TableView)-->
         <scene sceneID="ewX-3u-acY">
             <objects>
-                <viewController title="Native Ad (TableView)" id="12T-wg-Qfb" customClass="NativeAdTableViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Native Ad (TableView)" automaticallyAdjustsScrollViewInsets="NO" id="12T-wg-Qfb" customClass="NativeAdTableViewController" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y10-OE-02R">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -276,6 +297,7 @@
                             <outlet property="delegate" destination="12T-wg-Qfb" id="k5g-dw-WZP"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuG-Jc-VRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
