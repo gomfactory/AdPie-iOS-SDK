@@ -26,7 +26,7 @@
 		A3F34F671DFE996C00E1636C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F661DFE996C00E1636C /* SystemConfiguration.framework */; };
 		A3F34F691DFE997300E1636C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F681DFE997300E1636C /* CoreTelephony.framework */; };
 		A3F34F6B1DFE998A00E1636C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F6A1DFE998A00E1636C /* AdSupport.framework */; };
-		A3F34F841DFE9BA300E1636C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F601DFE988B00E1636C /* WebKit.framework */; };
+		A3F34F841DFE9BA300E1636C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F601DFE988B00E1636C /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A3F34F951DFEA48F00E1636C /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F941DFEA48F00E1636C /* AdPieSDK.framework */; };
 /* End PBXBuildFile section */
 
