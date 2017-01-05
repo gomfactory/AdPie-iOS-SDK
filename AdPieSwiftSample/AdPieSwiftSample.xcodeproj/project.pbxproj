@@ -11,6 +11,7 @@
 		A354F1D91CFD38D70099D551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1D71CFD38D70099D551 /* Main.storyboard */; };
 		A354F1DB1CFD38D70099D551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A354F1DA1CFD38D70099D551 /* Assets.xcassets */; };
 		A354F1EB1CFD3A310099D551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1EA1CFD3A310099D551 /* LaunchScreen.storyboard */; };
+		A3A438451E1E3DAB00C928B1 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A438441E1E3DAB00C928B1 /* AdPieSDK.framework */; };
 		A3E1A3D21DB88E4E009C2158 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A3D11DB88E4E009C2158 /* ViewController.swift */; };
 		A3E1A3DA1DB88F5F009C2158 /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A3D91DB88F5F009C2158 /* BannerAdViewController.swift */; };
 		A3E1A3DC1DB8963D009C2158 /* InterstitialAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A3DB1DB8963D009C2158 /* InterstitialAdViewController.swift */; };
@@ -22,7 +23,6 @@
 		A3E1A3F41DB8B603009C2158 /* AdPieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A3F21DB8B603009C2158 /* AdPieTableViewCell.swift */; };
 		A3E1A3FB1DB9C9EF009C2158 /* AdPieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E1A3FA1DB9C9EF009C2158 /* AdPieTableViewCell.xib */; };
 		A3E1A4051DB9E79E009C2158 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A4041DB9E79E009C2158 /* InfoViewController.swift */; };
-		A3F34F891DFE9D9200E1636C /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F881DFE9D9200E1636C /* AdPieSDK.framework */; };
 		A3F34F8B1DFE9D9B00E1636C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F8A1DFE9D9B00E1636C /* SystemConfiguration.framework */; };
 		A3F34F8D1DFE9DA300E1636C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F8C1DFE9DA300E1636C /* CoreTelephony.framework */; };
 		A3F34F8F1DFE9DB100E1636C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F8E1DFE9DB100E1636C /* AdSupport.framework */; };
@@ -36,6 +36,7 @@
 		A354F1DA1CFD38D70099D551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A354F1DF1CFD38D70099D551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A354F1EA1CFD3A310099D551 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3A438441E1E3DAB00C928B1 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 		A3E1A3D11DB88E4E009C2158 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3E1A3D91DB88F5F009C2158 /* BannerAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
 		A3E1A3DB1DB8963D009C2158 /* InterstitialAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		A3E1A3F21DB8B603009C2158 /* AdPieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdPieTableViewCell.swift; sourceTree = "<group>"; };
 		A3E1A3FA1DB9C9EF009C2158 /* AdPieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdPieTableViewCell.xib; sourceTree = "<group>"; };
 		A3E1A4041DB9E79E009C2158 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		A3F34F881DFE9D9200E1636C /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 		A3F34F8A1DFE9D9B00E1636C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A3F34F8C1DFE9DA300E1636C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A3F34F8E1DFE9DB100E1636C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -62,8 +62,8 @@
 				A3F34F911DFE9DB700E1636C /* WebKit.framework in Frameworks */,
 				A3F34F8F1DFE9DB100E1636C /* AdSupport.framework in Frameworks */,
 				A3F34F8D1DFE9DA300E1636C /* CoreTelephony.framework in Frameworks */,
+				A3A438451E1E3DAB00C928B1 /* AdPieSDK.framework in Frameworks */,
 				A3F34F8B1DFE9D9B00E1636C /* SystemConfiguration.framework in Frameworks */,
-				A3F34F891DFE9D9200E1636C /* AdPieSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +113,11 @@
 		A3F34F851DFE9D3F00E1636C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3A438441E1E3DAB00C928B1 /* AdPieSDK.framework */,
 				A3F34F901DFE9DB700E1636C /* WebKit.framework */,
 				A3F34F8E1DFE9DB100E1636C /* AdSupport.framework */,
 				A3F34F8C1DFE9DA300E1636C /* CoreTelephony.framework */,
 				A3F34F8A1DFE9D9B00E1636C /* SystemConfiguration.framework */,
-				A3F34F881DFE9D9200E1636C /* AdPieSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

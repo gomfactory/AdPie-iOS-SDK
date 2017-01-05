@@ -39,7 +39,7 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
         itemsArray = NSMutableArray()
         
         for index in 1...20{
-            itemsArray.add(String("Item \(index)"))
+            itemsArray.add(String("Item \(index)")!)
         }
 
         // 광고가 존재하는 테이블뷰 셀을 저장하기 위해 생성

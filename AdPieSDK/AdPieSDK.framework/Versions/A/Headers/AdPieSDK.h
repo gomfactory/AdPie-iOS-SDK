@@ -15,12 +15,14 @@
 #import <AdPieSDK/APNativeAdView.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.1.2"
+#define ADPIE_SDK_VERSION @"1.1.3"
 
 @interface AdPieSDK : NSObject
 
 @property(copy, nonatomic) NSString *mediaId;
 @property(nonatomic, readonly) BOOL isInitialized;
+@property(nonatomic, readonly) BOOL isTransportSecurity;
+@property(nonatomic, readonly) BOOL isWebviewSecurity;
 
 + (instancetype)sharedInstance;
 
