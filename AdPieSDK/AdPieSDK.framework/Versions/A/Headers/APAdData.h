@@ -12,7 +12,7 @@
 
 @property(nonatomic, readonly, copy) NSDictionary *dictionary;
 
-@property (nonatomic, assign, readonly) int contentType;
+@property (nonatomic, assign, readonly) int icType;
 @property (nonatomic, strong, readonly) NSString *adm;
 @property (nonatomic, strong, readonly) NSString *admImageTag;
 @property (nonatomic, assign, readonly) int width;
