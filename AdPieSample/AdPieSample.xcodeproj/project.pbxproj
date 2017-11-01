@@ -22,7 +22,7 @@
 		A354F1A21CF7D9AF0099D551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1A01CF7D9AF0099D551 /* Main.storyboard */; };
 		A354F1A41CF7D9AF0099D551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A354F1A31CF7D9AF0099D551 /* Assets.xcassets */; };
 		A354F1BC1CF7E8290099D551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1BB1CF7E8290099D551 /* LaunchScreen.storyboard */; };
-		A36E01B51EF7AF4400235176 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36E01B41EF7AF4400235176 /* AdPieSDK.framework */; };
+		A379791B1FA9FC48007090C9 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379791A1FA9FC48007090C9 /* AdPieSDK.framework */; };
 		A3E1A4031DB9E709009C2158 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A4021DB9E709009C2158 /* InfoViewController.m */; };
 		A3F34F671DFE996C00E1636C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F661DFE996C00E1636C /* SystemConfiguration.framework */; };
 		A3F34F691DFE997300E1636C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F681DFE997300E1636C /* CoreTelephony.framework */; };
@@ -56,7 +56,7 @@
 		A354F1A31CF7D9AF0099D551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A354F1A81CF7D9AF0099D551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A354F1BB1CF7E8290099D551 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A36E01B41EF7AF4400235176 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
+		A379791A1FA9FC48007090C9 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 		A3E1A4011DB9E709009C2158 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		A3E1A4021DB9E709009C2158 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		A3F34F601DFE988B00E1636C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -73,7 +73,7 @@
 				A3F34F841DFE9BA300E1636C /* WebKit.framework in Frameworks */,
 				A3F34F6B1DFE998A00E1636C /* AdSupport.framework in Frameworks */,
 				A3F34F691DFE997300E1636C /* CoreTelephony.framework in Frameworks */,
-				A36E01B51EF7AF4400235176 /* AdPieSDK.framework in Frameworks */,
+				A379791B1FA9FC48007090C9 /* AdPieSDK.framework in Frameworks */,
 				A3F34F671DFE996C00E1636C /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +142,7 @@
 		A3F34F5F1DFE988B00E1636C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A36E01B41EF7AF4400235176 /* AdPieSDK.framework */,
+				A379791A1FA9FC48007090C9 /* AdPieSDK.framework */,
 				A3F34F6A1DFE998A00E1636C /* AdSupport.framework */,
 				A3F34F681DFE997300E1636C /* CoreTelephony.framework */,
 				A3F34F661DFE996C00E1636C /* SystemConfiguration.framework */,
@@ -177,7 +177,7 @@
 		A354F18C1CF7D9AF0099D551 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = GomFactory;
 				TargetAttributes = {
 					A354F1931CF7D9AF0099D551 = {
@@ -261,14 +261,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -310,14 +316,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -357,7 +369,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AdPieSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
@@ -380,7 +392,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AdPieSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
