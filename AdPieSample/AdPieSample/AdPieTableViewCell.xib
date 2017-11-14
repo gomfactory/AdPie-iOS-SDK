@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,77 +13,91 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" userLabel="AdPie Table View Cell" customClass="AdPieTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="524" height="366"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="405" id="KGk-i7-Jjw" userLabel="AdPie Table View Cell" customClass="AdPieTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="524" height="405"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="524" height="365"/>
+                <rect key="frame" x="0.0" y="0.0" width="524" height="404.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMk-Ih-otk" customClass="APNativeAdView">
+                        <rect key="frame" x="8" y="8" width="508" height="388.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-ea-btI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-ea-btI">
+                                <rect key="frame" x="8" y="8" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UWl-vp-Htw"/>
                                     <constraint firstAttribute="width" constant="40" id="XCm-PX-rUG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="458" translatesAutoresizingMaskIntoConstraints="NO" id="AD6-aY-uEM">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="458" translatesAutoresizingMaskIntoConstraints="NO" id="AD6-aY-uEM">
+                                <rect key="frame" x="53" y="18.5" width="422" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHW-DS-JwR" customClass="APMainAdView">
+                                <rect key="frame" x="8" y="80.5" width="492" height="257"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="OHW-DS-JwR" secondAttribute="height" multiplier="1200:627" id="Dgz-r3-q89"/>
+                                    <constraint firstAttribute="width" secondItem="OHW-DS-JwR" secondAttribute="height" multiplier="1200:627" priority="750" id="Qfn-dh-f1K"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="498" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-9I-ohV">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-9I-ohV">
+                                <rect key="frame" x="8" y="53" width="492" height="22.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hA-3H-u7S">
+                                <rect key="frame" x="8" y="342.5" width="492" height="38"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AD6-aY-uEM" firstAttribute="centerY" secondItem="omZ-ea-btI" secondAttribute="centerY" id="0Lk-BZ-2fD"/>
-                            <constraint firstItem="omZ-ea-btI" firstAttribute="leading" secondItem="OHW-DS-JwR" secondAttribute="leading" id="5oc-5t-ghJ"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="width" relation="lessThanOrEqual" secondItem="wMk-Ih-otk" secondAttribute="width" id="7Ob-BJ-9EX"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="bottom" secondItem="wMk-Ih-otk" secondAttribute="bottomMargin" id="7S8-55-JTb"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="height" relation="lessThanOrEqual" secondItem="wMk-Ih-otk" secondAttribute="height" id="9Ka-z6-uG4"/>
-                            <constraint firstItem="AD6-aY-uEM" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailingMargin" id="AyV-lg-zQL"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="height" secondItem="wMk-Ih-otk" secondAttribute="height" priority="750" id="Dvj-6B-IIB"/>
-                            <constraint firstItem="omZ-ea-btI" firstAttribute="bottom" secondItem="OHW-DS-JwR" secondAttribute="top" constant="-5" id="RJf-H7-key"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="top" secondItem="OHW-DS-JwR" secondAttribute="bottom" constant="5" id="Zls-nF-mcq"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="centerX" secondItem="wMk-Ih-otk" secondAttribute="centerX" id="bxd-Uu-d0U"/>
+                            <constraint firstItem="omZ-ea-btI" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leadingMargin" id="5oc-5t-ghJ"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailingMargin" id="7Rr-uR-cG0"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="top" secondItem="B7r-9I-ohV" secondAttribute="bottom" constant="5" id="8iY-U1-m9M"/>
+                            <constraint firstItem="AD6-aY-uEM" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailingMargin" constant="-25" id="AyV-lg-zQL"/>
+                            <constraint firstItem="9hA-3H-u7S" firstAttribute="bottom" secondItem="wMk-Ih-otk" secondAttribute="bottomMargin" id="P6a-v3-Myj"/>
+                            <constraint firstItem="9hA-3H-u7S" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leadingMargin" id="Uxo-tJ-Kli"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="top" secondItem="omZ-ea-btI" secondAttribute="bottom" constant="5" id="Zls-nF-mcq"/>
+                            <constraint firstItem="9hA-3H-u7S" firstAttribute="top" secondItem="OHW-DS-JwR" secondAttribute="bottom" constant="5" id="bsw-1k-5CF"/>
                             <constraint firstItem="AD6-aY-uEM" firstAttribute="leading" secondItem="omZ-ea-btI" secondAttribute="trailing" constant="5" id="cBI-9g-mHJ"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="leading" secondItem="OHW-DS-JwR" secondAttribute="leading" id="h35-ok-yiE"/>
-                            <constraint firstItem="B7r-9I-ohV" firstAttribute="trailing" secondItem="OHW-DS-JwR" secondAttribute="trailing" id="kwS-ub-TRc"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leadingMargin" id="h35-ok-yiE"/>
+                            <constraint firstItem="B7r-9I-ohV" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailingMargin" id="kwS-ub-TRc"/>
+                            <constraint firstItem="OHW-DS-JwR" firstAttribute="leading" secondItem="wMk-Ih-otk" secondAttribute="leadingMargin" id="qKt-VW-5Zc"/>
                             <constraint firstItem="omZ-ea-btI" firstAttribute="top" secondItem="wMk-Ih-otk" secondAttribute="topMargin" id="rwC-9T-5J6"/>
-                            <constraint firstItem="OHW-DS-JwR" firstAttribute="width" secondItem="wMk-Ih-otk" secondAttribute="width" priority="750" id="sHy-x8-At9"/>
-                            <constraint firstItem="omZ-ea-btI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wMk-Ih-otk" secondAttribute="leadingMargin" id="zC5-9N-5Sa"/>
+                            <constraint firstItem="9hA-3H-u7S" firstAttribute="trailing" secondItem="wMk-Ih-otk" secondAttribute="trailingMargin" id="vxf-Dz-X9w"/>
                         </constraints>
                         <connections>
+                            <outlet property="callToActionButton" destination="9hA-3H-u7S" id="jaD-Q3-nQ4"/>
                             <outlet property="descriptionLabel" destination="B7r-9I-ohV" id="wFB-uu-Zft"/>
                             <outlet property="iconImageView" destination="omZ-ea-btI" id="yKu-TP-9CX"/>
                             <outlet property="mainAdView" destination="OHW-DS-JwR" id="ara-sL-w6v"/>
-                            <outlet property="mainAdViewAspectRatioConstraint" destination="Dgz-r3-q89" id="1lo-6G-0Cu"/>
+                            <outlet property="mainAdViewAspectRatioConstraint" destination="Qfn-dh-f1K" id="HSt-VK-ywf"/>
                             <outlet property="titleLabel" destination="AD6-aY-uEM" id="RxJ-3Q-QJr"/>
                         </connections>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Z3k-QW-eQn"/>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="uW1-X3-wqF"/>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="v6V-o4-fFd"/>
-                    <constraint firstItem="wMk-Ih-otk" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="wgb-wM-awk"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Z3k-QW-eQn"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="uW1-X3-wqF"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="v6V-o4-fFd"/>
+                    <constraint firstItem="wMk-Ih-otk" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="wgb-wM-awk"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nativeAdView" destination="wMk-Ih-otk" id="brg-kI-3dd"/>
             </connections>
-            <point key="canvasLocation" x="242" y="-212"/>
+            <point key="canvasLocation" x="242" y="-192.5"/>
         </tableViewCell>
     </objects>
 </document>

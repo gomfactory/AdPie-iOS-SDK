@@ -12,6 +12,6 @@
 
 @property(nonatomic) UIImageView *imageView;
 
-- (void)setMainImage:(NSString *)url;
+- (void)changeAspectRatio:(float) aspectRatio;
 
 @end

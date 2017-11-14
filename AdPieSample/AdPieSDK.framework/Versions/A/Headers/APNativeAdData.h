@@ -38,6 +38,9 @@ typedef enum
 
 @property(nonatomic, readonly, copy) NSArray *assetType;
 
+@property(nonatomic, readonly, copy) NSString *optoutImageUrl;
+@property(nonatomic, readonly, copy) NSString *optoutLink;
+
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

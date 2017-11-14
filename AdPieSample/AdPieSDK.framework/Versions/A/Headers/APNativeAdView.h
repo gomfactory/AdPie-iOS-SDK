@@ -18,6 +18,7 @@
 @property(weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property(weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property(weak, nonatomic) IBOutlet APMainAdView *mainAdView;
+@property(weak, nonatomic) IBOutlet UIButton *callToActionButton;
 
 @property(nonatomic, readonly) bool isValidLayout;
 
