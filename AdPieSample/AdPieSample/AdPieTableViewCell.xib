@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,14 +36,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHW-DS-JwR" customClass="APMainAdView">
-                                <rect key="frame" x="8" y="80.5" width="492" height="257"/>
+                                <rect key="frame" x="8" y="75" width="492" height="262.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OHW-DS-JwR" secondAttribute="height" multiplier="1200:627" priority="750" id="Qfn-dh-f1K"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="B7r-9I-ohV">
-                                <rect key="frame" x="8" y="53" width="492" height="22.5"/>
+                                <rect key="frame" x="8" y="53" width="492" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,7 +78,6 @@
                             <outlet property="descriptionLabel" destination="B7r-9I-ohV" id="wFB-uu-Zft"/>
                             <outlet property="iconImageView" destination="omZ-ea-btI" id="yKu-TP-9CX"/>
                             <outlet property="mainAdView" destination="OHW-DS-JwR" id="ara-sL-w6v"/>
-                            <outlet property="mainAdViewAspectRatioConstraint" destination="Qfn-dh-f1K" id="HSt-VK-ywf"/>
                             <outlet property="titleLabel" destination="AD6-aY-uEM" id="RxJ-3Q-QJr"/>
                         </connections>
                     </view>

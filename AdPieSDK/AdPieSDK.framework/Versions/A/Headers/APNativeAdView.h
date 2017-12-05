@@ -22,8 +22,6 @@
 
 @property(nonatomic, readonly) bool isValidLayout;
 
-@property(nonatomic) IBOutlet NSLayoutConstraint *mainAdViewAspectRatioConstraint;
-
 @property(weak, nonatomic) id<APNativeAdViewDelegate> delegate;
 
 - (BOOL)fillAd:(APNativeAdData *)adData;

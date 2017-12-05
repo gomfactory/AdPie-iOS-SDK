@@ -40,7 +40,7 @@
                     <rect key="frame" x="20" y="87.000000000000014" width="374" height="195.33333333333337"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="PqX-BC-wnx" secondAttribute="height" multiplier="1200:627" priority="750" id="N1T-K6-Twi"/>
+                        <constraint firstAttribute="width" secondItem="PqX-BC-wnx" secondAttribute="height" multiplier="1200:627" priority="750" placeholder="YES" id="N1T-K6-Twi"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u38-Wt-qV8">
@@ -75,7 +75,6 @@
                 <outlet property="descriptionLabel" destination="ycf-rF-B1I" id="VDy-RH-Qhb"/>
                 <outlet property="iconImageView" destination="fjB-I5-6wZ" id="diy-TI-iq7"/>
                 <outlet property="mainAdView" destination="PqX-BC-wnx" id="81L-1u-JPO"/>
-                <outlet property="mainAdViewAspectRatioConstraint" destination="N1T-K6-Twi" id="p9n-ZR-gxa"/>
                 <outlet property="titleLabel" destination="NVd-WH-KCQ" id="UUZ-mp-enf"/>
             </connections>
             <point key="canvasLocation" x="187.5" y="194.5"/>

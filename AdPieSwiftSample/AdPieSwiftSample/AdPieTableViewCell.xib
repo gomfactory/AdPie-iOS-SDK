@@ -82,7 +82,6 @@
                             <outlet property="descriptionLabel" destination="B7r-9I-ohV" id="wFB-uu-Zft"/>
                             <outlet property="iconImageView" destination="omZ-ea-btI" id="yKu-TP-9CX"/>
                             <outlet property="mainAdView" destination="OHW-DS-JwR" id="ara-sL-w6v"/>
-                            <outlet property="mainAdViewAspectRatioConstraint" destination="Qfn-dh-f1K" id="HSt-VK-ywf"/>
                             <outlet property="titleLabel" destination="AD6-aY-uEM" id="RxJ-3Q-QJr"/>
                         </connections>
                     </view>
