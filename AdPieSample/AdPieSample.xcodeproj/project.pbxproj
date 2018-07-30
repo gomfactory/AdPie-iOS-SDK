@@ -22,7 +22,7 @@
 		A354F1BC1CF7E8290099D551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1BB1CF7E8290099D551 /* LaunchScreen.storyboard */; };
 		A373AC021FBAE6C800DB6D3C /* AdPieNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A373AC011FBAE6C800DB6D3C /* AdPieNativeAdView.xib */; };
 		A373AC041FBAE70600DB6D3C /* AdPieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A373AC031FBAE70600DB6D3C /* AdPieTableViewCell.xib */; };
-		A3DC19281FD695A600158729 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC19271FD695A600158729 /* AdPieSDK.framework */; };
+		A3DF0D35210ACD1E00C9B9C0 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DF0D34210ACD1E00C9B9C0 /* AdPieSDK.framework */; };
 		A3E1A4031DB9E709009C2158 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1A4021DB9E709009C2158 /* InfoViewController.m */; };
 		A3F34F671DFE996C00E1636C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F661DFE996C00E1636C /* SystemConfiguration.framework */; };
 		A3F34F691DFE997300E1636C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F681DFE997300E1636C /* CoreTelephony.framework */; };
@@ -56,7 +56,7 @@
 		A354F1BB1CF7E8290099D551 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A373AC011FBAE6C800DB6D3C /* AdPieNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdPieNativeAdView.xib; sourceTree = "<group>"; };
 		A373AC031FBAE70600DB6D3C /* AdPieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdPieTableViewCell.xib; sourceTree = "<group>"; };
-		A3DC19271FD695A600158729 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
+		A3DF0D34210ACD1E00C9B9C0 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
 		A3E1A4011DB9E709009C2158 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		A3E1A4021DB9E709009C2158 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		A3F34F601DFE988B00E1636C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -73,7 +73,7 @@
 				A3F34F841DFE9BA300E1636C /* WebKit.framework in Frameworks */,
 				A3F34F6B1DFE998A00E1636C /* AdSupport.framework in Frameworks */,
 				A3F34F691DFE997300E1636C /* CoreTelephony.framework in Frameworks */,
-				A3DC19281FD695A600158729 /* AdPieSDK.framework in Frameworks */,
+				A3DF0D35210ACD1E00C9B9C0 /* AdPieSDK.framework in Frameworks */,
 				A3F34F671DFE996C00E1636C /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +142,7 @@
 		A3F34F5F1DFE988B00E1636C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3DC19271FD695A600158729 /* AdPieSDK.framework */,
+				A3DF0D34210ACD1E00C9B9C0 /* AdPieSDK.framework */,
 				A3F34F6A1DFE998A00E1636C /* AdSupport.framework */,
 				A3F34F681DFE997300E1636C /* CoreTelephony.framework */,
 				A3F34F661DFE996C00E1636C /* SystemConfiguration.framework */,
@@ -177,7 +177,7 @@
 		A354F18C1CF7D9AF0099D551 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = GomFactory;
 				TargetAttributes = {
 					A354F1931CF7D9AF0099D551 = {
@@ -265,12 +265,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -320,12 +322,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -369,7 +373,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AdPieSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
@@ -392,7 +396,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AdPieSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";

@@ -17,15 +17,13 @@
 @property (nonatomic, strong, readonly) NSString *admImageTag;
 @property (nonatomic, assign, readonly) int width;
 @property (nonatomic, assign, readonly) int height;
-
 @property (nonatomic, strong, readonly) NSString *impUrl;
 @property (nonatomic, strong, readonly) NSString *clkUrl;
-
 @property (nonatomic, strong, readonly) NSString *bgColor;
-
 @property (nonatomic, assign, readonly) BOOL isScalable;
 @property (nonatomic, assign, readonly) int position;
 @property (nonatomic, assign, readonly) int animationType;
+@property (nonatomic, assign, readonly) int act;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
