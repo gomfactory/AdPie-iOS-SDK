@@ -15,7 +15,7 @@
 #import <AdPieSDK/APNativeAdView.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.2.0"
+#define ADPIE_SDK_VERSION @"1.2.1"
 
 @interface AdPieSDK : NSObject
 
