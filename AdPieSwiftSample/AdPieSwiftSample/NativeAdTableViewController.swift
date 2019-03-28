@@ -28,7 +28,7 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
         
         // 동적으로 셀의 크기 지정
         if #available(iOS 8.0, *) {
-            tableView.rowHeight = UITableViewAutomaticDimension;
+            tableView.rowHeight = UITableView.automaticDimension;
             tableView.estimatedRowHeight = 300;
         }
         
@@ -118,7 +118,7 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
             
             if isValidLayout {
                 if #available(iOS 8.0, *) {
-                    return UITableViewAutomaticDimension
+                    return UITableView.automaticDimension
                 } else {
                     return 300;
                 }
@@ -127,7 +127,7 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
             }
         } else {
             if #available(iOS 8.0, *) {
-                return UITableViewAutomaticDimension
+                return UITableView.automaticDimension
             } else {
                 return tableView.rowHeight
             }
@@ -185,9 +185,9 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
         // 광고 요청 완료 후 이벤트 발생
         if nativeAd.nativeAdData != nil {
             if itemsArray.object(at: adRowIndex) is APNativeAdData {
-                itemsArray.replaceObject(at: adRowIndex, with: nativeAd.nativeAdData)
+                itemsArray.replaceObject(at: adRowIndex, with: nativeAd.nativeAdData!)
             } else {
-                itemsArray.insert(nativeAd.nativeAdData, at: adRowIndex)
+                itemsArray.insert(nativeAd.nativeAdData!, at: adRowIndex)
             }
         }
         

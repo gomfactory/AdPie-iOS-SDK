@@ -15,7 +15,9 @@
 #import <AdPieSDK/APNativeAdView.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.2.2"
+#define ADPIE_SDK_VERSION @"1.2.3"
+
+typedef void (^ResultBlock)(BOOL isInitialized);
 
 @interface AdPieSDK : NSObject
 
@@ -30,6 +32,8 @@
 
 - (void)initWithMediaId:(NSString *)mediaId;
 - (void)initWithMediaId:(NSString *)mediaId withData:(NSData *)data;
+- (void)initWithMediaId:(NSString *)mediaId completion:(ResultBlock)result;
 - (void)logging;
+- (void)openURLwithString:(NSString *)url;
 
 @end

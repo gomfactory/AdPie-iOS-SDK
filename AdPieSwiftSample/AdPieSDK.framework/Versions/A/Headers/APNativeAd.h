@@ -26,6 +26,10 @@
 
 - (void)registerViewForInteraction:(APNativeAdView *)nativeAdView;
 
+- (void)fireImpression;
+
+- (void)invokeDefaultAction;
+
 @end
 
 @protocol APNativeDelegate <NSObject>
