@@ -11,8 +11,8 @@
 #import "AdPieConfig.h"
 #import <AdPieSDK/APInterstitial.h>
 
-static NSString * const kAdPieMediaId = @"media_id";
-static NSString * const kAdPieSlotId = @"slot_id";
+static NSString * const kAdPieMediaId = @"mediaId";
+static NSString * const kAdPieSlotId = @"slotId";
 
 @interface  AdPieInterstitialCustomEvent() <APInterstitialDelegate>
 

@@ -11,10 +11,10 @@
 #import "AdPieConfig.h"
 #import <AdPieSDK/APAdView.h>
 
-static NSString * const kAdPieMediaId = @"media_id";
-static NSString * const kAdPieSlotId = @"slot_id";
-static NSString * const kAdPieAdWidth = @"ad_width";
-static NSString * const kAdPieAdHeight = @"ad_height";
+static NSString * const kAdPieMediaId = @"mediaId";
+static NSString * const kAdPieSlotId = @"slotId";
+static NSString * const kAdPieAdWidth = @"adWidth";
+static NSString * const kAdPieAdHeight = @"adHeight";
 
 @interface AdPieBannerCustomEvent () <APAdViewDelegate>
 

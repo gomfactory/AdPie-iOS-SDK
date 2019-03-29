@@ -12,8 +12,8 @@
 #import "AdPieNativeAdAdapter.h"
 #import <AdPieSDK/APNativeAd.h>
 
-static NSString * const kAdPieMediaId = @"media_id";
-static NSString * const kAdPieSlotId = @"slot_id";
+static NSString * const kAdPieMediaId = @"mediaId";
+static NSString * const kAdPieSlotId = @"slotId";
 
 @interface AdPieNativeCustomEvent () <APNativeDelegate>
 

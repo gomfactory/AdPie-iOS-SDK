@@ -10,7 +10,7 @@
 #import <AdPieSDK/AdPieSDK.h>
 #import "AdPieConfig.h"
 
-static NSString * const kAdPieMediaId = @"media_id";
+static NSString * const kAdPieMediaId = @"mediaId";
 static NSString * const kAdapterErrorDomain = @"com.mopub.mopub-ios-sdk.mopub-adpie-adapters";
 
 typedef NS_ENUM(NSInteger, AdPieAdapterErrorCode) {
