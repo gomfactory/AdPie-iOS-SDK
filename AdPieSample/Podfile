@@ -1,0 +1,3 @@
+target 'AdPieSample' do
+	pod 'AdPieSDK', '~> 1.2'
+end

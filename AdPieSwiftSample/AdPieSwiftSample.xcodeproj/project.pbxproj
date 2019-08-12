@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A319820F224CC55900E916E8 /* AdPieSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319820E224CC55900E916E8 /* AdPieSDK.framework */; };
 		A354F1D41CFD38D70099D551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A354F1D31CFD38D70099D551 /* AppDelegate.swift */; };
 		A354F1D91CFD38D70099D551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1D71CFD38D70099D551 /* Main.storyboard */; };
 		A354F1DB1CFD38D70099D551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A354F1DA1CFD38D70099D551 /* Assets.xcassets */; };
@@ -27,10 +26,11 @@
 		A3F34F8D1DFE9DA300E1636C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F8C1DFE9DA300E1636C /* CoreTelephony.framework */; };
 		A3F34F8F1DFE9DB100E1636C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F8E1DFE9DB100E1636C /* AdSupport.framework */; };
 		A3F34F911DFE9DB700E1636C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F34F901DFE9DB700E1636C /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB87F202F8AE3C70814CF8F9 /* libPods-AdPieSwiftSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5B261E2B7FDF6A16D28EBA /* libPods-AdPieSwiftSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A319820E224CC55900E916E8 /* AdPieSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdPieSDK.framework; sourceTree = "<group>"; };
+		239DF1EFEDAE82CB015C6270 /* Pods-AdPieSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdPieSwiftSample.release.xcconfig"; path = "Target Support Files/Pods-AdPieSwiftSample/Pods-AdPieSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
 		A354F1D01CFD38D70099D551 /* AdPieSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdPieSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A354F1D31CFD38D70099D551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A354F1D81CFD38D70099D551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		A3F34F8C1DFE9DA300E1636C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A3F34F8E1DFE9DB100E1636C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A3F34F901DFE9DB700E1636C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AECE81689968FE5788688151 /* Pods-AdPieSwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdPieSwiftSample.debug.xcconfig"; path = "Target Support Files/Pods-AdPieSwiftSample/Pods-AdPieSwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
+		EF5B261E2B7FDF6A16D28EBA /* libPods-AdPieSwiftSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdPieSwiftSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,8 @@
 				A3F34F911DFE9DB700E1636C /* WebKit.framework in Frameworks */,
 				A3F34F8F1DFE9DB100E1636C /* AdSupport.framework in Frameworks */,
 				A3F34F8D1DFE9DA300E1636C /* CoreTelephony.framework in Frameworks */,
-				A319820F224CC55900E916E8 /* AdPieSDK.framework in Frameworks */,
 				A3F34F8B1DFE9D9B00E1636C /* SystemConfiguration.framework in Frameworks */,
+				EB87F202F8AE3C70814CF8F9 /* libPods-AdPieSwiftSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,7 @@
 				A3F34F851DFE9D3F00E1636C /* Frameworks */,
 				A354F1D21CFD38D70099D551 /* AdPieSwiftSample */,
 				A354F1D11CFD38D70099D551 /* Products */,
+				BA946DDF1F2F00244332E5DE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,13 +116,23 @@
 		A3F34F851DFE9D3F00E1636C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A319820E224CC55900E916E8 /* AdPieSDK.framework */,
 				A3F34F901DFE9DB700E1636C /* WebKit.framework */,
 				A3F34F8E1DFE9DB100E1636C /* AdSupport.framework */,
 				A3F34F8C1DFE9DA300E1636C /* CoreTelephony.framework */,
 				A3F34F8A1DFE9D9B00E1636C /* SystemConfiguration.framework */,
+				EF5B261E2B7FDF6A16D28EBA /* libPods-AdPieSwiftSample.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA946DDF1F2F00244332E5DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AECE81689968FE5788688151 /* Pods-AdPieSwiftSample.debug.xcconfig */,
+				239DF1EFEDAE82CB015C6270 /* Pods-AdPieSwiftSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A354F1E21CFD38D70099D551 /* Build configuration list for PBXNativeTarget "AdPieSwiftSample" */;
 			buildPhases = (
+				1831A4277F4D8FEEAF917210 /* [CP] Check Pods Manifest.lock */,
 				A354F1CC1CFD38D70099D551 /* Sources */,
 				A354F1CD1CFD38D70099D551 /* Frameworks */,
 				A354F1CE1CFD38D70099D551 /* Resources */,
@@ -193,6 +207,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1831A4277F4D8FEEAF917210 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdPieSwiftSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A354F1CC1CFD38D70099D551 /* Sources */ = {
@@ -335,6 +374,7 @@
 		};
 		A354F1E31CFD38D70099D551 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AECE81689968FE5788688151 /* Pods-AdPieSwiftSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -359,6 +399,7 @@
 		};
 		A354F1E41CFD38D70099D551 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 239DF1EFEDAE82CB015C6270 /* Pods-AdPieSwiftSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -1,0 +1,16 @@
+PODS:
+  - AdPieSDK (1.2.4)
+
+DEPENDENCIES:
+  - AdPieSDK (~> 1.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AdPieSDK
+
+SPEC CHECKSUMS:
+  AdPieSDK: 47b1145a6eb4fc5c919842061d7ef83b813f5903
+
+PODFILE CHECKSUM: 00be6195e78a58e076820234c2cbad9dd91d2b77
+
+COCOAPODS: 1.7.4
