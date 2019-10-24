@@ -25,6 +25,10 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         
         // 광고 요청
         nativeAd.load()
+        
+        if #available(iOS 13, *) {
+            view.backgroundColor = .systemBackground
+        }
     }
     
     override func didReceiveMemoryWarning() {

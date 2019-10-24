@@ -30,6 +30,10 @@ class BannerAdViewContoller: UIViewController, APAdViewDelegate {
         
         // 광고 요청
         adView.load()
+        
+        if #available(iOS 13, *) {
+            view.backgroundColor = .systemBackground
+        }
     }
     
     override func didReceiveMemoryWarning() {

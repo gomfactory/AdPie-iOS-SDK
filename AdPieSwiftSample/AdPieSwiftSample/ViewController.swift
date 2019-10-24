@@ -9,5 +9,10 @@
 import UIKit
 
 class ViewController : UITableViewController {
-    
+    override func viewDidLoad() {
+        if #available(iOS 13, *) {
+            view.backgroundColor = .systemBackground
+            tableView.backgroundColor = .systemBackground
+        }
+    }
 }

@@ -59,6 +59,11 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
         
         // 광고 요청
         nativeAd.load()
+        
+        if #available(iOS 13, *) {
+            view.backgroundColor = .systemBackground
+            tableView.backgroundColor = .systemBackground
+        }
     }
     
     override func didReceiveMemoryWarning() {

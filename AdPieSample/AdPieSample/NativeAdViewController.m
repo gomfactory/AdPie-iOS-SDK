@@ -24,6 +24,10 @@
     
     // 광고 요청
     [self.nativeAd load];
+    
+    if (@available(iOS 13, *)) {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

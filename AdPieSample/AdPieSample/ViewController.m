@@ -11,6 +11,10 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    if (@available(iOS 13, *)) {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+        self.tableView.backgroundColor = UIColor.systemBackgroundColor;
+    }
 }
 
 @end

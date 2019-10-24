@@ -22,6 +22,10 @@ class InterstitialAdViewContoller: UIViewController, APInterstitialDelegate {
         interstitial = APInterstitial(slotId: "573430057174ea39844cac16")
         // 델리게이트 등록
         interstitial.delegate = self
+        
+        if #available(iOS 13, *) {
+            view.backgroundColor = .systemBackground
+        }
     }
     
     override func didReceiveMemoryWarning() {

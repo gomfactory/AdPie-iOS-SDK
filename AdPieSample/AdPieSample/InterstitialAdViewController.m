@@ -22,6 +22,10 @@
     self.interstitial = [[APInterstitial alloc] initWithSlotId:@"573430057174ea39844cac16"];
     // 델리게이트 등록
     self.interstitial.delegate = self;
+    
+    if (@available(iOS 13, *)) {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+    }
 }
 
 - (IBAction)requestInterstitialAd:(id)sender {

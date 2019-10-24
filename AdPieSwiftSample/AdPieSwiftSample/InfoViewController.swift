@@ -19,6 +19,10 @@ class InfoViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         sdkInfoLabel?.text = AdPieSDK.sdkVersion()
+        
+        if #available(iOS 13, *) {
+            view.backgroundColor = .systemBackground
+        }
     }
 
     override func didReceiveMemoryWarning() {

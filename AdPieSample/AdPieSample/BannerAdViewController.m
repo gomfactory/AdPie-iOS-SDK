@@ -29,6 +29,10 @@
     
     // 광고 요청
     [self.adView load];
+    
+    if (@available(iOS 13, *)) {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

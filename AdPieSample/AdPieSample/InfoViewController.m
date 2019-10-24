@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view.
     
     self.sdkInfoLabel.text = [AdPieSDK sdkVersion];
+    
+    if (@available(iOS 13, *)) {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
