@@ -33,9 +33,6 @@ typedef enum
 
 @property(nonatomic, readonly, copy) NSString *link;
 
-@property(nonatomic, readonly, copy) NSArray *impTrackers;
-@property(nonatomic, readonly, copy) NSArray *clickTrackers;
-
 @property(nonatomic, readonly, copy) NSArray *assetType;
 
 @property(nonatomic, readonly, copy) NSString *optoutImageUrl;

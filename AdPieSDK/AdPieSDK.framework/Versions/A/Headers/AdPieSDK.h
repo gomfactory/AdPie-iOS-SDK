@@ -15,7 +15,7 @@
 #import <AdPieSDK/APNativeAdView.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.2.6"
+#define ADPIE_SDK_VERSION @"1.2.7"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 
@@ -25,6 +25,7 @@ typedef void (^ResultBlock)(BOOL isInitialized);
 @property(nonatomic, readonly) BOOL isInitialized;
 @property(nonatomic, readonly) BOOL isTransportSecurity;
 @property(nonatomic, readonly) BOOL isWebviewSecurity;
+@property(nonatomic) BOOL isOneOfMediation;
 
 + (instancetype)sharedInstance;
 
