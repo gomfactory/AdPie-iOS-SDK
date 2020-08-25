@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AdPieSDK"
-  spec.version      = "1.2.6"
+  spec.version      = "1.2.7"
   spec.summary      = "AdPie Ads SDK."
   spec.description  = "The AdPie SDK allows developers to easily incorporate banner, interstitial and native ads. It will benefit developers a lot."
   spec.homepage     = "https://github.com/gomfactory/AdPie-iOS-SDK"
