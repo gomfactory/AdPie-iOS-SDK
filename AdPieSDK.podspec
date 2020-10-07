@@ -19,4 +19,6 @@ Pod::Spec.new do |spec|
   spec.frameworks = "AdSupport", "CoreTelephony", "SystemConfiguration"
   spec.weak_frameworks = "WebKit"
   spec.xcconfig  =  { "OTHER_LDFLAGS" => "-ObjC", "LIBRARY_SEARCH_PATHS" => "$(SRCROOT)/Pods/AdPieSDK" }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
