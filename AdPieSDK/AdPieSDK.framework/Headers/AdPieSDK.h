@@ -15,7 +15,7 @@
 #import <AdPieSDK/APNativeAdView.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.2.9"
+#define ADPIE_SDK_VERSION @"1.2.10"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 
