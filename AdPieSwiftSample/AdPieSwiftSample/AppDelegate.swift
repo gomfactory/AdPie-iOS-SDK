@@ -8,6 +8,7 @@
 
 import UIKit
 import AdPieSDK
+import AppTrackingTransparency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,10 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // 디버깅 적용
-        // AdPieSDK.sharedInstance().logging()
+        AdPieSDK.sharedInstance().logging()
         
-        // SDK 초기화
-        AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+        if #available(iOS 14, *) {
+            // ATT 알림을 통한 권한 요청
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                // SDK 초기화
+                AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+            })
+        } else {
+            // SDK 초기화
+            AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+        }
         
         return true
     }

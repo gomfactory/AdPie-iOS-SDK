@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30F9B65279557710037C47D /* RewardedAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F9B64279557710037C47D /* RewardedAdViewController.swift */; };
 		A354F1D41CFD38D70099D551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A354F1D31CFD38D70099D551 /* AppDelegate.swift */; };
 		A354F1D91CFD38D70099D551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A354F1D71CFD38D70099D551 /* Main.storyboard */; };
 		A354F1DB1CFD38D70099D551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A354F1DA1CFD38D70099D551 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		239DF1EFEDAE82CB015C6270 /* Pods-AdPieSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdPieSwiftSample.release.xcconfig"; path = "Target Support Files/Pods-AdPieSwiftSample/Pods-AdPieSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
+		A30F9B64279557710037C47D /* RewardedAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdViewController.swift; sourceTree = "<group>"; };
 		A354F1D01CFD38D70099D551 /* AdPieSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdPieSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A354F1D31CFD38D70099D551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A354F1D81CFD38D70099D551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				A3E1A3D91DB88F5F009C2158 /* BannerAdViewController.swift */,
 				A3E1A3DB1DB8963D009C2158 /* InterstitialAdViewController.swift */,
 				A3E1A3DD1DB896E7009C2158 /* NativeAdViewController.swift */,
+				A30F9B64279557710037C47D /* RewardedAdViewController.swift */,
 				A373AC0B1FBAEFB500DB6D3C /* AdPieNativeAdView.xib */,
 				A3E1A3DF1DB8971C009C2158 /* NativeAdTableViewController.swift */,
 				A3E1A3EE1DB8B5E8009C2158 /* SimpleTableViewCell.swift */,
@@ -167,7 +170,7 @@
 				TargetAttributes = {
 					A354F1CF1CFD38D70099D551 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AMNALPNZ69;
+						DevelopmentTeam = 6V6UAGM9A4;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
@@ -244,6 +247,7 @@
 				A3E1A3DC1DB8963D009C2158 /* InterstitialAdViewController.swift in Sources */,
 				A3E1A3DA1DB88F5F009C2158 /* BannerAdViewController.swift in Sources */,
 				A3E1A3F01DB8B5E9009C2158 /* SimpleTableViewCell.swift in Sources */,
+				A30F9B65279557710037C47D /* RewardedAdViewController.swift in Sources */,
 				A354F1D41CFD38D70099D551 /* AppDelegate.swift in Sources */,
 				A3E1A3E01DB8971C009C2158 /* NativeAdTableViewController.swift in Sources */,
 			);
@@ -380,7 +384,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AMNALPNZ69;
+				DEVELOPMENT_TEAM = 6V6UAGM9A4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -405,7 +409,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AMNALPNZ69;
+				DEVELOPMENT_TEAM = 6V6UAGM9A4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

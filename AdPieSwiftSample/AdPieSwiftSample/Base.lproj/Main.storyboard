@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPU-el-Kr0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qPU-el-Kr0">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,7 @@
                             <tableViewSection headerTitle="AD TYPE" id="lOJ-Qj-bh1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ezf-m5-WWP" style="IBUITableViewCellStyleDefault" id="tt1-Xl-D5X">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tt1-Xl-D5X" id="z9z-Mf-CBb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="No4-Wg-QzA" style="IBUITableViewCellStyleDefault" id="e3G-lQ-aFe">
-                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3G-lQ-aFe" id="gxY-VZ-cWR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -57,7 +57,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="2JK-Ps-NIU" style="IBUITableViewCellStyleDefault" id="qJy-zk-mNV">
-                                        <rect key="frame" x="0.0" y="143.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="137.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJy-zk-mNV" id="LCl-ks-syb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -76,7 +76,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="6ny-QR-rqy" style="IBUITableViewCellStyleDefault" id="FQq-Pn-pdg">
-                                        <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FQq-Pn-pdg" id="xhD-RR-cJp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -94,12 +94,31 @@
                                             <segue destination="12T-wg-Qfb" kind="show" id="frm-nB-hip"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ET6-ko-Luf" style="IBUITableViewCellStyleDefault" id="Ank-mv-pXF">
+                                        <rect key="frame" x="0.0" y="225.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ank-mv-pXF" id="Ogt-gu-ySw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rewarded Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ET6-ko-Luf">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WHg-Wz-9T7" kind="show" id="0fV-sk-WQw"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="AD INFO" id="k0r-ly-Jxc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5VW-7e-MB3" style="IBUITableViewCellStyleDefault" id="zPD-ga-mCs">
-                                        <rect key="frame" x="0.0" y="287.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="319.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zPD-ga-mCs" id="cgw-Rq-RWu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -145,13 +164,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Version : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-nb-352">
-                                <rect key="frame" x="26" y="26" width="108.5" height="21"/>
+                                <rect key="frame" x="26" y="26" width="107.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eah-3y-Ily">
-                                <rect key="frame" x="144.5" y="47" width="0.0" height="0.0"/>
+                                <rect key="frame" x="143.5" y="47" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -233,7 +252,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AR-MG-K8k">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AR-MG-K8k">
                                 <rect key="frame" x="125.5" y="296.5" width="124" height="30"/>
                                 <state key="normal" title="Interstitial Ad load"/>
                                 <connections>
@@ -306,6 +325,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veB-NC-bT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-88" y="211"/>
+        </scene>
+        <!--Rewarded Ad-->
+        <scene sceneID="Vqk-EV-C5v">
+            <objects>
+                <viewController title="Rewarded Ad" automaticallyAdjustsScrollViewInsets="NO" id="WHg-Wz-9T7" customClass="RewardedAdViewContoller" customModule="AdPieSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZDC-it-toj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lvb-uh-4TA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b1x-J3-Mme">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-2n-wO8">
+                                <rect key="frame" x="125" y="296.5" width="125" height="30"/>
+                                <state key="normal" title="Rewarded Ad load"/>
+                                <connections>
+                                    <action selector="requestRewardedAd:" destination="WHg-Wz-9T7" eventType="touchUpInside" id="k4Q-xN-Do4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cfr-2n-wO8" firstAttribute="centerX" secondItem="b1x-J3-Mme" secondAttribute="centerX" id="Itx-Ol-XsV"/>
+                            <constraint firstItem="cfr-2n-wO8" firstAttribute="centerY" secondItem="b1x-J3-Mme" secondAttribute="centerY" id="ew1-cq-C3c"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="xc9-OD-X8t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ga-8i-PFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="990"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2662F55AE779545732049AB3 /* libPods-AdPieSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 751919BDABADB0CF701200B2 /* libPods-AdPieSample.a */; };
+		A30F9B632795553B0037C47D /* RewardedAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A30F9B612795553B0037C47D /* RewardedAdViewController.m */; };
 		A35088141DB4BDC300B910E0 /* AdPieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A35088041DB4BDC300B910E0 /* AdPieTableViewCell.m */; };
 		A35088161DB4BDC300B910E0 /* BannerAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35088071DB4BDC300B910E0 /* BannerAdViewController.m */; };
 		A35088171DB4BDC300B910E0 /* InterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35088091DB4BDC300B910E0 /* InterstitialAdViewController.m */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		0CB7FA25140584D3983A1993 /* Pods-AdPieSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdPieSample.debug.xcconfig"; path = "Target Support Files/Pods-AdPieSample/Pods-AdPieSample.debug.xcconfig"; sourceTree = "<group>"; };
 		751919BDABADB0CF701200B2 /* libPods-AdPieSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdPieSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30F9B612795553B0037C47D /* RewardedAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedAdViewController.m; sourceTree = "<group>"; };
+		A30F9B622795553B0037C47D /* RewardedAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedAdViewController.h; sourceTree = "<group>"; };
 		A35088031DB4BDC300B910E0 /* AdPieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdPieTableViewCell.h; sourceTree = "<group>"; };
 		A35088041DB4BDC300B910E0 /* AdPieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdPieTableViewCell.m; sourceTree = "<group>"; };
 		A35088061DB4BDC300B910E0 /* BannerAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerAdViewController.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				A373AC011FBAE6C800DB6D3C /* AdPieNativeAdView.xib */,
 				A350880A1DB4BDC300B910E0 /* NativeAdTableViewController.h */,
 				A350880B1DB4BDC300B910E0 /* NativeAdTableViewController.m */,
+				A30F9B622795553B0037C47D /* RewardedAdViewController.h */,
+				A30F9B612795553B0037C47D /* RewardedAdViewController.m */,
 				A35088031DB4BDC300B910E0 /* AdPieTableViewCell.h */,
 				A35088041DB4BDC300B910E0 /* AdPieTableViewCell.m */,
 				A373AC031FBAE70600DB6D3C /* AdPieTableViewCell.xib */,
@@ -195,7 +200,7 @@
 				TargetAttributes = {
 					A354F1931CF7D9AF0099D551 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AMNALPNZ69;
+						DevelopmentTeam = 6V6UAGM9A4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -266,6 +271,7 @@
 			files = (
 				A350881C1DB4BDC300B910E0 /* ViewController.m in Sources */,
 				A35088171DB4BDC300B910E0 /* InterstitialAdViewController.m in Sources */,
+				A30F9B632795553B0037C47D /* RewardedAdViewController.m in Sources */,
 				A354F19C1CF7D9AF0099D551 /* AppDelegate.m in Sources */,
 				A35088161DB4BDC300B910E0 /* BannerAdViewController.m in Sources */,
 				A35088141DB4BDC300B910E0 /* AdPieTableViewCell.m in Sources */,
@@ -408,7 +414,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AMNALPNZ69;
+				DEVELOPMENT_TEAM = 6V6UAGM9A4;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -419,7 +426,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gomfactory.AdPieSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adxcorp.AdPieSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -434,7 +441,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AMNALPNZ69;
+				DEVELOPMENT_TEAM = 6V6UAGM9A4;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -445,7 +453,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gomfactory.AdPieSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adxcorp.AdPieSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
