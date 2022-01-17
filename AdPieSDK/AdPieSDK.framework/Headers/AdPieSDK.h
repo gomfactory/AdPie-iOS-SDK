@@ -13,9 +13,10 @@
 #import <AdPieSDK/APInterstitial.h>
 #import <AdPieSDK/APNativeAd.h>
 #import <AdPieSDK/APNativeAdView.h>
+#import <AdPieSDK/APRewardedAd.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.2.10"
+#define ADPIE_SDK_VERSION @"1.3.0"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 
