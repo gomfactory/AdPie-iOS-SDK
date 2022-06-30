@@ -19,6 +19,8 @@
 
 - (id)initWithSlotId:(NSString *)slotId;
 
+- (void)setExtraParameterForKey:(NSString *)key value:(NSString *)value;
+
 - (void)load;
 
 - (void)presentFromRootViewController:(UIViewController *)controller;

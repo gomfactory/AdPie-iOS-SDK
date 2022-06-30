@@ -22,6 +22,8 @@
 
 - (id)initWithSlotId:(NSString *)slotId;
 
+- (void)setExtraParameterForKey:(NSString *)key value:(NSString *)value;
+
 - (void)load;
 
 - (void)registerViewForInteraction:(APNativeAdView *)nativeAdView;

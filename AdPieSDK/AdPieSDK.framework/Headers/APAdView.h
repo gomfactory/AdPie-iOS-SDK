@@ -18,6 +18,8 @@
 
 @property(weak, nonatomic) IBOutlet UIViewController *rootViewController;
 
+- (void)setExtraParameterForKey:(NSString *)key value:(NSString *)value;
+
 - (void)load;
 
 @end
