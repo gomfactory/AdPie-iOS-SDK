@@ -12,11 +12,11 @@
 
 @interface APAdView : UIView
 
-@property(weak, nonatomic) id<APAdViewDelegate> delegate;
+@property (nonatomic, weak) id<APAdViewDelegate> delegate;
 
-@property(copy, nonatomic) NSString *slotId;
+@property (nonatomic, copy) NSString *slotId;
 
-@property(weak, nonatomic) IBOutlet UIViewController *rootViewController;
+@property (nonatomic, weak) IBOutlet UIViewController *rootViewController;
 
 - (void)setExtraParameterForKey:(NSString *)key value:(NSString *)value;
 

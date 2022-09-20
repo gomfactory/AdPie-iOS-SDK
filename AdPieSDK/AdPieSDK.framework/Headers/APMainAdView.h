@@ -10,7 +10,7 @@
 
 @interface APMainAdView : UIView
 
-@property(nonatomic) UIImageView *imageView;
+@property (nonatomic) UIImageView *imageView;
 
 - (void)changeAspectRatio:(float) aspectRatio;
 

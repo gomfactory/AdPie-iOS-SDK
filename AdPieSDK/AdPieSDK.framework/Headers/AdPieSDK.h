@@ -16,17 +16,17 @@
 #import <AdPieSDK/APRewardedAd.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.3.5"
+#define ADPIE_SDK_VERSION @"1.3.6"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 
 @interface AdPieSDK : NSObject
 
-@property(copy, nonatomic) NSString *mediaId;
-@property(nonatomic, readonly) BOOL isInitialized;
-@property(nonatomic, readonly) BOOL isTransportSecurity;
-@property(nonatomic, readonly) BOOL isWebviewSecurity;
-@property(nonatomic) BOOL isOneOfMediation;
+@property (nonatomic, copy) NSString *mediaId;
+@property (nonatomic, readonly) BOOL isInitialized;
+@property (nonatomic, readonly) BOOL isTransportSecurity;
+@property (nonatomic, readonly) BOOL isWebviewSecurity;
+@property (nonatomic) BOOL isOneOfMediation;
 
 + (instancetype)sharedInstance;
 

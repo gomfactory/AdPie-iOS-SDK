@@ -10,20 +10,20 @@
 
 @interface APAdData : NSObject
 
-@property(nonatomic, readonly, copy) NSDictionary *dictionary;
+@property (nonatomic, readonly, strong) NSDictionary *dictionary;
 
-@property (nonatomic, assign, readonly) int icType;
-@property (nonatomic, strong, readonly) NSString *adm;
-@property (nonatomic, strong, readonly) NSString *admImageTag;
-@property (nonatomic, assign, readonly) int width;
-@property (nonatomic, assign, readonly) int height;
-@property(nonatomic, readonly, copy) NSArray *impTrackers;
-@property(nonatomic, readonly, copy) NSArray *clickTrackers;
-@property (nonatomic, strong, readonly) NSString *bgColor;
-@property (nonatomic, assign, readonly) BOOL isScalable;
-@property (nonatomic, assign, readonly) int position;
-@property (nonatomic, assign, readonly) int animationType;
-@property (nonatomic, assign, readonly) int act;
+@property (nonatomic, readonly, assign) int icType;
+@property (nonatomic, readonly, strong) NSString *adm;
+@property (nonatomic, readonly, strong) NSString *admImageTag;
+@property (nonatomic, readonly, assign) int width;
+@property (nonatomic, readonly, assign) int height;
+@property (nonatomic, readonly, strong) NSArray *impTrackers;
+@property (nonatomic, readonly, strong) NSArray *clickTrackers;
+@property (nonatomic, readonly, strong) NSString *bgColor;
+@property (nonatomic, readonly, assign) BOOL isScalable;
+@property (nonatomic, readonly, assign) int position;
+@property (nonatomic, readonly, assign) int animationType;
+@property (nonatomic, readonly, assign) int act;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
