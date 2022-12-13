@@ -23,11 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AdPieSDK.sharedInstance().logging()
         
         if #available(iOS 14, *) {
-            // ATT 알림을 통한 권한 요청
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                // SDK 초기화
-                AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
-            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                // ATT 알림을 통한 권한 요청
+                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                    // SDK 초기화
+                    AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+                })
+            }
         } else {
             // SDK 초기화
             AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
