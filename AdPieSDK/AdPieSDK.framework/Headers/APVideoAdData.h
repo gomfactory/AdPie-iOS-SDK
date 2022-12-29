@@ -29,12 +29,7 @@
 @property (nonatomic, readonly, strong) NSArray *trackingThirdQuartileUrls;
 @property (nonatomic, readonly, strong) NSArray *trackingCompleteUrls;
 
-@property (nonatomic, readonly, copy) NSString *ssvURL;
-@property (nonatomic, copy) NSString *ssvUserId;
-@property (nonatomic, copy) NSString *ssvCustomData;
-
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
-
 
