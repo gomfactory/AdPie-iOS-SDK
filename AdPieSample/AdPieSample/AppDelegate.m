@@ -20,25 +20,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    // 디버깅 적용
-     [[AdPieSDK sharedInstance] logging];
-    
-    if (@available(iOS 14, *)) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-            // ATT 알림을 통한 권한 요청
-            [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-                BOOL isAdvertisingTrackingEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
-                NSLog(@"isAdvertisingTrackingEnabled : %d", isAdvertisingTrackingEnabled);
-                // SDK 초기화
-                [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
-            }];
-        });
-    } else {
-        // SDK 초기화
-        [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
-    }
-    
     return YES;
 }
 
@@ -58,6 +39,21 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // 디버깅 적용
+     [[AdPieSDK sharedInstance] logging];
+    
+    if (@available(iOS 14, *)) {
+        // ATT 알림을 통한 권한 요청
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            BOOL isAdvertisingTrackingEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
+            NSLog(@"isAdvertisingTrackingEnabled : %d", isAdvertisingTrackingEnabled);
+            // SDK 초기화
+            [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
+        }];
+    } else {
+        // SDK 초기화
+        [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

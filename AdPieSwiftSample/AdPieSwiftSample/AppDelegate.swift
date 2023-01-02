@@ -18,23 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // 디버깅 적용
-        AdPieSDK.sharedInstance().logging()
-        
-        if #available(iOS 14, *) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                // ATT 알림을 통한 권한 요청
-                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                    // SDK 초기화
-                    AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
-                })
-            }
-        } else {
-            // SDK 초기화
-            AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
-        }
-        
         return true
     }
 
@@ -54,6 +37,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        // 디버깅 적용
+        AdPieSDK.sharedInstance().logging()
+        
+        if #available(iOS 14, *) {
+            // ATT 알림을 통한 권한 요청
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                // SDK 초기화
+                AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+            })
+        } else {
+            // SDK 초기화
+            AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
