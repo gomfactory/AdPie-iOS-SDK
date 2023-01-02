@@ -27,6 +27,10 @@
 
 - (BOOL)isReady;
 
+- (void)setUserIdForSSV:(NSString *)userId NS_SWIFT_NAME(setUserIdForSSV(userId:));
+
+- (void)setCustomDataForSSV:(NSString *)customData NS_SWIFT_NAME(setCustomDataForSSV(customData:));
+
 @end
 
 @protocol APRewardedAdDelegate <NSObject>
