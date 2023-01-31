@@ -48,11 +48,15 @@
             BOOL isAdvertisingTrackingEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
             NSLog(@"isAdvertisingTrackingEnabled : %d", isAdvertisingTrackingEnabled);
             // SDK 초기화
-            [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
+            if(![[AdPieSDK sharedInstance] isInitialized]) {
+                [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
+            }
         }];
     } else {
         // SDK 초기화
-        [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
+        if(![[AdPieSDK sharedInstance] isInitialized]) {
+            [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
+        }
     }
 }
 

@@ -44,11 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // ATT 알림을 통한 권한 요청
             ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
                 // SDK 초기화
-                AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+                if AdPieSDK.sharedInstance().isInitialized == false {
+                    AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+                }
             })
         } else {
             // SDK 초기화
-            AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+            if AdPieSDK.sharedInstance().isInitialized == false {
+                AdPieSDK.sharedInstance().initWithMediaId("57342d787174ea39844cac11")
+            }
         }
     }
 
