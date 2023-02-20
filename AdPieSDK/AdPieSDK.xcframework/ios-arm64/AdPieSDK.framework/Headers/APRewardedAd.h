@@ -13,9 +13,9 @@
 
 @interface APRewardedAd : NSObject
 
-@property(weak, nonatomic) id<APRewardedAdDelegate> delegate;
+@property(weak) id<APRewardedAdDelegate> delegate;
 
-@property(copy, nonatomic) NSString *slotId;
+@property(copy) NSString *slotId;
 
 - (id)initWithSlotId:(NSString *)slotId;
 

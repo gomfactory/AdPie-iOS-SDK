@@ -14,15 +14,15 @@
 
 @interface APNativeAdView : UIView
 
-@property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
-@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
-@property (nonatomic, weak) IBOutlet APMainAdView *mainAdView;
-@property (nonatomic, weak) IBOutlet UIButton *callToActionButton;
+@property (weak) IBOutlet UIImageView *iconImageView;
+@property (weak) IBOutlet UILabel *titleLabel;
+@property (weak) IBOutlet UILabel *descriptionLabel;
+@property (weak) IBOutlet APMainAdView *mainAdView;
+@property (weak) IBOutlet UIButton *callToActionButton;
 
-@property (nonatomic, readonly) bool isValidLayout;
+@property (readonly) bool isValidLayout;
 
-@property (nonatomic, weak) id<APNativeAdViewDelegate> delegate;
+@property (weak) id<APNativeAdViewDelegate> delegate;
 
 - (BOOL)fillAd:(APNativeAdData *)adData;
 

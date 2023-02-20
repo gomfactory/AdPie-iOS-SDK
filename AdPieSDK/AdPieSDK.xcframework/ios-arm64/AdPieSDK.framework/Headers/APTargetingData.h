@@ -17,10 +17,10 @@ typedef enum APGender {
 
 } APGender;
 
-@property(nonatomic) APGender gender;
-@property(nonatomic) int yearOfBirthday;
-@property(nonatomic) int age;
-@property(nonatomic) NSData *customData;
+@property APGender gender;
+@property int yearOfBirthday;
+@property int age;
+@property NSData *customData;
 
 + (instancetype)sharedInstance;
 

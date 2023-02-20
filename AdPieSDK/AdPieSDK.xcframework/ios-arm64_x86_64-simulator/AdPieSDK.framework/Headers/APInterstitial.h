@@ -13,9 +13,9 @@
 
 @interface APInterstitial : NSObject
 
-@property(nonatomic, weak) id<APInterstitialDelegate> delegate;
+@property(weak) id<APInterstitialDelegate> delegate;
 
-@property(nonatomic, copy) NSString *slotId;
+@property(copy) NSString *slotId;
 
 - (id)initWithSlotId:(NSString *)slotId;
 

@@ -14,11 +14,11 @@
 
 @interface APNativeAd : NSObject
 
-@property(nonatomic, weak) id<APNativeDelegate> delegate;
+@property(weak) id<APNativeDelegate> delegate;
 
-@property(nonatomic, copy) NSString *slotId;
+@property(copy) NSString *slotId;
 
-@property(nonatomic, readonly) APNativeAdData *nativeAdData;
+@property(readonly) APNativeAdData *nativeAdData;
 
 - (id)initWithSlotId:(NSString *)slotId;
 

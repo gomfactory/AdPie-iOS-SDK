@@ -10,28 +10,28 @@
 
 @interface APVideoAdData : APAdData
 
-@property (nonatomic, readonly, copy) NSString *title;
-@property (nonatomic, readonly, copy) NSString *desc;
-@property (nonatomic, readonly, assign) int skipOffset;
-@property (nonatomic, readonly, assign) int autoplay;
-@property (nonatomic, readonly, assign) int duration;
-@property (nonatomic, readonly, copy) NSString *link;
-@property (nonatomic, readonly, copy) NSString *linkText;
-@property (nonatomic, readonly, copy) NSString *content;
-@property (nonatomic, readonly, copy) NSString *contentType;
-@property (nonatomic, readonly, assign) int delivery;
-@property (nonatomic, readonly, assign) int contentWidth;
-@property (nonatomic, readonly, assign) int contentHeight;
+@property (readonly, copy) NSString *title;
+@property (readonly, copy) NSString *desc;
+@property (readonly, assign) int skipOffset;
+@property (readonly, assign) int autoplay;
+@property (readonly, assign) int duration;
+@property (readonly, copy) NSString *link;
+@property (readonly, copy) NSString *linkText;
+@property (readonly, copy) NSString *content;
+@property (readonly, copy) NSString *contentType;
+@property (readonly, assign) int delivery;
+@property (readonly, assign) int contentWidth;
+@property (readonly, assign) int contentHeight;
 
-@property (nonatomic, readonly, strong) NSArray *trackingStartUrls;
-@property (nonatomic, readonly, strong) NSArray *trackingFirstQuartileUrls;
-@property (nonatomic, readonly, strong) NSArray *trackingMidpointUrls;
-@property (nonatomic, readonly, strong) NSArray *trackingThirdQuartileUrls;
-@property (nonatomic, readonly, strong) NSArray *trackingCompleteUrls;
+@property (readonly, strong) NSArray *trackingStartUrls;
+@property (readonly, strong) NSArray *trackingFirstQuartileUrls;
+@property (readonly, strong) NSArray *trackingMidpointUrls;
+@property (readonly, strong) NSArray *trackingThirdQuartileUrls;
+@property (readonly, strong) NSArray *trackingCompleteUrls;
 
-@property (nonatomic, readonly, copy) NSString *ssvURL;
-@property (nonatomic, copy) NSString *ssvUserId;
-@property (nonatomic, copy) NSString *ssvCustomData;
+@property (readonly, copy) NSString *ssvURL;
+@property (copy) NSString *ssvUserId;
+@property (copy) NSString *ssvCustomData;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
