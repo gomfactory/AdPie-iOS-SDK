@@ -12,6 +12,8 @@
 
 @property (readonly, copy) NSString *title;
 @property (readonly, copy) NSString *desc;
+@property (readonly, copy) NSString *optoutImageURL;
+@property (readonly, copy) NSString *optoutLinkURL;
 @property (readonly, assign) int skipOffset;
 @property (readonly, assign) int autoplay;
 @property (readonly, assign) int duration;

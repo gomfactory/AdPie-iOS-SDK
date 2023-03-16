@@ -16,7 +16,7 @@
 #import <AdPieSDK/APRewardedAd.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.4.3"
+#define ADPIE_SDK_VERSION @"1.4.4"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 

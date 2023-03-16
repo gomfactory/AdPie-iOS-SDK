@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/APVideoAdData.h</key>
 		<data>
-		iHz+jrlPR6cZIONNALFLhVqA1xo=
+		YbWbxbuhhPv2OfEHLLApEffzwj4=
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
-		Paa4beBvk0rvHWE1TJE0asIifLQ=
+		0YFQJ9kiAB8JEFT9dLoL845fsKU=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iHz+jrlPR6cZIONNALFLhVqA1xo=
+			YbWbxbuhhPv2OfEHLLApEffzwj4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Js2NcOYmwhwmYMq+i/VojWnEthJJB96HaH/CmRSD/cY=
+			RjKPWDnuXHDvxHrytv5qw3QBu3DoPsL0mwq4WsXJKc8=
 			</data>
 		</dict>
 		<key>Headers/AdPieSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Paa4beBvk0rvHWE1TJE0asIifLQ=
+			0YFQJ9kiAB8JEFT9dLoL845fsKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			gEtId43TQyF6BdsherXgKjzvA0yDpdHbSqo1rJpNYVw=
+			pWH19qE9GGYoPWfyTkcQ1QyBZyQcwl6zL+VaBCtiQH4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
