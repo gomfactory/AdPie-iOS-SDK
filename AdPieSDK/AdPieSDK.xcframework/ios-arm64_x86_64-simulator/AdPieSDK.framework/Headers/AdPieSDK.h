@@ -16,7 +16,7 @@
 #import <AdPieSDK/APRewardedAd.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.4.4"
+#define ADPIE_SDK_VERSION @"1.4.5"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 
@@ -24,8 +24,6 @@ typedef void (^ResultBlock)(BOOL isInitialized);
 
 @property (copy) NSString *mediaId;
 @property (readonly) BOOL isInitialized;
-@property (readonly) BOOL isTransportSecurity;
-@property (readonly) BOOL isWebviewSecurity;
 @property BOOL isOneOfMediation;
 
 + (instancetype)sharedInstance;
