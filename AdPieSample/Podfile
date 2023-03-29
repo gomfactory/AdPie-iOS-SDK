@@ -1,4 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 target 'AdPieSample' do
 	pod 'AdPieSDK', '1.4.5'
+	pod 'AppLovinSDK', '11.8.2'
 end
