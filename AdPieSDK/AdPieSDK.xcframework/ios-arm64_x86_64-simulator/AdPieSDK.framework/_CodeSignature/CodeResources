@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APAdData.h</key>
 		<data>
-		uxbdopdudIppwxpqXrz+4d2I5g4=
+		x6nLTZO/MQ4bzBqpIfDjbK8lb30=
 		</data>
 		<key>Headers/APAdView.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
-		NLq9MMbbfqTmDEjlvB/oKlDTqNU=
+		t3IMAC671CMUKDNgD9lAlpcGC9A=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Wa5T8fA1gLiXn/vq3aRs7+6IaF0=
+		BbuY5dr6ZjY+BvsHzbAIAZZ8/zM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,11 +63,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uxbdopdudIppwxpqXrz+4d2I5g4=
+			x6nLTZO/MQ4bzBqpIfDjbK8lb30=
 			</data>
 			<key>hash2</key>
 			<data>
-			TUbJN5y4n3C0LcdJbusz2HVJSbG00nCTKNJJZxhKAUg=
+			gq9p9xaZFOymJl98xiwxxDijPqhhFN3NRfQEKyNa8+c=
 			</data>
 		</dict>
 		<key>Headers/APAdView.h</key>
@@ -173,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NLq9MMbbfqTmDEjlvB/oKlDTqNU=
+			t3IMAC671CMUKDNgD9lAlpcGC9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			PM5Ov1gZ8dXAfEXYl28vvG7QBdRTVJ5W77/UXudbm84=
+			f/x0Y300dAwgU6YepXhYaQHqM84ck9kO4MnKaes0Lm4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

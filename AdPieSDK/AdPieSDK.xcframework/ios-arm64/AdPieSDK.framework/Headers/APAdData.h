@@ -22,6 +22,7 @@
 @property (readonly, strong) NSString *bgColor;
 @property (readonly, assign) BOOL isScalable;
 @property (readonly, assign) int position;
+@property (readonly, assign) int orientation;
 @property (readonly, assign) int animationType;
 @property (readonly, assign) int act;
 
