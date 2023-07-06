@@ -74,4 +74,27 @@
     }];
 }
 
++ (void)adPieSdkInitialize:(NSString*)mid completionHandler:(void(^)(BOOL result))completionHandler {
+    
+    if([[AdPieSDK sharedInstance] isInitialized]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(YES);
+        });
+        return;
+    }
+    
+    if([mid length] == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(NO);
+        });
+        return;
+    }
+    
+    [[AdPieSDK sharedInstance] initWithMediaId:mid completion:^(BOOL isInitialized) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(isInitialized);
+        });
+    }];
+}
+
 @end

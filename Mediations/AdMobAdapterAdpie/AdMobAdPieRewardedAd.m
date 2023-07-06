@@ -14,7 +14,7 @@
 
 @implementation AdMobAdPieRewardedAd
 
-#pragma mark - GADMediationBannerAd
+#pragma mark - GADMediationRewardedAd
 
 + (GADVersionNumber)adSDKVersion {
     return [AdmobAdPieUtils adSDKVersion];
@@ -37,6 +37,12 @@
 - (void)loadRewardedAdForAdConfiguration:(GADMediationRewardedAdConfiguration *)adConfiguration
                        completionHandler:(GADMediationRewardedLoadCompletionHandler)completionHandler
 {
+    [self loadRewardedAd:adConfiguration completionHandler:completionHandler];
+}
+
+- (void)loadRewardedAd:(nonnull GADMediationRewardedAdConfiguration *)adConfiguration
+     completionHandler:(nonnull GADMediationRewardedLoadCompletionHandler)completionHandler
+{
     // Store the completion handler for later use.
     __block atomic_flag completionHandlerCalled = ATOMIC_FLAG_INIT;
     __block GADMediationRewardedLoadCompletionHandler originalCompletionHandler = [completionHandler copy];
@@ -54,27 +60,46 @@
     
     NSString *parameter = adConfiguration.credentials.settings[@"parameter"];
     NSDictionary *info = [AdmobAdPieUtils dictionaryWithJsonString:parameter];
+    NSString *appId = [info objectForKey:@"app_id"];
     NSString *slotId = [info objectForKey:@"slot_id"];
     
-    if (slotId == nil || slotId.length == 0) {
-        NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorInvalidRequest description:@"AdPie SDK slot ID cannot be nil."];
-        __weak typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            __strong typeof(self) strongSelf = weakSelf;
-            strongSelf->_adLoadCompletionHandler(nil, error);
-        });
-        return;
-    }
-    
-    self.rewardedAd = [[APRewardedAd alloc] initWithSlotId:slotId];
-    self.rewardedAd.delegate = self;
-    
-    NSString *floorPrice = [info objectForKey:@"floor_price"];
-    if (floorPrice != nil) {
-        [self.rewardedAd setExtraParameterForKey:@"floorPrice" value:floorPrice];
-    }
-    
-    [self.rewardedAd load];
+    __weak typeof(self) weakSelf = self;
+    [AdmobAdPieUtils adPieSdkInitialize:appId completionHandler:^(BOOL result) {
+        __strong typeof(self) strongSelf = weakSelf;
+        if(!result) {
+            NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorSdkNotInitialize
+                                                  description:@"AdPie SDK must be initialized before ads loading."];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                __strong typeof(self) strongSelf = weakSelf;
+                if(strongSelf) {
+                    strongSelf->_adLoadCompletionHandler(nil, error);
+                }
+            });
+            return;
+        }
+        
+        if (![slotId length]) {
+            NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorInvalidRequest
+                                                  description:@"AdPie SDK slot ID cannot be nil."];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                __strong typeof(self) strongSelf = weakSelf;
+                if(strongSelf) {
+                    strongSelf->_adLoadCompletionHandler(nil, error);
+                }
+            });
+            return;
+        }
+        
+        if(strongSelf) {
+            strongSelf.rewardedAd = [[APRewardedAd alloc] initWithSlotId:slotId];
+            strongSelf.rewardedAd.delegate = strongSelf;
+            NSString *floorPrice = [info objectForKey:@"floor_price"];
+            if (floorPrice != nil) {
+                [strongSelf.rewardedAd setExtraParameterForKey:@"floorPrice" value:floorPrice];
+            }
+            [strongSelf.rewardedAd load];
+        }
+    }];
 }
 
 - (void)presentFromViewController:(UIViewController *)viewController {

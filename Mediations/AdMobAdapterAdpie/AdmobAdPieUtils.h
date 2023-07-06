@@ -9,4 +9,5 @@
 + (GADVersionNumber)adapterVersion;
 + (void)setUpWithConfiguration:(GADMediationServerConfiguration *)configuration
              completionHandler:(GADMediationAdapterSetUpCompletionBlock)completionHandler;
++ (void)adPieSdkInitialize:(NSString*)mid completionHandler:(void(^)(BOOL result))completionHandler;
 @end

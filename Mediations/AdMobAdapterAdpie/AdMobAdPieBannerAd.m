@@ -15,6 +15,13 @@
 - (void)loadBannerForAdConfiguration:(nonnull GADMediationBannerAdConfiguration *)adConfiguration
                    completionHandler:(nonnull GADMediationBannerLoadCompletionHandler)completionHandler
 {
+    [self loadBannerFor:adConfiguration completionHandler:completionHandler];
+}
+
+- (void)loadBannerFor:(nonnull GADMediationBannerAdConfiguration *)adConfiguration
+    completionHandler:(nonnull GADMediationBannerLoadCompletionHandler)completionHandler
+{
+    // Store the completion handler for later use.
     __block atomic_flag completionHandlerCalled = ATOMIC_FLAG_INIT;
     __block GADMediationBannerLoadCompletionHandler originalCompletionHandler = [completionHandler copy];
     _adLoadCompletionHandler = ^id<GADMediationBannerAdEventDelegate>(_Nullable id<GADMediationBannerAd> ad, NSError *_Nullable error) {
@@ -29,44 +36,64 @@
         return delegate;
     };
     
-    // load
     NSString *parameter = adConfiguration.credentials.settings[@"parameter"];
-    NSDictionary *info = [AdMobAdPieBannerAd dictionaryWithJsonString:parameter];
+    NSDictionary *info = [AdmobAdPieUtils dictionaryWithJsonString:parameter];
+    NSString *appId = [info objectForKey:@"app_id"];
     NSString *slotId = [info objectForKey:@"slot_id"];
     
-    if (slotId == nil || slotId.length == 0) {
-        NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorInvalidRequest description:@"AdPie SDK slot ID cannot be nil."];
-        __weak typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            __strong typeof(self) strongSelf = weakSelf;
-            strongSelf->_adLoadCompletionHandler(nil, error);
-        });
-        return;
-    }
-    
-    UIViewController *rootViewController = adConfiguration.topViewController;
-    if (!rootViewController) {
-        NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorInvalidRequest description:@"Root view controller cannot be nil."];
-        __weak typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            __strong typeof(self) strongSelf = weakSelf;
-            strongSelf->_adLoadCompletionHandler(nil, error);
-        });
-        return;
-    }
-    
-    CGSize bannerSize = adConfiguration.adSize.size;
-    self.adView = [[APAdView alloc] initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)];
-    self.adView.slotId = slotId;
-    self.adView.delegate = self;
-    self.adView.rootViewController = rootViewController;
-    
-    NSString *floorPrice = [info objectForKey:@"floor_price"];
-    if (floorPrice != nil) {
-        [self.adView setExtraParameterForKey:@"floorPrice" value:floorPrice];
-    }
-    
-    [self.adView load];
+    __weak typeof(self) weakSelf = self;
+    [AdmobAdPieUtils adPieSdkInitialize:appId completionHandler:^(BOOL result) {
+        __strong typeof(self) strongSelf = weakSelf;
+        if(!result) {
+            NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorSdkNotInitialize
+                                                  description:@"AdPie SDK must be initialized before ads loading."];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                __strong typeof(self) strongSelf = weakSelf;
+                if(strongSelf) {
+                    strongSelf->_adLoadCompletionHandler(nil, error);
+                }
+            });
+            return;
+        }
+        
+        if (![slotId length]) {
+            NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorInvalidRequest
+                                                  description:@"AdPie SDK slot ID cannot be nil."];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                __strong typeof(self) strongSelf = weakSelf;
+                if(strongSelf) {
+                    strongSelf->_adLoadCompletionHandler(nil, error);
+                }
+            });
+            return;
+        }
+        
+        UIViewController *rootViewController = adConfiguration.topViewController;
+        if (!rootViewController) {
+            NSError *error = [AdMobAdPieAdError errorWithCode:AdMobAdPieAdErrorInvalidRequest description:@"Root view controller cannot be nil."];
+            __weak typeof(self) weakSelf = self;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                __strong typeof(self) strongSelf = weakSelf;
+                if(strongSelf) {
+                    strongSelf->_adLoadCompletionHandler(nil, error);
+                }
+            });
+            return;
+        }
+        
+        if(strongSelf) {
+            CGSize bannerSize = adConfiguration.adSize.size;
+            strongSelf.adView = [[APAdView alloc] initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)];
+            strongSelf.adView.slotId = slotId;
+            strongSelf.adView.delegate = strongSelf;
+            strongSelf.adView.rootViewController = rootViewController;
+            NSString *floorPrice = [info objectForKey:@"floor_price"];
+            if (floorPrice != nil) {
+                [strongSelf.adView setExtraParameterForKey:@"floorPrice" value:floorPrice];
+            }
+            [strongSelf.adView load];
+        }
+    }];
 }
 
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
