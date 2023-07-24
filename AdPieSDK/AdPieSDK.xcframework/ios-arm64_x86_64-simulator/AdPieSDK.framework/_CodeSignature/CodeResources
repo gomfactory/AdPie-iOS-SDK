@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
-		1yjKfMuTRD19xnf4OwK/1pP/mYM=
+		/zmmQFkFN7qdT8JKvhRrsVm1yOg=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -173,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1yjKfMuTRD19xnf4OwK/1pP/mYM=
+			/zmmQFkFN7qdT8JKvhRrsVm1yOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZshplgSXiUfu4VZZSBUBizY7N2wVz7tsL+1iq5AeRDs=
+			+qnVzTX/VlujhwdCWKPA8gvbNFHB2pi2lP9qlAgjfsY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
