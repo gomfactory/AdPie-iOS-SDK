@@ -19,6 +19,7 @@
 @property (weak) IBOutlet UILabel *descriptionLabel;
 @property (weak) IBOutlet APMainAdView *mainAdView;
 @property (weak) IBOutlet UIButton *callToActionButton;
+@property (weak) IBOutlet UIImageView *optoutImageView;
 
 @property (readonly) bool isValidLayout;
 
