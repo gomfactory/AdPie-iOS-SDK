@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 target 'AdPieSwiftSample' do
-	pod 'AdPieSDK', '1.5.3'
+	pod 'AdPieSDK', '1.5.4'
 	#pod 'Google-Mobile-Ads-SDK', '9.14.0'
 	#pod 'AppLovinSDK', '11.6.1'
 end
