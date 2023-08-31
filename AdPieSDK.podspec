@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AdPieSDK"
-  spec.version      = "1.5.6"
+  spec.version      = "1.5.7"
   spec.summary      = "AdPie Ads SDK."
   spec.description  = "The AdPie SDK allows developers to easily incorporate banner, interstitial and native ads. It will benefit developers a lot."
   spec.homepage     = "https://github.com/gomfactory/AdPie-iOS-SDK"
@@ -16,5 +16,4 @@ Pod::Spec.new do |spec|
   spec.frameworks = "AdSupport", "CoreTelephony", "SystemConfiguration"
   spec.weak_frameworks = "WebKit"
   spec.xcconfig  =  { "OTHER_LDFLAGS" => "-ObjC", "LIBRARY_SEARCH_PATHS" => "$(SRCROOT)/Pods/AdPieSDK" }
-  spec.swift_version = '4.0'
 end
