@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APStoreKitAdImpression.h"
 
 @interface APAdData : NSObject
 
@@ -25,6 +26,8 @@
 @property (readonly, assign) int orientation;
 @property (readonly, assign) int animationType;
 @property (readonly, assign) int act;
+@property (readonly, strong) NSDictionary *skadn;
+@property (readonly, strong) APStoreKitAdImpression *skadImpression;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
