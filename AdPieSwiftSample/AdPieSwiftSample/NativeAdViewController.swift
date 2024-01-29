@@ -37,30 +37,18 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     // MARK: - APNative delegates
-    
     func nativeDidLoad(_ nativeAd: APNativeAd!) {
         // 광고 요청 완료 후 이벤트 발생
-        
         let nativeAdView = Bundle.main.loadNibNamed("AdPieNativeAdView", owner: nil, options: nil)?[0] as! APNativeAdView
+        nativeAdView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nativeAdView)
-        
-        var viewDictionary = [String: AnyObject]()
-        viewDictionary["nativeAdView"] = nativeAdView
-        
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[nativeAdView]|", options: [], metrics: nil, views: viewDictionary))
-        
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nativeAdView]|", options: [], metrics: nil, views: viewDictionary))
+        NSLayoutConstraint.activate([
+            nativeAdView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            nativeAdView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            nativeAdView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            nativeAdView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        ])
         
         // 광고뷰에 데이터 표출
         if nativeAdView.fillAd(nativeAd.nativeAdData) {

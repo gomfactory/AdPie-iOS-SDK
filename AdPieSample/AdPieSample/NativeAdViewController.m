@@ -35,43 +35,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little
-preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark APNativeAd delegates
 
 - (void)nativeDidLoadAd:(APNativeAd *)nativeAd {
-    // 광고 요청 완료 후 이벤트 발생
+    // 네이티브 성공
+    NSLog(@"%s", __func__);
+    
     APNativeAdView *nativeAdView = [[[NSBundle mainBundle] loadNibNamed:@"AdPieNativeAdView"
                                                        owner:nil
                                                      options:nil] firstObject];
     
     [self.view addSubview:nativeAdView];
-    
-    NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(nativeAdView);
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[nativeAdView]|"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewDictionary]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[nativeAdView]|"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewDictionary]];
-    
-    // 광고뷰에 데이터 표출
+    nativeAdView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [nativeAdView.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor],
+        [nativeAdView.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor],
+        [nativeAdView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
+        [nativeAdView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]
+    ]];
+
     if ([nativeAdView fillAd:nativeAd.nativeAdData]) {
-        // 광고 클릭 이벤트 수신을 위해 등록
-        [nativeAd registerViewForInteraction:nativeAdView];
-    } else {
-        // 광고 데이터를 채우는데 실패한 경우로 광고뷰 제거
+      // 클릭 이벤트를 받기 위해 등록
+      [nativeAd registerViewForInteraction:nativeAdView];
+    }else{
         [nativeAdView removeFromSuperview];
         
         NSString *message = @"Failed to fill native ads data. Check your xib file.";
