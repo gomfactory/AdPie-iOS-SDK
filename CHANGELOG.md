@@ -1,6 +1,13 @@
 
 # 변경내역
 
+### 1.5.9 (2024년 02월 15일)
+- 보상광고의 rewardedAdDidEarnReward 이벤트 전달 타이밍 변경 
+- 전면 비디오 / 보상 광고 화면의 닫기 버튼에 대한 로직 변경 
+- 재생 가능한 비디오 컨텐츠인지 확인하는 로직 추가 
+- 네이티브 광고 관련 
+ : removeMainImageAspectRatioConstraint 메소드 추가  
+
 ### 1.5.8 (2023년 12월 12일)
 - Apple SKAdNetwork 지원 
 
