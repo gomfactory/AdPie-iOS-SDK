@@ -12,6 +12,7 @@
 
 @property UIImageView *imageView;
 
+- (void)removeMainImageAspectRatioConstraint;
 - (void)changeAspectRatio:(float) aspectRatio;
 
 @end

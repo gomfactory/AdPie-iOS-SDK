@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/APMainAdView.h</key>
 		<data>
-		8ucYFheFKWsYBII/uBZZQgNh3Zo=
+		3xmCFSjIrg/iPfn/jfRV54dtyaM=
 		</data>
 		<key>Headers/APNativeAd.h</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
-		sBA8WezdYhSQb85A55WO6wMhonQ=
+		eg397to0JVA+jxJTpAz3fbFYswc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		htNomnkQ+OW7eeeXsSx6WMtDKkg=
+		wprvz+y3F4W2vQPqubSfteVmL9o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -100,11 +100,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8ucYFheFKWsYBII/uBZZQgNh3Zo=
+			3xmCFSjIrg/iPfn/jfRV54dtyaM=
 			</data>
 			<key>hash2</key>
 			<data>
-			wd7JWi13GoYThyEMV//IBvdJmpr5sBDauuGc2kx5/RI=
+			8Xpx6oPvuV4fAzG5fTc2SUDEsBgITeIdWyEGgel6Qsg=
 			</data>
 		</dict>
 		<key>Headers/APNativeAd.h</key>
@@ -188,11 +188,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sBA8WezdYhSQb85A55WO6wMhonQ=
+			eg397to0JVA+jxJTpAz3fbFYswc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sHJDRKuyZ7TVNTDulRPnhwkRzNItKApJeb/npXQeabM=
+			SAjYONyfaL3MP9oHYC1SlAim+hAUfn48p61zl3jMWTM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
