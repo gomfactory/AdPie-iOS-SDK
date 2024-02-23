@@ -26,6 +26,7 @@
 @property (readonly, assign) int orientation;
 @property (readonly, assign) int animationType;
 @property (readonly, assign) int act;
+@property (readonly, assign) int closeBtnPosition;
 @property (readonly, strong) NSDictionary *skadn;
 @property (readonly, strong) APStoreKitAdImpression *skadImpression;
 

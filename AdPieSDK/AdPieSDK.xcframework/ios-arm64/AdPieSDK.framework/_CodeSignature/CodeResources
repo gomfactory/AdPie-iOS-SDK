@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/APAdData.h</key>
 		<data>
-		WI6HFNnxnLvgSaM9qypqbdirJdE=
+		AiHUaL7q8v+2aOXtUuYSV14T9lU=
 		</data>
 		<key>Headers/APAdView.h</key>
 		<data>
-		NgFPD4ggDCET2hgDijscyq69PsM=
+		1vtZxH9VN2J91hP6GV05OYsqKOs=
 		</data>
 		<key>Headers/APInterstitial.h</key>
 		<data>
-		CbTKFBZwudQE9VEVruFllQUnRVE=
+		5i3z8+j4hlecKzYvwuYB6W3r+W0=
 		</data>
 		<key>Headers/APMainAdView.h</key>
 		<data>
-		3xmCFSjIrg/iPfn/jfRV54dtyaM=
+		Hvt+imoOrbfs85Vdrbh0/6bPXBY=
 		</data>
 		<key>Headers/APNativeAd.h</key>
 		<data>
-		nwW95JV9L0vqBMSUlJCFqAiPgME=
+		l2h7WGYSAW6pr71BU7CdzVfrHv8=
 		</data>
 		<key>Headers/APNativeAdData.h</key>
 		<data>
-		sggOrYnFB7zKQxGdvezanbzCNtQ=
+		fL98alMligVnmW6VXB61/S8czAE=
 		</data>
 		<key>Headers/APNativeAdView.h</key>
 		<data>
-		w97U4WWIDU+UrBjOYLb0raLmU48=
+		qAeWYA+0SXdxdYV0X6uM/K+0c3Q=
 		</data>
 		<key>Headers/APRewardedAd.h</key>
 		<data>
-		d8zZODCLaDUgQmXTPCYTAoTqkNI=
+		/rBqg8awrryNV/H3/viJpy2r0Qo=
 		</data>
 		<key>Headers/APStoreKitAdImpression.h</key>
 		<data>
-		nhndZ25vleAnfs7buQm43K5T7sM=
+		pv6HICUj9TkOQ7fwtc2LZBqd2RY=
 		</data>
 		<key>Headers/APTargetingData.h</key>
 		<data>
-		Q9jNyOw7XJIEyDPKwlAY0piEaOo=
+		sovbECcoITRtJ/zBvHnX/FMjDQo=
 		</data>
 		<key>Headers/APVideoAdData.h</key>
 		<data>
-		ZpT40W7U9Ti9aWn4g4RKz81fg1w=
+		YbWbxbuhhPv2OfEHLLApEffzwj4=
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
-		eg397to0JVA+jxJTpAz3fbFYswc=
+		C0FOAIl8X5+PiJURJaN+nYVFNZ0=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -60,6 +60,10 @@
 		<data>
 		mPLm5W3L+Y2vUKtM64NzUqiiM7E=
 		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		DHMRoQMNm1rYDR/JzLdN9Drqdy0=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -67,132 +71,132 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WI6HFNnxnLvgSaM9qypqbdirJdE=
+			AiHUaL7q8v+2aOXtUuYSV14T9lU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Lt5SJIWFYklH0Z7oczrIza6jyP/RHANwVDxLXH+6LTk=
+			feWY+3Q5hb+HXXhL9/cE9luGX+yd/Mnrln/5tkJ36ag=
 			</data>
 		</dict>
 		<key>Headers/APAdView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NgFPD4ggDCET2hgDijscyq69PsM=
+			1vtZxH9VN2J91hP6GV05OYsqKOs=
 			</data>
 			<key>hash2</key>
 			<data>
-			X66qagWI6hgN75JZRHRpo63efF3irannJWc2/sgZ7gU=
+			U8wuiutqLoppkLAarSp/Dak0kKwKLRF+/JN20f7/lyA=
 			</data>
 		</dict>
 		<key>Headers/APInterstitial.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CbTKFBZwudQE9VEVruFllQUnRVE=
+			5i3z8+j4hlecKzYvwuYB6W3r+W0=
 			</data>
 			<key>hash2</key>
 			<data>
-			wEdTrEHCbHOHL8/NprBw/r56csqkVoZgVZeLpKsJkJ8=
+			60Hk10WAXYVPz10AHlcd6doubRgInXEmIMGCd8A+fF0=
 			</data>
 		</dict>
 		<key>Headers/APMainAdView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3xmCFSjIrg/iPfn/jfRV54dtyaM=
+			Hvt+imoOrbfs85Vdrbh0/6bPXBY=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Xpx6oPvuV4fAzG5fTc2SUDEsBgITeIdWyEGgel6Qsg=
+			YIvdAD0+i+8R8ZbeQvFVvM8z1QZje0kdsKi/WO5LzPs=
 			</data>
 		</dict>
 		<key>Headers/APNativeAd.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nwW95JV9L0vqBMSUlJCFqAiPgME=
+			l2h7WGYSAW6pr71BU7CdzVfrHv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			0G4sZRAMKOXJQsuuAJnWp0Jr9ENiR2zqMR98uMi6XwI=
+			jcypFBpY3fCcEuWaz2bEZs5rSvADCqKVBuyoL3hXYl4=
 			</data>
 		</dict>
 		<key>Headers/APNativeAdData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sggOrYnFB7zKQxGdvezanbzCNtQ=
+			fL98alMligVnmW6VXB61/S8czAE=
 			</data>
 			<key>hash2</key>
 			<data>
-			kjhkwsbdWxe/6OvoH23YRZvvckOTZSRaplqtIajQF2g=
+			TrEc1p0yIN+UGO/BwKaxQqCNfx8t+FerP3w71iEsUbI=
 			</data>
 		</dict>
 		<key>Headers/APNativeAdView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			w97U4WWIDU+UrBjOYLb0raLmU48=
+			qAeWYA+0SXdxdYV0X6uM/K+0c3Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			5AeHh+JEXyF4UAFLUQDdG2e6okbGTo5ahGhmx9A2Ubw=
+			xX/B3nulWZstJfVHsngruM8OoQxEgqkLIh9/SPKqAU4=
 			</data>
 		</dict>
 		<key>Headers/APRewardedAd.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			d8zZODCLaDUgQmXTPCYTAoTqkNI=
+			/rBqg8awrryNV/H3/viJpy2r0Qo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zLCVkUUP8cvMZK8gZNTeimAgjtOf3y4Y1h49asqlU0Q=
+			NP3D14mvN5Q+oNIKlRdYRhGhgHFgZC9+VSUHDmZA4Qo=
 			</data>
 		</dict>
 		<key>Headers/APStoreKitAdImpression.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nhndZ25vleAnfs7buQm43K5T7sM=
+			pv6HICUj9TkOQ7fwtc2LZBqd2RY=
 			</data>
 			<key>hash2</key>
 			<data>
-			VT+egAfALmZWWEaeUcA6JatxUiN+23MlcYeiVejNVNI=
+			Wm2tDiArIvf6Ra/OCCHoB/IHRtNzC2fj2WSmbKKfChI=
 			</data>
 		</dict>
 		<key>Headers/APTargetingData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Q9jNyOw7XJIEyDPKwlAY0piEaOo=
+			sovbECcoITRtJ/zBvHnX/FMjDQo=
 			</data>
 			<key>hash2</key>
 			<data>
-			+QFZC3GoCHNizVAIA6boCwUHDmraW/Nx5D2ZJVlVPq4=
+			Wp62TwDUy14lmghN3eDY57dJB614+Y6tmTbVxhQ7V50=
 			</data>
 		</dict>
 		<key>Headers/APVideoAdData.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZpT40W7U9Ti9aWn4g4RKz81fg1w=
+			YbWbxbuhhPv2OfEHLLApEffzwj4=
 			</data>
 			<key>hash2</key>
 			<data>
-			lK14935vDZeoNDOo9lRH0qzo/xV82jneSvxp63hybkg=
+			RjKPWDnuXHDvxHrytv5qw3QBu3DoPsL0mwq4WsXJKc8=
 			</data>
 		</dict>
 		<key>Headers/AdPieSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eg397to0JVA+jxJTpAz3fbFYswc=
+			C0FOAIl8X5+PiJURJaN+nYVFNZ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			SAjYONyfaL3MP9oHYC1SlAim+hAUfn48p61zl3jMWTM=
+			gqxdX/jyf7ixhmT+KGPVnY5dVWMz4mVNT8BwXx7TfqM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -204,6 +208,17 @@
 			<key>hash2</key>
 			<data>
 			d4xw+UqhJ222N/IEqKF6rYNSmiKDp6rJ8zvQvXilp44=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DHMRoQMNm1rYDR/JzLdN9Drqdy0=
+			</data>
+			<key>hash2</key>
+			<data>
+			3g9eNzLBCfWqAycwyaPXFFAwDoHdXspJJfx6Q6/HfIc=
 			</data>
 		</dict>
 	</dict>
