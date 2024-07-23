@@ -29,3 +29,4 @@ Pods/
 *.xcworkspace
 AdPieSwiftSample/Podfile.lock
 AdPieSample/Podfile.lock
+.DS_Store
