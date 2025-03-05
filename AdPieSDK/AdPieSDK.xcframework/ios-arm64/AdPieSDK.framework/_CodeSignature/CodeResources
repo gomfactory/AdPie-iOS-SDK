@@ -6,11 +6,15 @@
 	<dict>
 		<key>Headers/APAdData.h</key>
 		<data>
-		yEOLSz4P6PB9CUUKRUKP0D65oks=
+		4fp9zMZzom9okacfOXoyP4r8RnA=
 		</data>
 		<key>Headers/APAdView.h</key>
 		<data>
 		NgFPD4ggDCET2hgDijscyq69PsM=
+		</data>
+		<key>Headers/APEndCardData.h</key>
+		<data>
+		zeNXRJuVNQ32gvfYoe/94kqwT0A=
 		</data>
 		<key>Headers/APInterstitial.h</key>
 		<data>
@@ -46,15 +50,15 @@
 		</data>
 		<key>Headers/APVideoAdData.h</key>
 		<data>
-		ZpT40W7U9Ti9aWn4g4RKz81fg1w=
+		in62/yOjPEdZlX+3755x9uw/MqY=
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
-		HJINKRmHaZBS9zc+8J7+A0balKQ=
+		X+ChjqldhX85Q0oo88PjqvX5Qrg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5uT8F+pmXUUqUyIdalwOmcGnoD8=
+		hOJMCaqnlwDWfQPEe5MFIEZYx20=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,11 +75,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yEOLSz4P6PB9CUUKRUKP0D65oks=
+			4fp9zMZzom9okacfOXoyP4r8RnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			VXjr79lVCL2WEqS9prHqZ7NLdCJ2uC0a6iBXAGsGyWc=
+			WQj/cb21HJqMgWQd94wPov/n5GWHvSSY7HzHfXpW6Jk=
 			</data>
 		</dict>
 		<key>Headers/APAdView.h</key>
@@ -87,6 +91,17 @@
 			<key>hash2</key>
 			<data>
 			X66qagWI6hgN75JZRHRpo63efF3irannJWc2/sgZ7gU=
+			</data>
+		</dict>
+		<key>Headers/APEndCardData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zeNXRJuVNQ32gvfYoe/94kqwT0A=
+			</data>
+			<key>hash2</key>
+			<data>
+			BHlRd2WicT4+z1N53OX4Zl9GoEFPWgVNEXJHycwpK5A=
 			</data>
 		</dict>
 		<key>Headers/APInterstitial.h</key>
@@ -181,22 +196,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZpT40W7U9Ti9aWn4g4RKz81fg1w=
+			in62/yOjPEdZlX+3755x9uw/MqY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lK14935vDZeoNDOo9lRH0qzo/xV82jneSvxp63hybkg=
+			SrKoT+NpQURDDr5zV96adm/wefEunzSmeQe3YHLLeCo=
 			</data>
 		</dict>
 		<key>Headers/AdPieSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HJINKRmHaZBS9zc+8J7+A0balKQ=
+			X+ChjqldhX85Q0oo88PjqvX5Qrg=
 			</data>
 			<key>hash2</key>
 			<data>
-			D8ncL2QhoM5qcnufrvwI5q7QB1Ovpi7XKWV3V/aeXh0=
+			64awhyK1dLvFDPN5mw3Txl4QSMm1mjQJsHDliIM0Szc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

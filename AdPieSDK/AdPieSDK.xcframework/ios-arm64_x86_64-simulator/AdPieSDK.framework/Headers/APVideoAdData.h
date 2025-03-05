@@ -6,6 +6,7 @@
 //
 
 #import "APAdData.h"
+#import "APEndCardData.h"
 #import <Foundation/Foundation.h>
 
 @interface APVideoAdData : APAdData
@@ -34,6 +35,8 @@
 @property (readonly, copy) NSString *ssvURL;
 @property (copy) NSString *ssvUserId;
 @property (copy) NSString *ssvCustomData;
+
+@property (readonly, strong) APEndCardData * endCard;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
