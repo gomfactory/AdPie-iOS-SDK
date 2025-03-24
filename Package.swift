@@ -6,7 +6,7 @@ let package = Package(
     name: "spm-adpie-framework",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v12)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
