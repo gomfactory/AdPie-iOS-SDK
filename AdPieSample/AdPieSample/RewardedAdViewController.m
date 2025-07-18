@@ -17,11 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    // self.rewardedAd = [[APRewardedAd alloc]
-    // initWithSlotId:@"YOUR_SLOT_ID_HERE"];
-    self.rewardedAd =
-        [[APRewardedAd alloc] initWithSlotId:@"61de726d65a17f71c7896827"];
+    self.rewardedAd = [[APRewardedAd alloc] initWithSlotId:@"61de726d65a17f71c7896827"];
     self.rewardedAd.delegate = self;
     
     if (@available(iOS 13, *)) {
@@ -33,22 +29,6 @@
     // 리워드광고 요청
     [self.rewardedAd load];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little
-preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark APRewardedAd delegates
 
@@ -113,6 +93,11 @@ preparation before navigation
 
 - (void)rewardedAdWillLeaveApplication:(APRewardedAd *)rewardedAd {
     // 리워드광고 클릭 알림
+    NSLog(@"%s", __func__);
+}
+
+- (void)rewardedVideoFinished:(APVideoFinishState)finishState {
+    // 동영상 광고 종료 알림
     NSLog(@"%s", __func__);
 }
 

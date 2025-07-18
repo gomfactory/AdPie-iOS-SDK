@@ -9,7 +9,7 @@
 import UIKit
 import AdPieSDK
 
-class RewardedAdViewContoller: UIViewController, APRewardedAdDelegate {
+class RewardedAdViewContoller: UIViewController {
     
     var rewardedAd: APRewardedAd!
     
@@ -28,26 +28,14 @@ class RewardedAdViewContoller: UIViewController, APRewardedAdDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     @IBAction func requestRewardedAd(_ sender: UIButton) {
         // 광고 요청
         rewardedAd.load()
     }
+}
+
+
+extension RewardedAdViewContoller: APRewardedAdDelegate {
     
     // MARK: - APRewardedAdDelegate delegates
     func rewardedAdDidLoad(_ rewardedAd: APRewardedAd!) {
@@ -99,4 +87,9 @@ class RewardedAdViewContoller: UIViewController, APRewardedAdDelegate {
     func rewardedAdWillLeaveApplication(_ rewardedAd: APRewardedAd!) {
         // 리워드광고 클릭 알림
     }
+    
+    func rewardedVideoFinished(_ finishState: APVideoFinishState) {
+        // 동영상 광고 종료 알림
+    }
+
 }

@@ -9,7 +9,7 @@
 import UIKit
 import AdPieSDK
 
-class InterstitialAdViewContoller: UIViewController, APInterstitialDelegate {
+class InterstitialAdViewContoller: UIViewController {
     
     var interstitial: APInterstitial!
     
@@ -28,26 +28,13 @@ class InterstitialAdViewContoller: UIViewController, APInterstitialDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     @IBAction func requestInterstitialAd(_ sender: UIButton) {
         // 광고 요청
         interstitial.load()
     }
+}
+
+extension InterstitialAdViewContoller: APInterstitialDelegate {
     
     // MARK: - APInterstitial delegates
     
@@ -97,4 +84,9 @@ class InterstitialAdViewContoller: UIViewController, APInterstitialDelegate {
     func interstitialWillLeaveApplication(_ interstitial: APInterstitial!) {
         // 광고 클릭 후 이벤트 발생
     }
+    
+    func videoFinished(_ finishState: APVideoFinishState) {
+        // 동영상 광고 종료 알림
+    }
+    
 }

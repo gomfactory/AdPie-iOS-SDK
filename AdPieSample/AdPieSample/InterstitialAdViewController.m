@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     // Slot ID 입력
     self.interstitial = [[APInterstitial alloc] initWithSlotId:@"573430057174ea39844cac16"];
     // 델리게이트 등록
@@ -32,22 +31,6 @@
     // 광고 요청
     [self.interstitial load];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little
-preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark APInterstitial delegates
 
@@ -85,18 +68,27 @@ preparation before navigation
 
 - (void)interstitialWillPresentScreen:(APInterstitial *)interstitial {
     // 광고 표출 후 이벤트 발생
+    NSLog(@"%s", __func__);
 }
 
 - (void)interstitialWillDismissScreen:(APInterstitial *)interstitial {
     // 광고가 표출한 뒤 종료하기 전에 이벤트 발생
+    NSLog(@"%s", __func__);
 }
 
 - (void)interstitialDidDismissScreen:(APInterstitial *)interstitial {
     // 광고가 표출한 뒤 종료한 후 이벤트 발생
+    NSLog(@"%s", __func__);
 }
 
 - (void)interstitialWillLeaveApplication:(APInterstitial *)interstitial {
     // 광고 클릭 후 이벤트 발생
+    NSLog(@"%s", __func__);
+}
+
+- (void)videoFinished:(APVideoFinishState)finishState {
+    // 동영상 광고 종료 알림
+    NSLog(@"%s", __func__);
 }
 
 @end
