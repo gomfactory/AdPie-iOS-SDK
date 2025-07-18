@@ -9,6 +9,13 @@
 #import "APEndCardData.h"
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, APVideoFinishState) {
+    APVideoFinishStateUnknown = 0,
+    APVideoFinishStateCompleted,
+    APVideoFinishStateError,
+    APVideoFinishStateSkipped,
+};
+
 @interface APVideoAdData : APAdData
 
 @property (readonly, copy) NSString *title;

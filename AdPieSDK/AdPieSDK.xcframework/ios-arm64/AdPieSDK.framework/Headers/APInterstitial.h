@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "APVideoAdData.h"
 
 @protocol APInterstitialDelegate;
 
@@ -48,5 +49,7 @@
 - (void)interstitialDidDismissScreen:(APInterstitial *)interstitial;
 // 전면배너 클릭 알림
 - (void)interstitialWillLeaveApplication:(APInterstitial *)interstitial;
+// 동영상 광고 종료 알림
+- (void)videoFinished:(APVideoFinishState)finishState;
 
 @end
