@@ -50,6 +50,6 @@
 // 전면배너 클릭 알림
 - (void)interstitialWillLeaveApplication:(APInterstitial *)interstitial;
 // 동영상 광고 종료 알림
-- (void)videoFinished:(APVideoFinishState)finishState;
+- (void)videoFinished:(APInterstitial *)interstitial videoFinishState:(APVideoFinishState)finishState;
 
 @end

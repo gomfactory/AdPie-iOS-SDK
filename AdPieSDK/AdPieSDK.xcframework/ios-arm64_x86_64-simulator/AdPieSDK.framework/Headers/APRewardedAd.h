@@ -55,5 +55,5 @@
 // 리워드 보상 알림
 - (void)rewardedAdDidEarnReward:(APRewardedAd *)rewardedAd;
 // 동영상 광고 종료 알림
-- (void)rewardedVideoFinished:(APVideoFinishState)finishState;
+- (void)rewardedVideoFinished:(APRewardedAd *)rewardedAd videoFinishState:(APVideoFinishState)finishState;
 @end
