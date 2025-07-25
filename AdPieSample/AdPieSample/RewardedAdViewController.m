@@ -96,7 +96,7 @@
     NSLog(@"%s", __func__);
 }
 
-- (void)rewardedVideoFinished:(APVideoFinishState)finishState {
+- (void)rewardedVideoFinished:(APRewardedAd *)rewardedAd videoFinishState:(APVideoFinishState)finishState {
     // 동영상 광고 종료 알림
     NSLog(@"%s", __func__);
 }

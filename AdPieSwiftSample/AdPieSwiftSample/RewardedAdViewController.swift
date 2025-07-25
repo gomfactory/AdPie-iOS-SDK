@@ -88,7 +88,7 @@ extension RewardedAdViewContoller: APRewardedAdDelegate {
         // 리워드광고 클릭 알림
     }
     
-    func rewardedVideoFinished(_ finishState: APVideoFinishState) {
+    func rewardedVideoFinished(_ rewardedAd: APRewardedAd!, videoFinishState: APVideoFinishState) {
         // 동영상 광고 종료 알림
     }
 

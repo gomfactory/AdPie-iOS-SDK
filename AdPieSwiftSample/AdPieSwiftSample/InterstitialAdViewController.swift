@@ -85,7 +85,7 @@ extension InterstitialAdViewContoller: APInterstitialDelegate {
         // 광고 클릭 후 이벤트 발생
     }
     
-    func videoFinished(_ finishState: APVideoFinishState) {
+    func videoFinished(_ interstitial: APInterstitial!, videoFinishState: APVideoFinishState) {
         // 동영상 광고 종료 알림
     }
     
