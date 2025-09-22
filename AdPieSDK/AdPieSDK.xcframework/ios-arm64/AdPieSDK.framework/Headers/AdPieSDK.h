@@ -16,7 +16,7 @@
 #import <AdPieSDK/APRewardedAd.h>
 #import <AdPieSDK/APTargetingData.h>
 
-#define ADPIE_SDK_VERSION @"1.6.12"
+#define ADPIE_SDK_VERSION @"1.6.13"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 
@@ -31,8 +31,16 @@ typedef void (^ResultBlock)(BOOL isInitialized);
 + (NSString *)sdkVersion;
 
 - (void)initWithMediaId:(NSString *)mediaId;
-- (void)initWithMediaId:(NSString *)mediaId withData:(NSData *)data;
+
+- (void)initWithMediaId:(NSString *)mediaId
+               withData:(NSData *)data;
+
+- (void)initWithMediaId:(NSString *)mediaId
+               withData:(NSData *)data
+             completion:(ResultBlock)completion;
+
 - (void)initWithMediaId:(NSString *)mediaId completion:(ResultBlock)result;
+
 - (void)logging;
 - (void)openURLwithString:(NSString *)url;
 
