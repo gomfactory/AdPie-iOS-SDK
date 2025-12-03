@@ -10,11 +10,18 @@
 #import <UIKit/UIKit.h>
 #import "APVideoAdData.h"
 
+@class APInterstitial;
+typedef void (^APInterstitialVideoFinishState)(APInterstitial *, APVideoFinishState);
+
 @protocol APInterstitialDelegate;
 
 @interface APInterstitial : NSObject
 
 @property(weak) id<APInterstitialDelegate> delegate;
+
+@property (copy) void (^onPaidEvent)(double value);
+
+@property (copy) APInterstitialVideoFinishState videoFinishState;
 
 @property(copy) NSString *slotId;
 
@@ -50,6 +57,8 @@
 // 전면배너 클릭 알림
 - (void)interstitialWillLeaveApplication:(APInterstitial *)interstitial;
 // 동영상 광고 종료 알림
-- (void)videoFinished:(APInterstitial *)interstitial videoFinishState:(APVideoFinishState)finishState;
+- (void)videoFinished:(APInterstitial *)interstitial
+     videoFinishState:(APVideoFinishState)finishState
+DEPRECATED_MSG_ATTRIBUTE("Use the 'videoFinishState' property instead.");;
 
 @end

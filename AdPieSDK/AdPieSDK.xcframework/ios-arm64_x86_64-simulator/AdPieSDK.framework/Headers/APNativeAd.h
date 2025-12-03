@@ -16,6 +16,8 @@
 
 @property(weak) id<APNativeDelegate> delegate;
 
+@property (copy) void (^onPaidEvent)(double value);
+
 @property(copy) NSString *slotId;
 
 @property(readonly) APNativeAdData *nativeAdData;

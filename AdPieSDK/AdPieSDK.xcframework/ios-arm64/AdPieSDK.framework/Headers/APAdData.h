@@ -28,6 +28,7 @@
 @property (readonly, assign) int act;
 @property (readonly, assign) int cbd;
 @property (readonly, assign) int closeBtnPosition;
+@property (readonly, assign) double price;
 @property (readonly, strong) NSDictionary *skadn;
 @property (readonly, strong) APStoreKitAdImpression *skadImpression;
 

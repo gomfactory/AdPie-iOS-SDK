@@ -9,11 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "APVideoAdData.h"
 
+@class APRewardedAd;
+typedef void (^APRewardedVideoFinishState)(APRewardedAd *, APVideoFinishState);
+
 @protocol APRewardedAdDelegate;
 
 @interface APRewardedAd : NSObject
 
 @property(weak) id<APRewardedAdDelegate> delegate;
+
+@property (copy) void (^onPaidEvent)(double value);
+
+@property (copy) APRewardedVideoFinishState videoFinishState;
 
 @property(copy) NSString *slotId;
 
@@ -55,5 +62,7 @@
 // 리워드 보상 알림
 - (void)rewardedAdDidEarnReward:(APRewardedAd *)rewardedAd;
 // 동영상 광고 종료 알림
-- (void)rewardedVideoFinished:(APRewardedAd *)rewardedAd videoFinishState:(APVideoFinishState)finishState;
+- (void)rewardedVideoFinished:(APRewardedAd *)rewardedAd
+             videoFinishState:(APVideoFinishState)finishState
+    DEPRECATED_MSG_ATTRIBUTE("Use the 'videoFinishState' property instead.");
 @end

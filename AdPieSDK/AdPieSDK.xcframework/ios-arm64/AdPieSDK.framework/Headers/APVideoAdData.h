@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, APVideoFinishState) {
 @property (readonly, assign) int delivery;
 @property (readonly, assign) int contentWidth;
 @property (readonly, assign) int contentHeight;
+@property (readonly, assign) BOOL videoCache;
 
 @property (readonly, strong) NSArray *trackingStartUrls;
 @property (readonly, strong) NSArray *trackingFirstQuartileUrls;

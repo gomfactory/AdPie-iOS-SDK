@@ -8,15 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-// Header files.
-#import <AdPieSDK/APAdView.h>
-#import <AdPieSDK/APInterstitial.h>
-#import <AdPieSDK/APNativeAd.h>
-#import <AdPieSDK/APNativeAdView.h>
-#import <AdPieSDK/APRewardedAd.h>
-#import <AdPieSDK/APTargetingData.h>
-
-#define ADPIE_SDK_VERSION @"1.6.13"
+#import "APAdView.h"
+#import "APNativeAd.h"
+#import "APInterstitial.h"
+#import "APRewardedAd.h"
+#import "APTargetingData.h"
 
 typedef void (^ResultBlock)(BOOL isInitialized);
 

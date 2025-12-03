@@ -16,6 +16,8 @@
 
 @property (copy) NSString *slotId;
 
+@property (copy) void (^onPaidEvent)(double value);
+
 @property (weak) IBOutlet UIViewController *rootViewController;
 
 - (void)setExtraParameterForKey:(NSString *)key value:(NSString *)value;
