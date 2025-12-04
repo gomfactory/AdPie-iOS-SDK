@@ -1,6 +1,9 @@
 
 # 변경내역
 
+### 1.6.14 (2025년 12월 04일)
+ - 배너/전면/보상 광고용 "onPaidEvent" 추가
+ 
 ### 1.6.13 (2025년 09월 22일)
  - 초기화 메소드 "initWithMediaId:withData:completion:" 추가
  
