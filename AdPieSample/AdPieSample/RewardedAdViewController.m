@@ -71,6 +71,11 @@
     [vc presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)rewardedAdDidFailToShowAd:(APRewardedAd *)rewardedAd withError:(NSError *)error {
+    // 광고 노출 실패
+    NSLog(@"%s", __func__);
+}
+
 - (void)rewardedAdWillPresentScreen:(APRewardedAd *)rewardedAd {
     // 리워드광고 표출 알림
     NSLog(@"%s", __func__);

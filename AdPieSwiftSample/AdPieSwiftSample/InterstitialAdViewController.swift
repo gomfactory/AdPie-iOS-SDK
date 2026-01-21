@@ -68,6 +68,10 @@ extension InterstitialAdViewContoller: APInterstitialDelegate {
         }
     }
     
+    func interstitialDidFail(toShowAd interstitial: APInterstitial!, withError error: (any Error)!) {
+        // 광고 노출 실패 알림
+    }
+    
     func interstitialWillPresentScreen(_ interstitial: APInterstitial!) {
         // 광고 표출 후 이벤트 발생
     }

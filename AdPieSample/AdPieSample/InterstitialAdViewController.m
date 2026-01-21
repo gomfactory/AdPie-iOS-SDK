@@ -66,6 +66,11 @@
     [vc presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)interstitialDidFailToShowAd:(APInterstitial *)interstitial withError:(NSError *)error {
+    // 광고 노출 실패
+    NSLog(@"%s", __func__);
+}
+
 - (void)interstitialWillPresentScreen:(APInterstitial *)interstitial {
     // 광고 표출 후 이벤트 발생
     NSLog(@"%s", __func__);

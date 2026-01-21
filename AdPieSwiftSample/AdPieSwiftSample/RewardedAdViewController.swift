@@ -68,6 +68,10 @@ extension RewardedAdViewContoller: APRewardedAdDelegate {
         }
     }
     
+    func rewardedAdDidFail(toShow rewardedAd: APRewardedAd!, withError error: Error!) {
+        // 리워드광고 노출 실패 알림
+    }
+    
     func rewardedAdWillPresentScreen(_ rewardedAd: APRewardedAd!) {
         // 리워드광고 표출 알림
     }
