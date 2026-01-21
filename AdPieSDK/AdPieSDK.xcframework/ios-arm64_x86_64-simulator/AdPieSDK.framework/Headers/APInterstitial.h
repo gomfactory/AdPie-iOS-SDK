@@ -41,24 +41,25 @@ typedef void (^APInterstitialVideoFinishState)(APInterstitial *, APVideoFinishSt
 
 @required
 
-// 전면배너 성공
+// 전면광고 성공
 - (void)interstitialDidLoadAd:(APInterstitial *)interstitial;
-// 전면배너 실패
+// 전면광고 실패
 - (void)interstitialDidFailToLoadAd:(APInterstitial *)interstitial
                           withError:(NSError *)error;
-
 @optional
-// 전면배너 표출 알림
+// 전면광고 표출 알림
 - (void)interstitialWillPresentScreen:(APInterstitial *)interstitial;
-// 전면배너 종료 예정 알림
+// 전면광고 종료 예정 알림
 - (void)interstitialWillDismissScreen:(APInterstitial *)interstitial;
-// 전면배너 종료 완료 알림
+// 전면광고 종료 완료 알림
 - (void)interstitialDidDismissScreen:(APInterstitial *)interstitial;
-// 전면배너 클릭 알림
+// 전면광고 클릭 알림
 - (void)interstitialWillLeaveApplication:(APInterstitial *)interstitial;
-// 동영상 광고 종료 알림
+// 전면 광고 종료 알림
 - (void)videoFinished:(APInterstitial *)interstitial
      videoFinishState:(APVideoFinishState)finishState
 DEPRECATED_MSG_ATTRIBUTE("Use the 'videoFinishState' property instead.");;
-
+// 전면광고 노출 실패
+- (void)interstitialDidFailToShowAd:(APInterstitial *)interstitial
+                          withError:(NSError *)error;
 @end

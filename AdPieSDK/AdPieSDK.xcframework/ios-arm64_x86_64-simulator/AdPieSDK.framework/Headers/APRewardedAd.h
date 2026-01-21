@@ -61,8 +61,11 @@ typedef void (^APRewardedVideoFinishState)(APRewardedAd *, APVideoFinishState);
 - (void)rewardedAdWillLeaveApplication:(APRewardedAd *)rewardedAd;
 // 리워드 보상 알림
 - (void)rewardedAdDidEarnReward:(APRewardedAd *)rewardedAd;
-// 동영상 광고 종료 알림
+// 리워드 광고 종료 알림
 - (void)rewardedVideoFinished:(APRewardedAd *)rewardedAd
              videoFinishState:(APVideoFinishState)finishState
     DEPRECATED_MSG_ATTRIBUTE("Use the 'videoFinishState' property instead.");
+// 리워드 광고 노출 실패
+- (void)rewardedAdDidFailToShowAd:(APRewardedAd *)rewardedAd
+                        withError:(NSError *)error;
 @end
