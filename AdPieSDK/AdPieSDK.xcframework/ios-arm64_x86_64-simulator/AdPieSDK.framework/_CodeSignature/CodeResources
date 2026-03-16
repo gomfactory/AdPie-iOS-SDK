@@ -58,7 +58,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ISS416cXM59g57iXPVHroqw47Hk=
+		HkGp55U5rfPjGbKldjzcnPlorBs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -73,10 +73,6 @@
 	<dict>
 		<key>Headers/APAdData.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			O3IfdHprW9/nU2FHUEVWwnYx438=
-			</data>
 			<key>hash2</key>
 			<data>
 			p1Fbplr5HamvUuODVbvWujDVsAgtpfyFsrLJjocAVok=
@@ -84,10 +80,6 @@
 		</dict>
 		<key>Headers/APAdView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SdBFDoqhJP3OdUMX4Z2FByG9L0o=
-			</data>
 			<key>hash2</key>
 			<data>
 			QY+gfU76yaz2lGzqu0MxPPsC3qTXCurO3ltMd2Lr21M=
@@ -95,10 +87,6 @@
 		</dict>
 		<key>Headers/APEndCardData.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			zeNXRJuVNQ32gvfYoe/94kqwT0A=
-			</data>
 			<key>hash2</key>
 			<data>
 			BHlRd2WicT4+z1N53OX4Zl9GoEFPWgVNEXJHycwpK5A=
@@ -106,10 +94,6 @@
 		</dict>
 		<key>Headers/APInterstitial.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9PlWPwGQlfLy8DBzelRRUpZ1gw0=
-			</data>
 			<key>hash2</key>
 			<data>
 			BDJWIwJ3dS53FgnWdQ5na2UuPgIhOzBvvQYwRRINuvY=
@@ -117,10 +101,6 @@
 		</dict>
 		<key>Headers/APMainAdView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3xmCFSjIrg/iPfn/jfRV54dtyaM=
-			</data>
 			<key>hash2</key>
 			<data>
 			8Xpx6oPvuV4fAzG5fTc2SUDEsBgITeIdWyEGgel6Qsg=
@@ -128,10 +108,6 @@
 		</dict>
 		<key>Headers/APNativeAd.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dj8qHMhi1OavBeMx2/ieTVKSAlM=
-			</data>
 			<key>hash2</key>
 			<data>
 			NHUfpaWq5L7Fg9ZV3CWFNhzIjmZMsJV7nSL3jRj+GdI=
@@ -139,10 +115,6 @@
 		</dict>
 		<key>Headers/APNativeAdData.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sggOrYnFB7zKQxGdvezanbzCNtQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			kjhkwsbdWxe/6OvoH23YRZvvckOTZSRaplqtIajQF2g=
@@ -150,10 +122,6 @@
 		</dict>
 		<key>Headers/APNativeAdView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			w97U4WWIDU+UrBjOYLb0raLmU48=
-			</data>
 			<key>hash2</key>
 			<data>
 			5AeHh+JEXyF4UAFLUQDdG2e6okbGTo5ahGhmx9A2Ubw=
@@ -161,10 +129,6 @@
 		</dict>
 		<key>Headers/APRewardedAd.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FXtLgRrG0oelHK9tg2/HpZT2wmo=
-			</data>
 			<key>hash2</key>
 			<data>
 			TY6lPhCDpzQSPv0s4B9gqtKMBUOv6jkZOfIp/ie3r2I=
@@ -172,10 +136,6 @@
 		</dict>
 		<key>Headers/APStoreKitAdImpression.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nhndZ25vleAnfs7buQm43K5T7sM=
-			</data>
 			<key>hash2</key>
 			<data>
 			VT+egAfALmZWWEaeUcA6JatxUiN+23MlcYeiVejNVNI=
@@ -183,10 +143,6 @@
 		</dict>
 		<key>Headers/APTargetingData.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Q9jNyOw7XJIEyDPKwlAY0piEaOo=
-			</data>
 			<key>hash2</key>
 			<data>
 			+QFZC3GoCHNizVAIA6boCwUHDmraW/Nx5D2ZJVlVPq4=
@@ -194,10 +150,6 @@
 		</dict>
 		<key>Headers/APVideoAdData.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			N2ETquzYdrohA4v4Mb+ebG1Dqlc=
-			</data>
 			<key>hash2</key>
 			<data>
 			Fa00u3LOrLO5b+tqp1bIqVpTYpLxGDchA1kloR2Ian0=
@@ -205,10 +157,6 @@
 		</dict>
 		<key>Headers/AdPieSDK.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			loljSG/TdfQm0JfoyR96PQidiQE=
-			</data>
 			<key>hash2</key>
 			<data>
 			vs6vXZFUv2c6Ulot9Bx5C0qyfMSsRS7JUo3Wz+GVdU0=
@@ -216,10 +164,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			mPLm5W3L+Y2vUKtM64NzUqiiM7E=
-			</data>
 			<key>hash2</key>
 			<data>
 			d4xw+UqhJ222N/IEqKF6rYNSmiKDp6rJ8zvQvXilp44=
@@ -227,10 +171,6 @@
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			e3jGtXI/ZHVDLYedJtrONX1knL4=
-			</data>
 			<key>hash2</key>
 			<data>
 			esNljTnvSOswLxX+tvcPQe+5iZ2d+uH5ywuWVKqWl/4=
