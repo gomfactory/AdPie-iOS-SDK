@@ -54,16 +54,20 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
         
         // 광고 객체 생성 (Slot ID 입력)
         nativeAd = APNativeAd(slotId: "580491a37174ea5279c5d09b")
+        
         // 델리게이트 등록
         nativeAd.delegate = self
-        
-        // 광고 요청
-        nativeAd.load()
         
         if #available(iOS 13, *) {
             view.backgroundColor = .systemBackground
             tableView.backgroundColor = .systemBackground
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 광고 요청
+        nativeAd.load()
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,79 +114,11 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         if itemsArray.object(at: indexPath.row) is APNativeAdData {
-            
-            var isValidLayout: Bool = false
-            
-            let cellIdentifier = "AdPieTableViewCell"
-            
-            if let cell = adViewDictionary?.object(forKey: String(format: "%@_%d", cellIdentifier,indexPath.row)) {
-                isValidLayout = (cell as! AdPieTableViewCell).nativeAdView.isValidLayout
-            }
-            
-            if isValidLayout {
-                if #available(iOS 8.0, *) {
-                    return UITableView.automaticDimension
-                } else {
-                    return 300;
-                }
-            } else {
-                return 0
-            }
-        } else {
-            if #available(iOS 8.0, *) {
-                return UITableView.automaticDimension
-            } else {
-                return tableView.rowHeight
-            }
+            return 405.0
         }
+        return UITableView.automaticDimension
     }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     // MARK: - APNative delegates
     
@@ -195,7 +131,6 @@ class NativeAdTableViewController: UITableViewController, APNativeDelegate {
                 itemsArray.insert(nativeAd.nativeAdData!, at: adRowIndex)
             }
         }
-        
         tableView.reloadData()
     }
     

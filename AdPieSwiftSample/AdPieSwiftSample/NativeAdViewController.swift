@@ -23,12 +23,15 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         // 델리게이트 등록
         nativeAd.delegate = self
         
-        // 광고 요청
-        nativeAd.load()
-        
         if #available(iOS 13, *) {
             view.backgroundColor = .systemBackground
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 광고 요청
+        nativeAd.load()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,10 +39,8 @@ class NativeAdViewController: UIViewController, APNativeDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
     // MARK: - APNative delegates
     func nativeDidLoad(_ nativeAd: APNativeAd!) {
-        // 광고 요청 완료 후 이벤트 발생
         let nativeAdView = Bundle.main.loadNibNamed("AdPieNativeAdView", owner: nil, options: nil)?[0] as! APNativeAdView
         nativeAdView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nativeAdView)

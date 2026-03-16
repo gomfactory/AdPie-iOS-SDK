@@ -27,7 +27,7 @@
         self.tableView.estimatedRowHeight = 300;
     }
     
-    // 샘플 컨텐츠를 위한 xib 지정
+    // 샘플 컨텐츠를 위한 xib 등록
     [self.tableView registerNib:[UINib nibWithNibName:@"SimpleTableViewCell" bundle:nil] forCellReuseIdentifier:@"SimpleTableViewCell"];
     
     // 데이터 저장을 위한 배열 생성
@@ -44,19 +44,23 @@
     
     // 광고를 위한 xib 파일 등록
     [self.tableView registerNib:[UINib nibWithNibName:@"AdPieTableViewCell" bundle:nil] forCellReuseIdentifier:@"AdPieTableViewCell"];
-    
-    // Slot ID 입력
+
+    // 광고 객체 생성 (Slot ID 입력)
     self.nativeAd = [[APNativeAd alloc] initWithSlotId:@"580491a37174ea5279c5d09b"];
+    
     // 델리게이트 등록
     self.nativeAd.delegate = self;
-    
-    // 광고 요청
-    [self.nativeAd load];
     
     if (@available(iOS 13, *)) {
         self.view.backgroundColor = UIColor.systemBackgroundColor;
         self.tableView.backgroundColor = UIColor.systemBackgroundColor;
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // 광고 요청
+    [self.nativeAd load];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,45 +78,6 @@
     return [self.itemsArray count];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if([[self.itemsArray objectAtIndex:indexPath.row] isKindOfClass:[APNativeAdData class]] == YES){
-        
-        BOOL isValidLayout = NO;
-        
-        NSString *cellIdentifier = @"AdPieTableViewCell";
-        
-        if(self.adViewDictionary){
-            id cell = [self.adViewDictionary objectForKey:[NSString stringWithFormat:@"%@_%d", cellIdentifier, (int)indexPath.row]];
-            
-            if(cell && [cell isKindOfClass:[AdPieTableViewCell class]]){
-                if(((AdPieTableViewCell *)cell).nativeAdView){
-                    isValidLayout = ((AdPieTableViewCell *)cell).nativeAdView.isValidLayout;
-                }
-            }
-        }
-        
-        if(isValidLayout){
-            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-                // ios 8+
-                return UITableViewAutomaticDimension;
-            }else{
-                // 광고 형태와 사이즈에 따라 수정
-                return 300;
-            }
-        }else{
-            return 0;
-        }
-    }else{
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-                // ios 8+
-                return UITableViewAutomaticDimension;
-        }else{
-                return self.tableView.rowHeight;
-        }
-    }
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if([[self.itemsArray objectAtIndex:indexPath.row] isKindOfClass:[APNativeAdData class]] == YES){
@@ -123,12 +88,11 @@
         
         APNativeAdData *nativeAdData = [self.itemsArray objectAtIndex:indexPath.row];
         
-        // 광고뷰에 데이터 표출
         if ([cell.nativeAdView fillAd:nativeAdData]) {
-            // 광고 클릭 이벤트 수신을 위해 등록
+            // 클릭 이벤트를 받기 위해 등록
             [self.nativeAd registerViewForInteraction:cell.nativeAdView];
         }
-        
+
         return cell;
     }else{
         NSString *cellIdentifier = @"SimpleTableViewCell";
@@ -139,54 +103,18 @@
     }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([[self.itemsArray objectAtIndex:indexPath.row] isKindOfClass:[APNativeAdData class]] == YES){
+        return 405.0;
+    }
+    return UITableViewAutomaticDimension;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark APNativeAd delegates
 
 - (void)nativeDidLoadAd:(APNativeAd *)nativeAd {
-    // 광고 로딩 완료 후 이벤트 발생
+    // 네이티브 성공
+    NSLog(@"%s", __func__);
     if(nativeAd.nativeAdData){
         if([[self.itemsArray objectAtIndex:self.adRowIndex] isKindOfClass:[APNativeAdData class]] == YES){
             [self.itemsArray replaceObjectAtIndex:self.adRowIndex withObject:nativeAd.nativeAdData];
@@ -194,13 +122,15 @@
             [self.itemsArray insertObject:nativeAd.nativeAdData atIndex:self.adRowIndex];
         }
     }
-    
     [self.tableView reloadData];
 }
 
 - (void)nativeDidFailToLoadAd:(APNativeAd *)nativeAd
                     withError:(NSError *)error {
-    // 광고 요청 실패 후 이벤트 발생
+    // 네이티브 실패
+    NSLog(@"%s code : %d, message : %@", __func__, (int)[error code],
+          [error localizedDescription]);
+    
     NSString *title = @"Error";
     NSString *message = [NSString
                          stringWithFormat:
@@ -226,7 +156,9 @@
 }
 
 - (void)nativeWillLeaveApplication:(APNativeAd *)nativeAd {
-    // 광고 클릭 후 이벤트 발생
+    // 네이티브 클릭 알림
+    NSLog(@"%s", __func__);
 }
 
 @end
+

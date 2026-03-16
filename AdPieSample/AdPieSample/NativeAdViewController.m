@@ -22,13 +22,17 @@
     // 델리게이트 등록
     self.nativeAd.delegate = self;
     
-    // 광고 요청
-    [self.nativeAd load];
-    
     if (@available(iOS 13, *)) {
         self.view.backgroundColor = UIColor.systemBackgroundColor;
     }
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // 광고 요청
+    [self.nativeAd load];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,9 +42,8 @@
 #pragma mark APNativeAd delegates
 
 - (void)nativeDidLoadAd:(APNativeAd *)nativeAd {
-    // 네이티브 성공
+    // 네이티브 광고 로드 성공
     NSLog(@"%s", __func__);
-    
     APNativeAdView *nativeAdView = [[[NSBundle mainBundle] loadNibNamed:@"AdPieNativeAdView"
                                                        owner:nil
                                                      options:nil] firstObject];
@@ -69,6 +72,7 @@
 - (void)nativeDidFailToLoadAd:(APNativeAd *)nativeAd
                           withError:(NSError *)error {
     // 광고 요청 실패 후 이벤트 발생
+    NSLog(@"%s", __func__);
     NSString *message = [NSString
                          stringWithFormat:
                          @"Failed to load native ads. \n (code : %d, message : %@)",
@@ -79,6 +83,7 @@
 
 - (void)nativeWillLeaveApplication:(APNativeAd *)nativeAd {
     // 광고 클릭 후 이벤트 발생
+    NSLog(@"%s", __func__);
 }
 
 - (void) alertMessage:(NSString *)message{
