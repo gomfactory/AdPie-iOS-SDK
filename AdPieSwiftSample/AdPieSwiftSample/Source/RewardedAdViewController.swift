@@ -97,16 +97,22 @@ extension RewardedAdViewController: APRewardedAdDelegate {
     
     func rewardedAdDidFail(toLoad rewardedAd: APRewardedAd!, withError error: Error!) {
         showToast(message: #function)
-        let errorMessage = "Failed to load interstitial ads." + "(code : " + String(error._code) + ", message : " + error.localizedDescription + ")"
-        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
+        let nsError = error as NSError
+        let errorMsg = String(format: "Error (code : %d, message : %@, date : %@)",
+                              Int32(nsError.code),
+                              nsError.localizedDescription,
+                              Date().description(with: Locale.current))
+        print("\(#function), \(errorMsg)")
     }
     
     func rewardedAdDidFail(toShow rewardedAd: APRewardedAd!, withError error: Error!) {
         showToast(message: #function)
-        print(#function)
+        let nsError = error as NSError
+        let errorMsg = String(format: "Error (code : %d, message : %@, date : %@)",
+                              Int32(nsError.code),
+                              nsError.localizedDescription,
+                              Date().description(with: Locale.current))
+        print("\(#function), \(errorMsg)")
     }
     
     func rewardedAdDidDismissScreen(_ rewardedAd: APRewardedAd!) {

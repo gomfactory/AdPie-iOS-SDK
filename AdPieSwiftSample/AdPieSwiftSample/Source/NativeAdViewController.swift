@@ -132,13 +132,12 @@ extension NativeAdViewController: APNativeDelegate {
     
     func nativeDidFail(toLoad nativeAd: APNativeAd!, withError error: Error!) {
         showToast(message: #function)
-        let alert = UIAlertController(
-            title: "Ad Load Error",
-            message: error.localizedDescription,
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
+        let nsError = error as NSError
+        let errorMsg = String(format: "Error (code : %d, message : %@, date : %@)",
+                              Int32(nsError.code),
+                              nsError.localizedDescription,
+                              Date().description(with: Locale.current))
+        print("\(#function), \(errorMsg)")
     }
     
     func nativeWillLeaveApplication(_ nativeAd: APNativeAd!) {

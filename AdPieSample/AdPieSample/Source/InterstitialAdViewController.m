@@ -116,7 +116,11 @@
                           withError:(NSError *)error
 {
     [self showToastWithMessage:[NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__]];
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSString * errorMsg = [NSString stringWithFormat:@"Error (code : %d, message : %@, date : %@)",
+                           (int)[error code],
+                           [error localizedDescription],
+                           [[NSDate date] descriptionWithLocale:[NSLocale systemLocale]]];
+    NSLog(@"%s, %@", __PRETTY_FUNCTION__, errorMsg);
 }
 
 - (void)interstitialDidFailToShowAd:(APInterstitial *)interstitial withError:(NSError *)error {
