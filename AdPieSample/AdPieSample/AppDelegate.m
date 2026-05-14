@@ -1,15 +1,6 @@
-//
-//  AppDelegate.m
-//  AdPieSample
-//
-//  Created by sunny on 2016. 5. 27..
-//  Copyright © 2016년 GomFactory. All rights reserved.
-//
-
 #import "AppDelegate.h"
-#import <AdPieSDK/AdPieSDK.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
-#import <AdSupport/AdSupport.h>
+#import <AdPieSDK/AdPieSDK.h>
 
 @interface AppDelegate ()
 
@@ -20,48 +11,81 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self requestTrackingPermission:^(BOOL granted) {
+        [self initializeAdPieSDK];
+    }];
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+
+#pragma mark - UISceneSession lifecycle
+
+
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+    // Called when a new scene session is being created.
+    // Use this method to select a configuration to create the new scene with.
+    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
+    // Called when the user discards a scene session.
+    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (void)initializeAdPieSDK {
+   if ([[AdPieSDK sharedInstance] isInitialized]) { return; }
+   [[AdPieSDK sharedInstance] logging];
+   [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    // 디버깅 적용
-     [[AdPieSDK sharedInstance] logging];
-    
-    if (@available(iOS 14, *)) {
-        // ATT 알림을 통한 권한 요청
-        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            BOOL isAdvertisingTrackingEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
-            NSLog(@"isAdvertisingTrackingEnabled : %d", isAdvertisingTrackingEnabled);
-            // SDK 초기화
-            if(![[AdPieSDK sharedInstance] isInitialized]) {
-                [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
-            }
-        }];
-    } else {
-        // SDK 초기화
-        if(![[AdPieSDK sharedInstance] isInitialized]) {
-            [[AdPieSDK sharedInstance] initWithMediaId:@"57342d787174ea39844cac11"];
-        }
-    }
-}
+- (void)requestTrackingPermission:(void (^)(BOOL granted))completion {
+   if (@available(iOS 14, *)) { } else {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (completion) completion(YES);
+       });
+       return;
+   }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+   ATTrackingManagerAuthorizationStatus status = ATTrackingManager.trackingAuthorizationStatus;
+   if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (completion) completion(YES);
+       });
+       return;
+   } else if (status == ATTrackingManagerAuthorizationStatusDenied ||
+              status == ATTrackingManagerAuthorizationStatusRestricted) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (completion) completion(NO);
+       });
+       return;
+   }
+
+   void (^requestBlock)(void) = ^{
+       [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+           dispatch_async(dispatch_get_main_queue(), ^{
+               if (completion) completion(status == ATTrackingManagerAuthorizationStatusAuthorized);
+           });
+       }];
+   };
+
+   if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+       requestBlock();
+       return;
+   }
+
+   __block id observer = nil;
+   observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification
+                                                                object:nil
+                                                                 queue:[NSOperationQueue mainQueue]
+                                                            usingBlock:^(NSNotification * _Nonnull note) {
+       if (observer) {
+           [[NSNotificationCenter defaultCenter] removeObserver:observer];
+           observer = nil;
+       }
+       requestBlock();
+   }];
 }
 
 @end
