@@ -33,12 +33,17 @@ typedef NS_ENUM(NSInteger, APVideoFinishState) {
 @property (readonly, assign) int contentWidth;
 @property (readonly, assign) int contentHeight;
 @property (readonly, assign) BOOL videoCache;
+@property (readonly, assign) int sound;
+@property (readonly, assign) BOOL autoCloseAdScreen;
+@property (readonly, assign) int contentDownloadTime;
+@property (readonly, assign) BOOL ableToClickBackground;
 
 @property (readonly, strong) NSArray *trackingStartUrls;
 @property (readonly, strong) NSArray *trackingFirstQuartileUrls;
 @property (readonly, strong) NSArray *trackingMidpointUrls;
 @property (readonly, strong) NSArray *trackingThirdQuartileUrls;
 @property (readonly, strong) NSArray *trackingCompleteUrls;
+@property (readonly, copy) NSString *closeMessage;
 
 @property (readonly, copy) NSString *ssvURL;
 @property (copy) NSString *ssvUserId;

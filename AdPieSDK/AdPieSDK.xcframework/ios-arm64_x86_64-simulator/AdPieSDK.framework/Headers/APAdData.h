@@ -19,6 +19,7 @@
 @property (readonly, assign) int width;
 @property (readonly, assign) int height;
 @property (readonly, strong) NSArray *impTrackers;
+@property (readonly, strong) NSArray *vimptrackers;
 @property (readonly, strong) NSArray *clickTrackers;
 @property (readonly, strong) NSString *bgColor;
 @property (readonly, assign) BOOL isScalable;

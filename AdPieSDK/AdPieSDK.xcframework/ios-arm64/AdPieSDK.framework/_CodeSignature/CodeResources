@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APAdData.h</key>
 		<data>
-		O3IfdHprW9/nU2FHUEVWwnYx438=
+		k/pyV07tjKkJG8uRTVvQSVZUs34=
 		</data>
 		<key>Headers/APAdView.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/APVideoAdData.h</key>
 		<data>
-		N2ETquzYdrohA4v4Mb+ebG1Dqlc=
+		RgA/oRtK4HIW/wOjeiNnXx5FM9k=
 		</data>
 		<key>Headers/AdPieSDK.h</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bVy/u0cw5BGWPI5wRIwqfVOo8m0=
+		awHPuP1lNpKNrtHDvszFcZNhoL8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p1Fbplr5HamvUuODVbvWujDVsAgtpfyFsrLJjocAVok=
+			MLYrQXgH/bsvtNd6CjC88MHMMWoP8sFwvMvoT2j/oFE=
 			</data>
 		</dict>
 		<key>Headers/APAdView.h</key>
@@ -152,7 +152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fa00u3LOrLO5b+tqp1bIqVpTYpLxGDchA1kloR2Ian0=
+			0aP3itWyDuHUsfZIqyfhWt5fnUbA2H8ec9bWZ1lpwSc=
 			</data>
 		</dict>
 		<key>Headers/AdPieSDK.h</key>
