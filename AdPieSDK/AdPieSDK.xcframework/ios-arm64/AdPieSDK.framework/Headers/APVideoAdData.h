@@ -44,6 +44,7 @@ typedef NS_ENUM(NSInteger, APVideoFinishState) {
 @property (readonly, strong) NSArray *trackingThirdQuartileUrls;
 @property (readonly, strong) NSArray *trackingCompleteUrls;
 @property (readonly, copy) NSString *closeMessage;
+@property (readonly, copy) NSString *skipMessage;
 
 @property (readonly, copy) NSString *ssvURL;
 @property (copy) NSString *ssvUserId;

@@ -30,8 +30,10 @@
 @property (readonly, assign) int cbd;
 @property (readonly, assign) int closeBtnPosition;
 @property (readonly, assign) double price;
+@property (readonly, assign) long ttl;
 @property (readonly, strong) NSDictionary *skadn;
 @property (readonly, strong) APStoreKitAdImpression *skadImpression;
+@property (readonly, strong) NSString *interstitialSkipMessage;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

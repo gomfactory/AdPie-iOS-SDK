@@ -5,7 +5,7 @@ target 'AdPieSample' do
   use_frameworks!
 
   # Pods for AdPieSample
-  pod 'AdPieSDK', '1.7.0'
+  pod 'AdPieSDK', '1.7.1'
   #pod 'Google-Mobile-Ads-SDK', '9.14.0'
   #pod 'AppLovinSDK', '11.6.1'
 

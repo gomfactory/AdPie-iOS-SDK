@@ -23,7 +23,7 @@ typedef void (^APInterstitialVideoFinishState)(APInterstitial *, APVideoFinishSt
 
 @property (copy) APInterstitialVideoFinishState videoFinishState;
 
-@property(copy) NSString *slotId;
+@property(readonly, copy) NSString *slotId;
 
 - (id)initWithSlotId:(NSString *)slotId;
 

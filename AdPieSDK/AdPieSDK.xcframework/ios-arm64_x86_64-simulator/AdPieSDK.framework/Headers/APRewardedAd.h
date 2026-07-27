@@ -22,7 +22,7 @@ typedef void (^APRewardedVideoFinishState)(APRewardedAd *, APVideoFinishState);
 
 @property (copy) APRewardedVideoFinishState videoFinishState;
 
-@property(copy) NSString *slotId;
+@property(readonly, copy) NSString *slotId;
 
 - (id)initWithSlotId:(NSString *)slotId;
 

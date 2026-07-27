@@ -41,7 +41,7 @@ class BannerAdViewController: UIViewController, APAdViewDelegate {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            bannerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             bannerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
             bannerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             bannerView.heightAnchor.constraint(equalToConstant: 50)
